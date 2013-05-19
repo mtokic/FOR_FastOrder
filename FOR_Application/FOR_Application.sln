@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pregledavanje narudžbi", "FOR_Application\Pregledavanje narudžbi.csproj", "{738A602B-EE3C-4498-8970-31D2B0874E49}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pregledavanje narudžbi", "..\..\..\..\Desktop\FOR_FastOrder-master\FOR_Application\FOR_Application\Pregledavanje narudžbi.csproj", "{738A602B-EE3C-4498-8970-31D2B0874E49}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kreiranje narudžbe", "Kreiranje narudžbe\Kreiranje narudžbe.csproj", "{3345D1AA-1B5A-4866-A0D0-09D0BE9E15BA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kreiranje narudžbe", "..\..\..\..\Desktop\FOR_FastOrder-master\FOR_Application\Kreiranje narudžbe\Kreiranje narudžbe.csproj", "{3345D1AA-1B5A-4866-A0D0-09D0BE9E15BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
