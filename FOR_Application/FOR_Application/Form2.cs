@@ -10,19 +10,19 @@ using System.Windows.Forms;
 
 namespace FOR_Application
 {
-    public partial class pregled_Narudzbi : Form
+    public partial class frmPrijava : Form
     {
-        public pregled_Narudzbi()
+        public frmPrijava()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void login_Forma_Load(object sender, EventArgs e)
         {
 
         }

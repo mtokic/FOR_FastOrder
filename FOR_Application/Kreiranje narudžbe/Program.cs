@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FOR_Application
+namespace Kreiranje_narudžbe
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace FOR_Application
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new pregled_Narudzbi());
+            Application.Run(new Form1());
         }
     }
 }
