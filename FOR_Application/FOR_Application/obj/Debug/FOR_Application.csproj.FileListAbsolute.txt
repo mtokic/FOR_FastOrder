@@ -1,1 +1,2 @@
 C:\Users\Mario\Desktop\GiT_Hub\FOR_FastOrder\FOR_Application\FOR_Application\bin\Debug\FOR_Application.exe.config
+C:\Users\Ivan\Documents\GitHub\FOR_FastOrder\FOR_Application\FOR_Application\bin\Debug\FOR_Application.exe.config

@@ -8,23 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FOR_Application
+namespace Kreiranje_narudžbe
 {
-    public partial class pregled_Narudzbi : Form
+    public partial class Form1 : Form
     {
-        public pregled_Narudzbi()
+        public Form1()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace FOR_Application
 {
-    public partial class pregled_Narudzbi : Form
+    public partial class Form2 : Form
     {
-        public pregled_Narudzbi()
+        public Form2()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
