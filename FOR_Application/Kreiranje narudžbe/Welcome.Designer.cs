@@ -1,6 +1,6 @@
 ﻿namespace Kreiranje_narudžbe
 {
-    partial class Form1
+    partial class frmPocetniZaslon
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,16 @@
         {
             this.SuspendLayout();
             // 
-            // Form1
+            // frmPocetniZaslon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
-            this.Name = "Form1";
-            this.Text = "Pregled narudžbi";
+            this.ClientSize = new System.Drawing.Size(789, 504);
+            this.MinimizeBox = false;
+            this.Name = "frmPocetniZaslon";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Welcome to Restaurant Victoria";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
 
         }
@@ -44,4 +47,3 @@
         #endregion
     }
 }
-
