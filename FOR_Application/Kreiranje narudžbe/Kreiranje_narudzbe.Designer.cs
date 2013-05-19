@@ -43,6 +43,7 @@
             this.lblNaruceneStavke = new System.Windows.Forms.Label();
             this.btnNaruci = new System.Windows.Forms.Button();
             this.lblUkupno = new System.Windows.Forms.Label();
+            this.btnUpute = new System.Windows.Forms.Button();
             dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.msIzbornikHelp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -75,7 +76,7 @@
             this.msUputeZaKoristenje,
             this.msIzlaz});
             this.msPomoc.Name = "msPomoc";
-            this.msPomoc.Size = new System.Drawing.Size(53, 20);
+            this.msPomoc.Size = new System.Drawing.Size(57, 20);
             this.msPomoc.Text = "Pomoć";
             // 
             // msUputeZaKoristenje
@@ -90,13 +91,13 @@
             // englishToolStripMenuItem
             // 
             this.englishToolStripMenuItem.Name = "englishToolStripMenuItem";
-            this.englishToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.englishToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.englishToolStripMenuItem.Text = "English";
             // 
             // croatianToolStripMenuItem
             // 
             this.croatianToolStripMenuItem.Name = "croatianToolStripMenuItem";
-            this.croatianToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.croatianToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.croatianToolStripMenuItem.Text = "Croatian";
             // 
             // msIzlaz
@@ -173,11 +174,22 @@
             this.lblUkupno.TabIndex = 8;
             this.lblUkupno.Text = "Ukupno:";
             // 
+            // btnUpute
+            // 
+            this.btnUpute.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnUpute.Location = new System.Drawing.Point(350, 410);
+            this.btnUpute.Name = "btnUpute";
+            this.btnUpute.Size = new System.Drawing.Size(215, 67);
+            this.btnUpute.TabIndex = 9;
+            this.btnUpute.Text = "UPUTE";
+            this.btnUpute.UseVisualStyleBackColor = true;
+            // 
             // frmKreiranjeNarudzbeGlavna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(577, 491);
+            this.Controls.Add(this.btnUpute);
             this.Controls.Add(this.lblUkupno);
             this.Controls.Add(this.btnNaruci);
             this.Controls.Add(this.lblNaruceneStavke);
@@ -216,6 +228,7 @@
         private System.Windows.Forms.Label lblNaruceneStavke;
         private System.Windows.Forms.Button btnNaruci;
         private System.Windows.Forms.Label lblUkupno;
+        private System.Windows.Forms.Button btnUpute;
     }
 }
 
