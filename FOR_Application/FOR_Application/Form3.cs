@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace FOR_Application
 {
-    public partial class frmPrijava : Form
+    public partial class frmRacun : Form
     {
-        public frmPrijava()
+        public frmRacun()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void login_Forma_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
