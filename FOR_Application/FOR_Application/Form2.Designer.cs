@@ -43,6 +43,7 @@
             this.btnLogin.TabIndex = 0;
             this.btnLogin.Text = "Prijavi se";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // label1
             // 
@@ -52,7 +53,6 @@
             this.label1.Size = new System.Drawing.Size(78, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Korisničko ime:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -74,6 +74,7 @@
             // 
             this.txtLozinka.Location = new System.Drawing.Point(131, 56);
             this.txtLozinka.Name = "txtLozinka";
+            this.txtLozinka.PasswordChar = '*';
             this.txtLozinka.Size = new System.Drawing.Size(147, 20);
             this.txtLozinka.TabIndex = 4;
             // 
@@ -89,7 +90,6 @@
             this.Controls.Add(this.btnLogin);
             this.Name = "frmPrijava";
             this.Text = "Prijava";
-            this.Load += new System.EventHandler(this.login_Forma_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
