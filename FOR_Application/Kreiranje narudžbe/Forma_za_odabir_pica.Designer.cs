@@ -86,6 +86,7 @@
             this.btnIzlazIzPica.TabIndex = 7;
             this.btnIzlazIzPica.Text = "Izlaz";
             this.btnIzlazIzPica.UseVisualStyleBackColor = true;
+            this.btnIzlazIzPica.Click += new System.EventHandler(this.btnIzlazIzPica_Click);
             // 
             // btnSpremiOdabirPica
             // 

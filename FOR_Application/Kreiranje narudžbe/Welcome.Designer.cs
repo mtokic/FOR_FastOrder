@@ -46,6 +46,7 @@
             this.btnUlaz.TabIndex = 8;
             this.btnUlaz.Text = "ULAZ";
             this.btnUlaz.UseVisualStyleBackColor = true;
+            this.btnUlaz.Click += new System.EventHandler(this.btnUlaz_Click);
             // 
             // pictureBox1
             // 
@@ -90,7 +91,6 @@
             this.Name = "frmPocetniZaslon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Welcome to Restaurant Victoria";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

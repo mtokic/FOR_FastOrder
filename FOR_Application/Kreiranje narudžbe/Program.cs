@@ -16,7 +16,7 @@ namespace Kreiranje_narudžbe
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmKreiranjeNarudzbeGlavna());
+            Application.Run(new frmPocetniZaslon());
         }
     }
 }

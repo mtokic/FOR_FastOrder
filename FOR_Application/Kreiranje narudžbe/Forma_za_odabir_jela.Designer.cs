@@ -64,6 +64,7 @@
             this.btnIzlazIzJela.TabIndex = 1;
             this.btnIzlazIzJela.Text = "Izlaz";
             this.btnIzlazIzJela.UseVisualStyleBackColor = true;
+            this.btnIzlazIzJela.Click += new System.EventHandler(this.btnIzlazIzJela_Click);
             // 
             // lstOdabranaJela
             // 

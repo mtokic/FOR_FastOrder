@@ -76,7 +76,7 @@
             this.msUputeZaKoristenje,
             this.msIzlaz});
             this.msPomoc.Name = "msPomoc";
-            this.msPomoc.Size = new System.Drawing.Size(57, 20);
+            this.msPomoc.Size = new System.Drawing.Size(53, 20);
             this.msPomoc.Text = "Pomoć";
             // 
             // msUputeZaKoristenje
@@ -91,13 +91,13 @@
             // englishToolStripMenuItem
             // 
             this.englishToolStripMenuItem.Name = "englishToolStripMenuItem";
-            this.englishToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.englishToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.englishToolStripMenuItem.Text = "English";
             // 
             // croatianToolStripMenuItem
             // 
             this.croatianToolStripMenuItem.Name = "croatianToolStripMenuItem";
-            this.croatianToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.croatianToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.croatianToolStripMenuItem.Text = "Croatian";
             // 
             // msIzlaz
@@ -115,6 +115,7 @@
             this.btnOdaberiJelo.TabIndex = 2;
             this.btnOdaberiJelo.Text = "Odaberi jelo";
             this.btnOdaberiJelo.UseVisualStyleBackColor = true;
+            this.btnOdaberiJelo.Click += new System.EventHandler(this.btnOdaberiJelo_Click);
             // 
             // btnOdaberiPice
             // 
@@ -125,6 +126,7 @@
             this.btnOdaberiPice.TabIndex = 3;
             this.btnOdaberiPice.Text = "Odaberi piće";
             this.btnOdaberiPice.UseVisualStyleBackColor = true;
+            this.btnOdaberiPice.Click += new System.EventHandler(this.btnOdaberiPice_Click);
             // 
             // pictureBox1
             // 
@@ -183,6 +185,7 @@
             this.btnUpute.TabIndex = 9;
             this.btnUpute.Text = "UPUTE";
             this.btnUpute.UseVisualStyleBackColor = true;
+            this.btnUpute.Click += new System.EventHandler(this.btnUpute_Click);
             // 
             // frmKreiranjeNarudzbeGlavna
             // 

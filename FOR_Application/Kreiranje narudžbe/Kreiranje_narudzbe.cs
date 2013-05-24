@@ -17,9 +17,25 @@ namespace Kreiranje_narudžbe
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnOdaberiJelo_Click(object sender, EventArgs e)
         {
+            frmOdabirJela odabir_jela = new frmOdabirJela();
+            odabir_jela.Show();
+        }
+
+        private void btnOdaberiPice_Click(object sender, EventArgs e)
+        {
+            frmOdabirPica odabir_pica = new frmOdabirPica();
+            odabir_pica.Show();
+        }
+
+        private void btnUpute_Click(object sender, EventArgs e)
+        {
+            frmUpute odaberi_upute = new frmUpute();
+            odaberi_upute.Show();
 
         }
+
+        
     }
 }

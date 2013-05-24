@@ -15,6 +15,13 @@ namespace Kreiranje_narudžbe
         public frmPocetniZaslon()
         {
             InitializeComponent();
+            
+        }
+
+        private void btnUlaz_Click(object sender, EventArgs e)
+        {
+            frmKreiranjeNarudzbeGlavna kreiranje_narudzbe = new frmKreiranjeNarudzbeGlavna();
+            kreiranje_narudzbe.Show();
         }
     }
 }

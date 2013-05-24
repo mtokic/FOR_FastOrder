@@ -19,7 +19,7 @@ namespace Kreiranje_narudžbe
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            frmUpute.ActiveForm.Close();
         }
     }
 }
