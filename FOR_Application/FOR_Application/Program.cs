@@ -16,7 +16,7 @@ namespace FOR_Application
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmPregledNarudzbi());
+            Application.Run(new frmPrijava());
         }
     }
 }

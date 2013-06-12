@@ -17,15 +17,6 @@ namespace FOR_Application
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void login_Forma_Load(object sender, EventArgs e)
-        {
-
-        }
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if ((txtKorisnicko_ime.Text == ("konobar") && txtLozinka.Text == ("konobar")) || (txtKorisnicko_ime.Text == ("kuhar") && txtLozinka.Text == ("kuhar")))

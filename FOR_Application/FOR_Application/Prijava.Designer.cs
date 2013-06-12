@@ -43,6 +43,7 @@
             this.btnLogin.TabIndex = 0;
             this.btnLogin.Text = "Prijavi se";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // label1
             // 
@@ -88,7 +89,6 @@
             this.Controls.Add(this.btnLogin);
             this.Name = "frmPrijava";
             this.Text = "Prijava";
-            this.Load += new System.EventHandler(this.login_Forma_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
