@@ -17,20 +17,14 @@ namespace FOR_Application
             InitializeComponent();
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-            if ((txtKorisnicko_ime.Text == ("konobar") && txtLozinka.Text == ("konobar")) || (txtKorisnicko_ime.Text == ("kuhar") && txtLozinka.Text == ("kuhar")))
-            {
-                frmPregledNarudzbi frmPregled = new frmPregledNarudzbi();
-                frmPregled.Show();
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Niste upisali točne podatke.\nPokušajte ponovno!", "Greška kod prijave!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtKorisnicko_ime.Text = "";
-                txtLozinka.Text = "";
-            }
+
+        }
+
+        private void login_Forma_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

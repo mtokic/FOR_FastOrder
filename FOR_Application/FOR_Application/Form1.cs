@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FOR_Application
 {
-    public partial class frmPregledNarudzbi : Form
+    public partial class pregled_Narudzbi : Form
     {
-        public frmPregledNarudzbi()
+        public pregled_Narudzbi()
         {
             InitializeComponent();
         }
