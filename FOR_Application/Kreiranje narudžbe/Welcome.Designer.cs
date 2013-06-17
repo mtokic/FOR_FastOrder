@@ -50,6 +50,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(317, 132);
             this.pictureBox1.Name = "pictureBox1";
@@ -60,6 +61,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(671, 433);
             this.pictureBox2.Name = "pictureBox2";
@@ -71,6 +73,7 @@
             // btnCreated
             // 
             this.btnCreated.AutoSize = true;
+            this.btnCreated.BackColor = System.Drawing.Color.Transparent;
             this.btnCreated.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnCreated.Location = new System.Drawing.Point(557, 467);
             this.btnCreated.Name = "btnCreated";
@@ -82,6 +85,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(789, 504);
             this.Controls.Add(this.btnCreated);
             this.Controls.Add(this.pictureBox2);

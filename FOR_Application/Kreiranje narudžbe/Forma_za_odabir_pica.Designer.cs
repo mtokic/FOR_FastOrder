@@ -32,7 +32,6 @@
             this.dbListaPica = new System.Windows.Forms.DataGridView();
             this.lstOdabranaPica = new System.Windows.Forms.ListBox();
             this.lblOdabranaPica = new System.Windows.Forms.Label();
-            this.btnIzlazIzPica = new System.Windows.Forms.Button();
             this.btnSpremiOdabirPica = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dbListaPica)).BeginInit();
@@ -50,7 +49,7 @@
             this.dbListaPica.Location = new System.Drawing.Point(12, 9);
             this.dbListaPica.Name = "dbListaPica";
             this.dbListaPica.ReadOnly = true;
-            this.dbListaPica.Size = new System.Drawing.Size(220, 400);
+            this.dbListaPica.Size = new System.Drawing.Size(298, 437);
             this.dbListaPica.TabIndex = 0;
             // 
             // lstOdabranaPica
@@ -59,52 +58,40 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lstOdabranaPica.FormattingEnabled = true;
-            this.lstOdabranaPica.Location = new System.Drawing.Point(238, 54);
+            this.lstOdabranaPica.Location = new System.Drawing.Point(339, 179);
             this.lstOdabranaPica.Name = "lstOdabranaPica";
-            this.lstOdabranaPica.Size = new System.Drawing.Size(215, 355);
+            this.lstOdabranaPica.Size = new System.Drawing.Size(405, 199);
             this.lstOdabranaPica.TabIndex = 1;
             // 
             // lblOdabranaPica
             // 
             this.lblOdabranaPica.AutoSize = true;
-            this.lblOdabranaPica.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblOdabranaPica.Location = new System.Drawing.Point(238, 33);
+            this.lblOdabranaPica.Font = new System.Drawing.Font("Segoe Script", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblOdabranaPica.ForeColor = System.Drawing.Color.White;
+            this.lblOdabranaPica.Location = new System.Drawing.Point(333, 139);
             this.lblOdabranaPica.Name = "lblOdabranaPica";
-            this.lblOdabranaPica.Size = new System.Drawing.Size(116, 18);
+            this.lblOdabranaPica.Size = new System.Drawing.Size(201, 34);
             this.lblOdabranaPica.TabIndex = 5;
             this.lblOdabranaPica.Text = "Odabrane stavke";
-            // 
-            // btnIzlazIzPica
-            // 
-            this.btnIzlazIzPica.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnIzlazIzPica.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnIzlazIzPica.Location = new System.Drawing.Point(502, 358);
-            this.btnIzlazIzPica.Name = "btnIzlazIzPica";
-            this.btnIzlazIzPica.Size = new System.Drawing.Size(166, 51);
-            this.btnIzlazIzPica.TabIndex = 7;
-            this.btnIzlazIzPica.Text = "Izlaz";
-            this.btnIzlazIzPica.UseVisualStyleBackColor = true;
-            this.btnIzlazIzPica.Click += new System.EventHandler(this.btnIzlazIzPica_Click);
             // 
             // btnSpremiOdabirPica
             // 
             this.btnSpremiOdabirPica.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSpremiOdabirPica.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnSpremiOdabirPica.Location = new System.Drawing.Point(502, 216);
+            this.btnSpremiOdabirPica.Font = new System.Drawing.Font("Segoe Script", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnSpremiOdabirPica.Location = new System.Drawing.Point(427, 403);
             this.btnSpremiOdabirPica.Name = "btnSpremiOdabirPica";
-            this.btnSpremiOdabirPica.Size = new System.Drawing.Size(166, 62);
+            this.btnSpremiOdabirPica.Size = new System.Drawing.Size(207, 43);
             this.btnSpremiOdabirPica.TabIndex = 6;
-            this.btnSpremiOdabirPica.Text = "Spermi odabir";
+            this.btnSpremiOdabirPica.Text = "Spremi odabir";
             this.btnSpremiOdabirPica.UseVisualStyleBackColor = true;
+            this.btnSpremiOdabirPica.Click += new System.EventHandler(this.btnSpremiOdabirPica_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(502, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(578, 9);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(166, 161);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -115,9 +102,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(704, 421);
+            this.BackColor = System.Drawing.Color.Maroon;
+            this.ClientSize = new System.Drawing.Size(769, 458);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnIzlazIzPica);
             this.Controls.Add(this.btnSpremiOdabirPica);
             this.Controls.Add(this.lblOdabranaPica);
             this.Controls.Add(this.lstOdabranaPica);
@@ -139,7 +126,6 @@
         private System.Windows.Forms.DataGridView dbListaPica;
         private System.Windows.Forms.ListBox lstOdabranaPica;
         private System.Windows.Forms.Label lblOdabranaPica;
-        private System.Windows.Forms.Button btnIzlazIzPica;
         private System.Windows.Forms.Button btnSpremiOdabirPica;
         private System.Windows.Forms.PictureBox pictureBox1;
     }

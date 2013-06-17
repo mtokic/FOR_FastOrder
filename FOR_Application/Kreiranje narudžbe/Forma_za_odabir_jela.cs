@@ -17,9 +17,11 @@ namespace Kreiranje_narudžbe
             InitializeComponent();
         }
 
-        private void btnIzlazIzJela_Click(object sender, EventArgs e)
+        private void btnSpremiOdabirJela_Click(object sender, EventArgs e)
         {
             frmOdabirJela.ActiveForm.Close();
         }
+
+       
     }
 }

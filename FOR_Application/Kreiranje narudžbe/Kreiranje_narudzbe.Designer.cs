@@ -43,7 +43,7 @@
             this.lblNaruceneStavke = new System.Windows.Forms.Label();
             this.btnNaruci = new System.Windows.Forms.Button();
             this.lblUkupno = new System.Windows.Forms.Label();
-            this.btnUpute = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.msIzbornikHelp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -54,7 +54,7 @@
             dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             dateTimePicker1.Checked = false;
             dateTimePicker1.Enabled = false;
-            dateTimePicker1.Location = new System.Drawing.Point(452, 4);
+            dateTimePicker1.Location = new System.Drawing.Point(446, 4);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             dateTimePicker1.Size = new System.Drawing.Size(125, 20);
@@ -66,7 +66,7 @@
             this.msPomoc});
             this.msIzbornikHelp.Location = new System.Drawing.Point(0, 0);
             this.msIzbornikHelp.Name = "msIzbornikHelp";
-            this.msIzbornikHelp.Size = new System.Drawing.Size(577, 24);
+            this.msIzbornikHelp.Size = new System.Drawing.Size(571, 24);
             this.msIzbornikHelp.TabIndex = 0;
             this.msIzbornikHelp.Text = "menuStrip1";
             // 
@@ -99,6 +99,7 @@
             this.croatianToolStripMenuItem.Name = "croatianToolStripMenuItem";
             this.croatianToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.croatianToolStripMenuItem.Text = "Croatian";
+            this.croatianToolStripMenuItem.Click += new System.EventHandler(this.croatianToolStripMenuItem_Click);
             // 
             // msIzlaz
             // 
@@ -108,8 +109,8 @@
             // 
             // btnOdaberiJelo
             // 
-            this.btnOdaberiJelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnOdaberiJelo.Location = new System.Drawing.Point(15, 414);
+            this.btnOdaberiJelo.Font = new System.Drawing.Font("Segoe Script", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnOdaberiJelo.Location = new System.Drawing.Point(12, 220);
             this.btnOdaberiJelo.Name = "btnOdaberiJelo";
             this.btnOdaberiJelo.Size = new System.Drawing.Size(157, 65);
             this.btnOdaberiJelo.TabIndex = 2;
@@ -119,8 +120,8 @@
             // 
             // btnOdaberiPice
             // 
-            this.btnOdaberiPice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnOdaberiPice.Location = new System.Drawing.Point(15, 321);
+            this.btnOdaberiPice.Font = new System.Drawing.Font("Segoe Script", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnOdaberiPice.Location = new System.Drawing.Point(12, 308);
             this.btnOdaberiPice.Name = "btnOdaberiPice";
             this.btnOdaberiPice.Size = new System.Drawing.Size(157, 67);
             this.btnOdaberiPice.TabIndex = 3;
@@ -131,7 +132,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(178, 321);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 48);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(166, 161);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -141,27 +142,27 @@
             // lstNaruceneStavke
             // 
             this.lstNaruceneStavke.FormattingEnabled = true;
-            this.lstNaruceneStavke.Location = new System.Drawing.Point(12, 44);
+            this.lstNaruceneStavke.Location = new System.Drawing.Point(199, 134);
             this.lstNaruceneStavke.Name = "lstNaruceneStavke";
-            this.lstNaruceneStavke.Size = new System.Drawing.Size(553, 238);
+            this.lstNaruceneStavke.Size = new System.Drawing.Size(347, 342);
             this.lstNaruceneStavke.TabIndex = 5;
             // 
             // lblNaruceneStavke
             // 
             this.lblNaruceneStavke.AutoSize = true;
-            this.lblNaruceneStavke.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblNaruceneStavke.Location = new System.Drawing.Point(229, 24);
+            this.lblNaruceneStavke.Font = new System.Drawing.Font("Segoe Script", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblNaruceneStavke.Location = new System.Drawing.Point(292, 101);
             this.lblNaruceneStavke.Name = "lblNaruceneStavke";
-            this.lblNaruceneStavke.Size = new System.Drawing.Size(115, 17);
+            this.lblNaruceneStavke.Size = new System.Drawing.Size(178, 30);
             this.lblNaruceneStavke.TabIndex = 6;
             this.lblNaruceneStavke.Text = "Naručene stavke";
             // 
             // btnNaruci
             // 
-            this.btnNaruci.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnNaruci.Location = new System.Drawing.Point(350, 321);
+            this.btnNaruci.Font = new System.Drawing.Font("Segoe Script", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnNaruci.Location = new System.Drawing.Point(371, 482);
             this.btnNaruci.Name = "btnNaruci";
-            this.btnNaruci.Size = new System.Drawing.Size(215, 67);
+            this.btnNaruci.Size = new System.Drawing.Size(175, 60);
             this.btnNaruci.TabIndex = 7;
             this.btnNaruci.Text = "NARUČI";
             this.btnNaruci.UseVisualStyleBackColor = true;
@@ -169,30 +170,31 @@
             // lblUkupno
             // 
             this.lblUkupno.AutoSize = true;
-            this.lblUkupno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblUkupno.Location = new System.Drawing.Point(347, 292);
+            this.lblUkupno.Font = new System.Drawing.Font("Segoe Script", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblUkupno.Location = new System.Drawing.Point(193, 482);
             this.lblUkupno.Name = "lblUkupno";
-            this.lblUkupno.Size = new System.Drawing.Size(61, 17);
+            this.lblUkupno.Size = new System.Drawing.Size(73, 31);
             this.lblUkupno.TabIndex = 8;
-            this.lblUkupno.Text = "Ukupno:";
+            this.lblUkupno.Text = "Total:";
             // 
-            // btnUpute
+            // label1
             // 
-            this.btnUpute.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnUpute.Location = new System.Drawing.Point(350, 410);
-            this.btnUpute.Name = "btnUpute";
-            this.btnUpute.Size = new System.Drawing.Size(215, 67);
-            this.btnUpute.TabIndex = 9;
-            this.btnUpute.Text = "UPUTE";
-            this.btnUpute.UseVisualStyleBackColor = true;
-            this.btnUpute.Click += new System.EventHandler(this.btnUpute_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe Script", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Location = new System.Drawing.Point(211, 48);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(321, 53);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Restoran Victoria";
             // 
             // frmKreiranjeNarudzbeGlavna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(577, 491);
-            this.Controls.Add(this.btnUpute);
+            this.BackColor = System.Drawing.Color.Maroon;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(571, 565);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblUkupno);
             this.Controls.Add(this.btnNaruci);
             this.Controls.Add(this.lblNaruceneStavke);
@@ -231,7 +233,7 @@
         private System.Windows.Forms.Label lblNaruceneStavke;
         private System.Windows.Forms.Button btnNaruci;
         private System.Windows.Forms.Label lblUkupno;
-        private System.Windows.Forms.Button btnUpute;
+        private System.Windows.Forms.Label label1;
     }
 }
 

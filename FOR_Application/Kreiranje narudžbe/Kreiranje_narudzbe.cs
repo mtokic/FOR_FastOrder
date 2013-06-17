@@ -29,13 +29,15 @@ namespace Kreiranje_narudžbe
             odabir_pica.Show();
         }
 
-        private void btnUpute_Click(object sender, EventArgs e)
+        private void croatianToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmUpute odaberi_upute = new frmUpute();
             odaberi_upute.Show();
-
         }
 
+        
+
+     
         
     }
 }
