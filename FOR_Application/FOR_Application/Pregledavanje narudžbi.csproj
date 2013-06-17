@@ -63,6 +63,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="pi2013FastOrderdbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pi2013FastOrderdbDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Pregled narudzbi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +106,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="pi2013FastOrderdbDataSet.xsc">
+      <DependentUpon>pi2013FastOrderdbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="pi2013FastOrderdbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pi2013FastOrderdbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pi2013FastOrderdbDataSet.xss">
+      <DependentUpon>pi2013FastOrderdbDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
