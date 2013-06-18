@@ -63,10 +63,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="pi2013FastOrderdbDataSet.cs">
-      <DependentUpon>pi2013FastOrderdbDataSet.xsd</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="pi2013FastOrderdbDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -92,6 +88,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Unos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Unos.Designer.cs">
+      <DependentUpon>Unos.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Pregled narudzbi.resx">
       <DependentUpon>Pregled narudzbi.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,6 +112,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Unos.resx">
+      <DependentUpon>Unos.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="pi2013FastOrderdbDataSet.xsc">
       <DependentUpon>pi2013FastOrderdbDataSet.xsd</DependentUpon>
     </None>

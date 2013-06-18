@@ -30,14 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnGotovo = new System.Windows.Forms.Button();
             this.btnKreiraj = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.izbornikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.zatvoriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pomoćToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.iDnarudžbeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vrijemeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,34 +43,32 @@
             this.fKIDzaposlenikaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.narudžbaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.pi2013FastOrderdbDataSet = new FOR_Application.pi2013FastOrderdbDataSet();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.izbornikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.zatvoriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pomoćToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.artikliBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pi2013FastOrderdbDataSet1 = new FOR_Application.pi2013FastOrderdbDataSet();
             this.stavkeNarudzbeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.narudžbaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.narudžbaTableAdapter = new FOR_Application.pi2013FastOrderdbDataSetTableAdapters.NarudžbaTableAdapter();
             this.stavke_narudzbeTableAdapter = new FOR_Application.pi2013FastOrderdbDataSetTableAdapters.Stavke_narudzbeTableAdapter();
             this.pi2013FastOrderdbDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.pi2013FastOrderdbDataSet1 = new FOR_Application.pi2013FastOrderdbDataSet();
-            this.artikliBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.artikliTableAdapter = new FOR_Application.pi2013FastOrderdbDataSetTableAdapters.ArtikliTableAdapter();
-            this.iDartiklaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nazivDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
-            this.jediničnacijenaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.opisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fKIDjedinicamjereDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.narudžbaBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pi2013FastOrderdbDataSet)).BeginInit();
+            this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.artikliBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pi2013FastOrderdbDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stavkeNarudzbeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.narudžbaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pi2013FastOrderdbDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pi2013FastOrderdbDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.artikliBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -86,6 +80,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.button1);
             this.splitContainer1.Panel1.Controls.Add(this.btnGotovo);
             this.splitContainer1.Panel1.Controls.Add(this.btnKreiraj);
             this.splitContainer1.Panel1.Controls.Add(this.dataGridView1);
@@ -94,11 +89,20 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.AutoScroll = true;
-            this.splitContainer1.Panel2.Controls.Add(this.dataGridView2);
             this.splitContainer1.Panel2.Controls.Add(this.listBox1);
             this.splitContainer1.Size = new System.Drawing.Size(1045, 571);
             this.splitContainer1.SplitterDistance = 348;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(742, 307);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(97, 38);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Dodaj artikl";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnGotovo
             // 
@@ -139,45 +143,6 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1039, 272);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.izbornikToolStripMenuItem,
-            this.pomoćToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1045, 24);
-            this.menuStrip1.TabIndex = 3;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // izbornikToolStripMenuItem
-            // 
-            this.izbornikToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.zatvoriToolStripMenuItem});
-            this.izbornikToolStripMenuItem.Name = "izbornikToolStripMenuItem";
-            this.izbornikToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.izbornikToolStripMenuItem.Text = "Izbornik";
-            // 
-            // zatvoriToolStripMenuItem
-            // 
-            this.zatvoriToolStripMenuItem.Name = "zatvoriToolStripMenuItem";
-            this.zatvoriToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
-            this.zatvoriToolStripMenuItem.Text = "Zatvori";
-            // 
-            // pomoćToolStripMenuItem
-            // 
-            this.pomoćToolStripMenuItem.Name = "pomoćToolStripMenuItem";
-            this.pomoćToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
-            this.pomoćToolStripMenuItem.Text = "Pomoć";
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(646, 3);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(396, 212);
-            this.listBox1.TabIndex = 1;
             // 
             // iDnarudžbeDataGridViewTextBoxColumn
             // 
@@ -231,6 +196,55 @@
             this.pi2013FastOrderdbDataSet.DataSetName = "pi2013FastOrderdbDataSet";
             this.pi2013FastOrderdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.izbornikToolStripMenuItem,
+            this.pomoćToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1045, 24);
+            this.menuStrip1.TabIndex = 3;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // izbornikToolStripMenuItem
+            // 
+            this.izbornikToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.zatvoriToolStripMenuItem});
+            this.izbornikToolStripMenuItem.Name = "izbornikToolStripMenuItem";
+            this.izbornikToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.izbornikToolStripMenuItem.Text = "Izbornik";
+            // 
+            // zatvoriToolStripMenuItem
+            // 
+            this.zatvoriToolStripMenuItem.Name = "zatvoriToolStripMenuItem";
+            this.zatvoriToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.zatvoriToolStripMenuItem.Text = "Zatvori";
+            // 
+            // pomoćToolStripMenuItem
+            // 
+            this.pomoćToolStripMenuItem.Name = "pomoćToolStripMenuItem";
+            this.pomoćToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.pomoćToolStripMenuItem.Text = "Pomoć";
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(646, 3);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(396, 212);
+            this.listBox1.TabIndex = 1;
+            // 
+            // artikliBindingSource
+            // 
+            this.artikliBindingSource.DataMember = "Artikli";
+            this.artikliBindingSource.DataSource = this.pi2013FastOrderdbDataSet1;
+            // 
+            // pi2013FastOrderdbDataSet1
+            // 
+            this.pi2013FastOrderdbDataSet1.DataSetName = "pi2013FastOrderdbDataSet";
+            this.pi2013FastOrderdbDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // stavkeNarudzbeBindingSource
             // 
             this.stavkeNarudzbeBindingSource.DataMember = "Stavke narudzbe";
@@ -254,66 +268,9 @@
             this.pi2013FastOrderdbDataSetBindingSource.DataSource = this.pi2013FastOrderdbDataSet;
             this.pi2013FastOrderdbDataSetBindingSource.Position = 0;
             // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AutoGenerateColumns = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDartiklaDataGridViewTextBoxColumn,
-            this.nazivDataGridViewImageColumn,
-            this.jediničnacijenaDataGridViewTextBoxColumn,
-            this.opisDataGridViewTextBoxColumn,
-            this.fKIDjedinicamjereDataGridViewTextBoxColumn});
-            this.dataGridView2.DataSource = this.artikliBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(637, 216);
-            this.dataGridView2.TabIndex = 2;
-            this.dataGridView2.SelectionChanged += new System.EventHandler(this.dataGridView2_SelectionChanged);
-            // 
-            // pi2013FastOrderdbDataSet1
-            // 
-            this.pi2013FastOrderdbDataSet1.DataSetName = "pi2013FastOrderdbDataSet";
-            this.pi2013FastOrderdbDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // artikliBindingSource
-            // 
-            this.artikliBindingSource.DataMember = "Artikli";
-            this.artikliBindingSource.DataSource = this.pi2013FastOrderdbDataSet1;
-            // 
             // artikliTableAdapter
             // 
             this.artikliTableAdapter.ClearBeforeFill = true;
-            // 
-            // iDartiklaDataGridViewTextBoxColumn
-            // 
-            this.iDartiklaDataGridViewTextBoxColumn.DataPropertyName = "ID_artikla";
-            this.iDartiklaDataGridViewTextBoxColumn.HeaderText = "ID_artikla";
-            this.iDartiklaDataGridViewTextBoxColumn.Name = "iDartiklaDataGridViewTextBoxColumn";
-            // 
-            // nazivDataGridViewImageColumn
-            // 
-            this.nazivDataGridViewImageColumn.DataPropertyName = "Naziv";
-            this.nazivDataGridViewImageColumn.HeaderText = "Naziv artikla";
-            this.nazivDataGridViewImageColumn.Name = "nazivDataGridViewImageColumn";
-            // 
-            // jediničnacijenaDataGridViewTextBoxColumn
-            // 
-            this.jediničnacijenaDataGridViewTextBoxColumn.DataPropertyName = "Jedinična_cijena";
-            this.jediničnacijenaDataGridViewTextBoxColumn.HeaderText = "Jedinična_cijena";
-            this.jediničnacijenaDataGridViewTextBoxColumn.Name = "jediničnacijenaDataGridViewTextBoxColumn";
-            // 
-            // opisDataGridViewTextBoxColumn
-            // 
-            this.opisDataGridViewTextBoxColumn.DataPropertyName = "Opis";
-            this.opisDataGridViewTextBoxColumn.HeaderText = "Opis";
-            this.opisDataGridViewTextBoxColumn.Name = "opisDataGridViewTextBoxColumn";
-            // 
-            // fKIDjedinicamjereDataGridViewTextBoxColumn
-            // 
-            this.fKIDjedinicamjereDataGridViewTextBoxColumn.DataPropertyName = "FK_ID_jedinica_mjere";
-            this.fKIDjedinicamjereDataGridViewTextBoxColumn.HeaderText = "FK_ID_jedinica_mjere";
-            this.fKIDjedinicamjereDataGridViewTextBoxColumn.Name = "fKIDjedinicamjereDataGridViewTextBoxColumn";
             // 
             // frmPregledNarudzbi
             // 
@@ -331,16 +288,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.narudžbaBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pi2013FastOrderdbDataSet)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.artikliBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pi2013FastOrderdbDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stavkeNarudzbeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.narudžbaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pi2013FastOrderdbDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pi2013FastOrderdbDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.artikliBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -370,15 +326,10 @@
         private System.Windows.Forms.BindingSource stavkeNarudzbeBindingSource;
         private pi2013FastOrderdbDataSetTableAdapters.Stavke_narudzbeTableAdapter stavke_narudzbeTableAdapter;
         private System.Windows.Forms.BindingSource pi2013FastOrderdbDataSetBindingSource;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private pi2013FastOrderdbDataSet pi2013FastOrderdbDataSet1;
         private System.Windows.Forms.BindingSource artikliBindingSource;
         private pi2013FastOrderdbDataSetTableAdapters.ArtikliTableAdapter artikliTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDartiklaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewImageColumn nazivDataGridViewImageColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn jediničnacijenaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn opisDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fKIDjedinicamjereDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button1;
     }
 }
 

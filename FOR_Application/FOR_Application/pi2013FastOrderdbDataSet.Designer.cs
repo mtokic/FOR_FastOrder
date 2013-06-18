@@ -565,7 +565,7 @@ namespace FOR_Application {
             base.Tables.Add(this.tableStavke_racuna);
             this.relationFK_Artikli_Jedinice_mjere = new global::System.Data.DataRelation("FK_Artikli_Jedinice mjere", new global::System.Data.DataColumn[] {
                         this.tableJedinice_mjere.ID_jedinica_mjereColumn}, new global::System.Data.DataColumn[] {
-                        this.tableArtikli.FK_ID_jedinica_mjereColumn}, false);
+                        this.tableArtikli.Jedinica_mjereColumn}, false);
             this.Relations.Add(this.relationFK_Artikli_Jedinice_mjere);
             this.relationFK_Jelovnik_Evidencija_o_zaposlenima = new global::System.Data.DataRelation("FK_Jelovnik_Evidencija o zaposlenima", new global::System.Data.DataColumn[] {
                         this.tableEvidencija_o_zaposlenima.ID_zaposlenikaColumn}, new global::System.Data.DataColumn[] {
@@ -810,9 +810,9 @@ namespace FOR_Application {
             
             private global::System.Data.DataColumn columnJedinična_cijena;
             
-            private global::System.Data.DataColumn columnOpis;
+            private global::System.Data.DataColumn columnOpis_artikla;
             
-            private global::System.Data.DataColumn columnFK_ID_jedinica_mjere;
+            private global::System.Data.DataColumn columnJedinica_mjere;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -873,17 +873,17 @@ namespace FOR_Application {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn OpisColumn {
+            public global::System.Data.DataColumn Opis_artiklaColumn {
                 get {
-                    return this.columnOpis;
+                    return this.columnOpis_artikla;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn FK_ID_jedinica_mjereColumn {
+            public global::System.Data.DataColumn Jedinica_mjereColumn {
                 get {
-                    return this.columnFK_ID_jedinica_mjere;
+                    return this.columnJedinica_mjere;
                 }
             }
             
@@ -924,13 +924,13 @@ namespace FOR_Application {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ArtikliRow AddArtikliRow(int ID_artikla, byte[] Naziv, double Jedinična_cijena, string Opis, Jedinice_mjereRow parentJedinice_mjereRowByFK_Artikli_Jedinice_mjere) {
+            public ArtikliRow AddArtikliRow(int ID_artikla, string Naziv, double Jedinična_cijena, string Opis_artikla, Jedinice_mjereRow parentJedinice_mjereRowByFK_Artikli_Jedinice_mjere) {
                 ArtikliRow rowArtikliRow = ((ArtikliRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID_artikla,
                         Naziv,
                         Jedinična_cijena,
-                        Opis,
+                        Opis_artikla,
                         null};
                 if ((parentJedinice_mjereRowByFK_Artikli_Jedinice_mjere != null)) {
                     columnValuesArray[4] = parentJedinice_mjereRowByFK_Artikli_Jedinice_mjere[0];
@@ -967,8 +967,8 @@ namespace FOR_Application {
                 this.columnID_artikla = base.Columns["ID_artikla"];
                 this.columnNaziv = base.Columns["Naziv"];
                 this.columnJedinična_cijena = base.Columns["Jedinična_cijena"];
-                this.columnOpis = base.Columns["Opis"];
-                this.columnFK_ID_jedinica_mjere = base.Columns["FK_ID_jedinica_mjere"];
+                this.columnOpis_artikla = base.Columns["Opis_artikla"];
+                this.columnJedinica_mjere = base.Columns["Jedinica_mjere"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -976,22 +976,24 @@ namespace FOR_Application {
             private void InitClass() {
                 this.columnID_artikla = new global::System.Data.DataColumn("ID_artikla", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID_artikla);
-                this.columnNaziv = new global::System.Data.DataColumn("Naziv", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                this.columnNaziv = new global::System.Data.DataColumn("Naziv", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNaziv);
                 this.columnJedinična_cijena = new global::System.Data.DataColumn("Jedinična_cijena", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnJedinična_cijena);
-                this.columnOpis = new global::System.Data.DataColumn("Opis", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnOpis);
-                this.columnFK_ID_jedinica_mjere = new global::System.Data.DataColumn("FK_ID_jedinica_mjere", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFK_ID_jedinica_mjere);
+                this.columnOpis_artikla = new global::System.Data.DataColumn("Opis_artikla", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOpis_artikla);
+                this.columnJedinica_mjere = new global::System.Data.DataColumn("Jedinica_mjere", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnJedinica_mjere);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID_artikla}, true));
                 this.columnID_artikla.AllowDBNull = false;
                 this.columnID_artikla.Unique = true;
                 this.columnNaziv.AllowDBNull = false;
+                this.columnNaziv.MaxLength = 50;
                 this.columnJedinična_cijena.AllowDBNull = false;
-                this.columnOpis.MaxLength = 50;
-                this.columnFK_ID_jedinica_mjere.AllowDBNull = false;
+                this.columnOpis_artikla.MaxLength = 50;
+                this.columnJedinica_mjere.AllowDBNull = false;
+                this.columnJedinica_mjere.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1536,7 +1538,7 @@ namespace FOR_Application {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Jedinice_mjereRow AddJedinice_mjereRow(int ID_jedinica_mjere, string Naziv) {
+            public Jedinice_mjereRow AddJedinice_mjereRow(string ID_jedinica_mjere, string Naziv) {
                 Jedinice_mjereRow rowJedinice_mjereRow = ((Jedinice_mjereRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID_jedinica_mjere,
@@ -1548,7 +1550,7 @@ namespace FOR_Application {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Jedinice_mjereRow FindByID_jedinica_mjere(int ID_jedinica_mjere) {
+            public Jedinice_mjereRow FindByID_jedinica_mjere(string ID_jedinica_mjere) {
                 return ((Jedinice_mjereRow)(this.Rows.Find(new object[] {
                             ID_jedinica_mjere})));
             }
@@ -1577,7 +1579,7 @@ namespace FOR_Application {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnID_jedinica_mjere = new global::System.Data.DataColumn("ID_jedinica_mjere", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnID_jedinica_mjere = new global::System.Data.DataColumn("ID_jedinica_mjere", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID_jedinica_mjere);
                 this.columnNaziv = new global::System.Data.DataColumn("Naziv", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNaziv);
@@ -1585,6 +1587,7 @@ namespace FOR_Application {
                                 this.columnID_jedinica_mjere}, true));
                 this.columnID_jedinica_mjere.AllowDBNull = false;
                 this.columnID_jedinica_mjere.Unique = true;
+                this.columnID_jedinica_mjere.MaxLength = 50;
                 this.columnNaziv.AllowDBNull = false;
                 this.columnNaziv.MaxLength = 10;
             }
@@ -4619,9 +4622,9 @@ namespace FOR_Application {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public byte[] Naziv {
+            public string Naziv {
                 get {
-                    return ((byte[])(this[this.tableArtikli.NazivColumn]));
+                    return ((string)(this[this.tableArtikli.NazivColumn]));
                 }
                 set {
                     this[this.tableArtikli.NazivColumn] = value;
@@ -4641,28 +4644,28 @@ namespace FOR_Application {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Opis {
+            public string Opis_artikla {
                 get {
                     try {
-                        return ((string)(this[this.tableArtikli.OpisColumn]));
+                        return ((string)(this[this.tableArtikli.Opis_artiklaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Opis\' in table \'Artikli\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Opis_artikla\' in table \'Artikli\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableArtikli.OpisColumn] = value;
+                    this[this.tableArtikli.Opis_artiklaColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int FK_ID_jedinica_mjere {
+            public string Jedinica_mjere {
                 get {
-                    return ((int)(this[this.tableArtikli.FK_ID_jedinica_mjereColumn]));
+                    return ((string)(this[this.tableArtikli.Jedinica_mjereColumn]));
                 }
                 set {
-                    this[this.tableArtikli.FK_ID_jedinica_mjereColumn] = value;
+                    this[this.tableArtikli.Jedinica_mjereColumn] = value;
                 }
             }
             
@@ -4679,14 +4682,14 @@ namespace FOR_Application {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsOpisNull() {
-                return this.IsNull(this.tableArtikli.OpisColumn);
+            public bool IsOpis_artiklaNull() {
+                return this.IsNull(this.tableArtikli.Opis_artiklaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetOpisNull() {
-                this[this.tableArtikli.OpisColumn] = global::System.Convert.DBNull;
+            public void SetOpis_artiklaNull() {
+                this[this.tableArtikli.Opis_artiklaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4870,9 +4873,9 @@ namespace FOR_Application {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int ID_jedinica_mjere {
+            public string ID_jedinica_mjere {
                 get {
-                    return ((int)(this[this.tableJedinice_mjere.ID_jedinica_mjereColumn]));
+                    return ((string)(this[this.tableJedinice_mjere.ID_jedinica_mjereColumn]));
                 }
                 set {
                     this[this.tableJedinice_mjere.ID_jedinica_mjereColumn] = value;
@@ -6285,45 +6288,45 @@ namespace FOR_Application.pi2013FastOrderdbDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("ID_artikla", "ID_artikla");
             tableMapping.ColumnMappings.Add("Naziv", "Naziv");
             tableMapping.ColumnMappings.Add("Jedinična_cijena", "Jedinična_cijena");
-            tableMapping.ColumnMappings.Add("Opis", "Opis");
-            tableMapping.ColumnMappings.Add("FK_ID_jedinica_mjere", "FK_ID_jedinica_mjere");
+            tableMapping.ColumnMappings.Add("Opis_artikla", "Opis_artikla");
+            tableMapping.ColumnMappings.Add("Jedinica_mjere", "Jedinica_mjere");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Artikli] WHERE (([ID_artikla] = @Original_ID_artikla) AND ([Naziv] = @Original_Naziv) AND ([Jedinična_cijena] = @Original_Jedinična_cijena) AND ((@IsNull_Opis = 1 AND [Opis] IS NULL) OR ([Opis] = @Original_Opis)) AND ([FK_ID_jedinica_mjere] = @Original_FK_ID_jedinica_mjere))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Artikli] WHERE (([ID_artikla] = @Original_ID_artikla) AND ([Naziv] = @Original_Naziv) AND ([Jedinična_cijena] = @Original_Jedinična_cijena) AND ((@IsNull_Opis_artikla = 1 AND [Opis_artikla] IS NULL) OR ([Opis_artikla] = @Original_Opis_artikla)) AND ([Jedinica_mjere] = @Original_Jedinica_mjere))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_artikla", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_artikla", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Naziv", global::System.Data.SqlDbType.VarBinary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Naziv", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Naziv", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Naziv", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Jedinična_cijena", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Jedinična_cijena", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Opis", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Opis", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Opis", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Opis", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FK_ID_jedinica_mjere", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FK_ID_jedinica_mjere", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Opis_artikla", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Opis_artikla", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Opis_artikla", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Opis_artikla", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Jedinica_mjere", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Jedinica_mjere", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Artikli] ([ID_artikla], [Naziv], [Jedinična_cijena], [Opis], [FK_ID_jedinica_mjere]) VALUES (@ID_artikla, @Naziv, @Jedinična_cijena, @Opis, @FK_ID_jedinica_mjere);
-SELECT ID_artikla, Naziv, Jedinična_cijena, Opis, FK_ID_jedinica_mjere FROM Artikli WHERE (ID_artikla = @ID_artikla)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Artikli] ([ID_artikla], [Naziv], [Jedinična_cijena], [Opis_artikla], [Jedinica_mjere]) VALUES (@ID_artikla, @Naziv, @Jedinična_cijena, @Opis_artikla, @Jedinica_mjere);
+SELECT ID_artikla, Naziv, Jedinična_cijena, Opis_artikla, Jedinica_mjere FROM Artikli WHERE (ID_artikla = @ID_artikla)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_artikla", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_artikla", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Naziv", global::System.Data.SqlDbType.VarBinary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Naziv", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Naziv", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Naziv", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Jedinična_cijena", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Jedinična_cijena", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Opis", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Opis", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FK_ID_jedinica_mjere", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FK_ID_jedinica_mjere", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Opis_artikla", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Opis_artikla", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Jedinica_mjere", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Jedinica_mjere", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Artikli] SET [ID_artikla] = @ID_artikla, [Naziv] = @Naziv, [Jedinična_cijena] = @Jedinična_cijena, [Opis] = @Opis, [FK_ID_jedinica_mjere] = @FK_ID_jedinica_mjere WHERE (([ID_artikla] = @Original_ID_artikla) AND ([Naziv] = @Original_Naziv) AND ([Jedinična_cijena] = @Original_Jedinična_cijena) AND ((@IsNull_Opis = 1 AND [Opis] IS NULL) OR ([Opis] = @Original_Opis)) AND ([FK_ID_jedinica_mjere] = @Original_FK_ID_jedinica_mjere));
-SELECT ID_artikla, Naziv, Jedinična_cijena, Opis, FK_ID_jedinica_mjere FROM Artikli WHERE (ID_artikla = @ID_artikla)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Artikli] SET [ID_artikla] = @ID_artikla, [Naziv] = @Naziv, [Jedinična_cijena] = @Jedinična_cijena, [Opis_artikla] = @Opis_artikla, [Jedinica_mjere] = @Jedinica_mjere WHERE (([ID_artikla] = @Original_ID_artikla) AND ([Naziv] = @Original_Naziv) AND ([Jedinična_cijena] = @Original_Jedinična_cijena) AND ((@IsNull_Opis_artikla = 1 AND [Opis_artikla] IS NULL) OR ([Opis_artikla] = @Original_Opis_artikla)) AND ([Jedinica_mjere] = @Original_Jedinica_mjere));
+SELECT ID_artikla, Naziv, Jedinična_cijena, Opis_artikla, Jedinica_mjere FROM Artikli WHERE (ID_artikla = @ID_artikla)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_artikla", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_artikla", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Naziv", global::System.Data.SqlDbType.VarBinary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Naziv", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Naziv", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Naziv", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Jedinična_cijena", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Jedinična_cijena", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Opis", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Opis", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FK_ID_jedinica_mjere", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FK_ID_jedinica_mjere", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Opis_artikla", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Opis_artikla", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Jedinica_mjere", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Jedinica_mjere", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_artikla", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_artikla", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Naziv", global::System.Data.SqlDbType.VarBinary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Naziv", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Naziv", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Naziv", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Jedinična_cijena", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Jedinična_cijena", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Opis", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Opis", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Opis", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Opis", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FK_ID_jedinica_mjere", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FK_ID_jedinica_mjere", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Opis_artikla", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Opis_artikla", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Opis_artikla", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Opis_artikla", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Jedinica_mjere", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Jedinica_mjere", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6339,8 +6342,8 @@ SELECT ID_artikla, Naziv, Jedinična_cijena, Opis, FK_ID_jedinica_mjere FROM Art
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID_artikla, Naziv, Jedinična_cijena, Opis, FK_ID_jedinica_mjere FROM dbo.A" +
-                "rtikli";
+            this._commandCollection[0].CommandText = "SELECT ID_artikla, Naziv, Jedinična_cijena, Opis_artikla, Jedinica_mjere FROM dbo" +
+                ".Artikli";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -6401,24 +6404,29 @@ SELECT ID_artikla, Naziv, Jedinična_cijena, Opis, FK_ID_jedinica_mjere FROM Art
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID_artikla, byte[] Original_Naziv, double Original_Jedinična_cijena, string Original_Opis, int Original_FK_ID_jedinica_mjere) {
+        public virtual int Delete(int Original_ID_artikla, string Original_Naziv, double Original_Jedinična_cijena, string Original_Opis_artikla, string Original_Jedinica_mjere) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID_artikla));
             if ((Original_Naziv == null)) {
                 throw new global::System.ArgumentNullException("Original_Naziv");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((byte[])(Original_Naziv));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Naziv));
             }
             this.Adapter.DeleteCommand.Parameters[2].Value = ((double)(Original_Jedinična_cijena));
-            if ((Original_Opis == null)) {
+            if ((Original_Opis_artikla == null)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Opis));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Opis_artikla));
             }
-            this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_FK_ID_jedinica_mjere));
+            if ((Original_Jedinica_mjere == null)) {
+                throw new global::System.ArgumentNullException("Original_Jedinica_mjere");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_Jedinica_mjere));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6439,22 +6447,27 @@ SELECT ID_artikla, Naziv, Jedinična_cijena, Opis, FK_ID_jedinica_mjere FROM Art
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int ID_artikla, byte[] Naziv, double Jedinična_cijena, string Opis, int FK_ID_jedinica_mjere) {
+        public virtual int Insert(int ID_artikla, string Naziv, double Jedinična_cijena, string Opis_artikla, string Jedinica_mjere) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID_artikla));
             if ((Naziv == null)) {
                 throw new global::System.ArgumentNullException("Naziv");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((byte[])(Naziv));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Naziv));
             }
             this.Adapter.InsertCommand.Parameters[2].Value = ((double)(Jedinična_cijena));
-            if ((Opis == null)) {
+            if ((Opis_artikla == null)) {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Opis));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Opis_artikla));
             }
-            this.Adapter.InsertCommand.Parameters[4].Value = ((int)(FK_ID_jedinica_mjere));
+            if ((Jedinica_mjere == null)) {
+                throw new global::System.ArgumentNullException("Jedinica_mjere");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Jedinica_mjere));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6475,39 +6488,49 @@ SELECT ID_artikla, Naziv, Jedinična_cijena, Opis, FK_ID_jedinica_mjere FROM Art
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int ID_artikla, byte[] Naziv, double Jedinična_cijena, string Opis, int FK_ID_jedinica_mjere, int Original_ID_artikla, byte[] Original_Naziv, double Original_Jedinična_cijena, string Original_Opis, int Original_FK_ID_jedinica_mjere) {
+        public virtual int Update(int ID_artikla, string Naziv, double Jedinična_cijena, string Opis_artikla, string Jedinica_mjere, int Original_ID_artikla, string Original_Naziv, double Original_Jedinična_cijena, string Original_Opis_artikla, string Original_Jedinica_mjere) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ID_artikla));
             if ((Naziv == null)) {
                 throw new global::System.ArgumentNullException("Naziv");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((byte[])(Naziv));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Naziv));
             }
             this.Adapter.UpdateCommand.Parameters[2].Value = ((double)(Jedinična_cijena));
-            if ((Opis == null)) {
+            if ((Opis_artikla == null)) {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Opis));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Opis_artikla));
             }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(FK_ID_jedinica_mjere));
+            if ((Jedinica_mjere == null)) {
+                throw new global::System.ArgumentNullException("Jedinica_mjere");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Jedinica_mjere));
+            }
             this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_ID_artikla));
             if ((Original_Naziv == null)) {
                 throw new global::System.ArgumentNullException("Original_Naziv");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((byte[])(Original_Naziv));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_Naziv));
             }
             this.Adapter.UpdateCommand.Parameters[7].Value = ((double)(Original_Jedinična_cijena));
-            if ((Original_Opis == null)) {
+            if ((Original_Opis_artikla == null)) {
                 this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_Opis));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_Opis_artikla));
             }
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_FK_ID_jedinica_mjere));
+            if ((Original_Jedinica_mjere == null)) {
+                throw new global::System.ArgumentNullException("Original_Jedinica_mjere");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Jedinica_mjere));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6528,8 +6551,8 @@ SELECT ID_artikla, Naziv, Jedinična_cijena, Opis, FK_ID_jedinica_mjere FROM Art
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(byte[] Naziv, double Jedinična_cijena, string Opis, int FK_ID_jedinica_mjere, int Original_ID_artikla, byte[] Original_Naziv, double Original_Jedinična_cijena, string Original_Opis, int Original_FK_ID_jedinica_mjere) {
-            return this.Update(Original_ID_artikla, Naziv, Jedinična_cijena, Opis, FK_ID_jedinica_mjere, Original_ID_artikla, Original_Naziv, Original_Jedinična_cijena, Original_Opis, Original_FK_ID_jedinica_mjere);
+        public virtual int Update(string Naziv, double Jedinična_cijena, string Opis_artikla, string Jedinica_mjere, int Original_ID_artikla, string Original_Naziv, double Original_Jedinična_cijena, string Original_Opis_artikla, string Original_Jedinica_mjere) {
+            return this.Update(Original_ID_artikla, Naziv, Jedinična_cijena, Opis_artikla, Jedinica_mjere, Original_ID_artikla, Original_Naziv, Original_Jedinična_cijena, Original_Opis_artikla, Original_Jedinica_mjere);
         }
     }
     
@@ -7074,7 +7097,7 @@ SELECT ID_zaposlenika, Radno_mjesto, Ime, Prezime, Adresa FROM [Evidencija o zap
             this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Jedinice mjere] WHERE (([ID_jedinica_mjere] = @Original_ID_jed" +
                 "inica_mjere) AND ([Naziv] = @Original_Naziv))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_jedinica_mjere", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_jedinica_mjere", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_jedinica_mjere", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_jedinica_mjere", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Naziv", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Naziv", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
@@ -7082,16 +7105,16 @@ SELECT ID_zaposlenika, Radno_mjesto, Ime, Prezime, Adresa FROM [Evidencija o zap
                 "inica_mjere, @Naziv);\r\nSELECT ID_jedinica_mjere, Naziv FROM [Jedinice mjere] WHE" +
                 "RE (ID_jedinica_mjere = @ID_jedinica_mjere)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_jedinica_mjere", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_jedinica_mjere", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_jedinica_mjere", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_jedinica_mjere", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Naziv", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Naziv", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Jedinice mjere] SET [ID_jedinica_mjere] = @ID_jedinica_mjere, [Naziv] = @Naziv WHERE (([ID_jedinica_mjere] = @Original_ID_jedinica_mjere) AND ([Naziv] = @Original_Naziv));
 SELECT ID_jedinica_mjere, Naziv FROM [Jedinice mjere] WHERE (ID_jedinica_mjere = @ID_jedinica_mjere)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_jedinica_mjere", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_jedinica_mjere", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_jedinica_mjere", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_jedinica_mjere", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Naziv", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Naziv", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_jedinica_mjere", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_jedinica_mjere", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_jedinica_mjere", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_jedinica_mjere", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Naziv", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Naziv", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
@@ -7169,8 +7192,13 @@ SELECT ID_jedinica_mjere, Naziv FROM [Jedinice mjere] WHERE (ID_jedinica_mjere =
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID_jedinica_mjere, string Original_Naziv) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID_jedinica_mjere));
+        public virtual int Delete(string Original_ID_jedinica_mjere, string Original_Naziv) {
+            if ((Original_ID_jedinica_mjere == null)) {
+                throw new global::System.ArgumentNullException("Original_ID_jedinica_mjere");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_ID_jedinica_mjere));
+            }
             if ((Original_Naziv == null)) {
                 throw new global::System.ArgumentNullException("Original_Naziv");
             }
@@ -7197,8 +7225,13 @@ SELECT ID_jedinica_mjere, Naziv FROM [Jedinice mjere] WHERE (ID_jedinica_mjere =
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int ID_jedinica_mjere, string Naziv) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID_jedinica_mjere));
+        public virtual int Insert(string ID_jedinica_mjere, string Naziv) {
+            if ((ID_jedinica_mjere == null)) {
+                throw new global::System.ArgumentNullException("ID_jedinica_mjere");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(ID_jedinica_mjere));
+            }
             if ((Naziv == null)) {
                 throw new global::System.ArgumentNullException("Naziv");
             }
@@ -7225,15 +7258,25 @@ SELECT ID_jedinica_mjere, Naziv FROM [Jedinice mjere] WHERE (ID_jedinica_mjere =
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int ID_jedinica_mjere, string Naziv, int Original_ID_jedinica_mjere, string Original_Naziv) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ID_jedinica_mjere));
+        public virtual int Update(string ID_jedinica_mjere, string Naziv, string Original_ID_jedinica_mjere, string Original_Naziv) {
+            if ((ID_jedinica_mjere == null)) {
+                throw new global::System.ArgumentNullException("ID_jedinica_mjere");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(ID_jedinica_mjere));
+            }
             if ((Naziv == null)) {
                 throw new global::System.ArgumentNullException("Naziv");
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Naziv));
             }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_ID_jedinica_mjere));
+            if ((Original_ID_jedinica_mjere == null)) {
+                throw new global::System.ArgumentNullException("Original_ID_jedinica_mjere");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Original_ID_jedinica_mjere));
+            }
             if ((Original_Naziv == null)) {
                 throw new global::System.ArgumentNullException("Original_Naziv");
             }
@@ -7260,7 +7303,7 @@ SELECT ID_jedinica_mjere, Naziv FROM [Jedinice mjere] WHERE (ID_jedinica_mjere =
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Naziv, int Original_ID_jedinica_mjere, string Original_Naziv) {
+        public virtual int Update(string Naziv, string Original_ID_jedinica_mjere, string Original_Naziv) {
             return this.Update(Original_ID_jedinica_mjere, Naziv, Original_ID_jedinica_mjere, Original_Naziv);
         }
     }
@@ -9658,20 +9701,11 @@ SELECT ID_racuna, Datum, Vrijeme, FK_ID_zaposlenika FROM [Racun za gosta] WHERE 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT FK_ID_narudzbe, FK_ID_artikla FROM dbo.[Stavke narudzbe]";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"SELECT        [Stavke narudzbe].FK_ID_narudzbe, Artikli.ID_artikla, Artikli.Naziv, Artikli.Jedinična_cijena, [Jedinice mjere].Naziv AS Mjera
-FROM            [Stavke narudzbe] INNER JOIN
-                         Artikli ON [Stavke narudzbe].FK_ID_artikla = Artikli.ID_artikla INNER JOIN
-                         [Jedinice mjere] ON Artikli.FK_ID_jedinica_mjere = [Jedinice mjere].ID_jedinica_mjere
-WHERE        ([Stavke narudzbe].FK_ID_narudzbe = @ID_narudzbe)";
-            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_narudzbe", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "FK_ID_narudzbe", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9693,32 +9727,6 @@ WHERE        ([Stavke narudzbe].FK_ID_narudzbe = @ID_narudzbe)";
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual pi2013FastOrderdbDataSet.Stavke_narudzbeDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            pi2013FastOrderdbDataSet.Stavke_narudzbeDataTable dataTable = new pi2013FastOrderdbDataSet.Stavke_narudzbeDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(pi2013FastOrderdbDataSet.Stavke_narudzbeDataTable dataTable, int ID_narudzbe) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(ID_narudzbe));
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual pi2013FastOrderdbDataSet.Stavke_narudzbeDataTable GetDataBy(int ID_narudzbe) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(ID_narudzbe));
             pi2013FastOrderdbDataSet.Stavke_narudzbeDataTable dataTable = new pi2013FastOrderdbDataSet.Stavke_narudzbeDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
