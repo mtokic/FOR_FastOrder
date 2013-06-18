@@ -34,6 +34,7 @@
             System.Windows.Forms.Label jedinica_mjereLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUnos));
             System.Windows.Forms.Label opis_artiklaLabel;
+            System.Windows.Forms.Label iD_artiklaLabel;
             this.pi2013FastOrderdbDataSet = new FOR_Application.pi2013FastOrderdbDataSet();
             this.artikliBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.artikliTableAdapter = new FOR_Application.pi2013FastOrderdbDataSetTableAdapters.ArtikliTableAdapter();
@@ -61,10 +62,12 @@
             this.jedinična_cijenaTextBox = new System.Windows.Forms.TextBox();
             this.jedinica_mjereTextBox = new System.Windows.Forms.TextBox();
             this.opis_artiklaTextBox = new System.Windows.Forms.TextBox();
+            this.iD_artiklaTextBox = new System.Windows.Forms.TextBox();
             nazivLabel = new System.Windows.Forms.Label();
             jedinična_cijenaLabel = new System.Windows.Forms.Label();
             jedinica_mjereLabel = new System.Windows.Forms.Label();
             opis_artiklaLabel = new System.Windows.Forms.Label();
+            iD_artiklaLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pi2013FastOrderdbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.artikliBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.artikliBindingNavigator)).BeginInit();
@@ -75,7 +78,7 @@
             // nazivLabel
             // 
             nazivLabel.AutoSize = true;
-            nazivLabel.Location = new System.Drawing.Point(59, 41);
+            nazivLabel.Location = new System.Drawing.Point(28, 67);
             nazivLabel.Name = "nazivLabel";
             nazivLabel.Size = new System.Drawing.Size(37, 13);
             nazivLabel.TabIndex = 2;
@@ -84,16 +87,16 @@
             // jedinična_cijenaLabel
             // 
             jedinična_cijenaLabel.AutoSize = true;
-            jedinična_cijenaLabel.Location = new System.Drawing.Point(10, 67);
+            jedinična_cijenaLabel.Location = new System.Drawing.Point(26, 93);
             jedinična_cijenaLabel.Name = "jedinična_cijenaLabel";
-            jedinična_cijenaLabel.Size = new System.Drawing.Size(86, 13);
+            jedinična_cijenaLabel.Size = new System.Drawing.Size(39, 13);
             jedinična_cijenaLabel.TabIndex = 4;
-            jedinična_cijenaLabel.Text = "Jedinična cijena:";
+            jedinična_cijenaLabel.Text = "Cijena:";
             // 
             // jedinica_mjereLabel
             // 
             jedinica_mjereLabel.AutoSize = true;
-            jedinica_mjereLabel.Location = new System.Drawing.Point(19, 93);
+            jedinica_mjereLabel.Location = new System.Drawing.Point(210, 67);
             jedinica_mjereLabel.Name = "jedinica_mjereLabel";
             jedinica_mjereLabel.Size = new System.Drawing.Size(77, 13);
             jedinica_mjereLabel.TabIndex = 6;
@@ -310,7 +313,7 @@
             // nazivTextBox
             // 
             this.nazivTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.artikliBindingSource, "Naziv", true));
-            this.nazivTextBox.Location = new System.Drawing.Point(102, 38);
+            this.nazivTextBox.Location = new System.Drawing.Point(71, 64);
             this.nazivTextBox.Name = "nazivTextBox";
             this.nazivTextBox.Size = new System.Drawing.Size(100, 20);
             this.nazivTextBox.TabIndex = 3;
@@ -318,7 +321,7 @@
             // jedinična_cijenaTextBox
             // 
             this.jedinična_cijenaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.artikliBindingSource, "Jedinična_cijena", true));
-            this.jedinična_cijenaTextBox.Location = new System.Drawing.Point(102, 64);
+            this.jedinična_cijenaTextBox.Location = new System.Drawing.Point(71, 90);
             this.jedinična_cijenaTextBox.Name = "jedinična_cijenaTextBox";
             this.jedinična_cijenaTextBox.Size = new System.Drawing.Size(100, 20);
             this.jedinična_cijenaTextBox.TabIndex = 5;
@@ -326,7 +329,7 @@
             // jedinica_mjereTextBox
             // 
             this.jedinica_mjereTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.artikliBindingSource, "Jedinica_mjere", true));
-            this.jedinica_mjereTextBox.Location = new System.Drawing.Point(102, 90);
+            this.jedinica_mjereTextBox.Location = new System.Drawing.Point(293, 64);
             this.jedinica_mjereTextBox.Name = "jedinica_mjereTextBox";
             this.jedinica_mjereTextBox.Size = new System.Drawing.Size(100, 20);
             this.jedinica_mjereTextBox.TabIndex = 7;
@@ -334,7 +337,7 @@
             // opis_artiklaLabel
             // 
             opis_artiklaLabel.AutoSize = true;
-            opis_artiklaLabel.Location = new System.Drawing.Point(230, 38);
+            opis_artiklaLabel.Location = new System.Drawing.Point(225, 41);
             opis_artiklaLabel.Name = "opis_artiklaLabel";
             opis_artiklaLabel.Size = new System.Drawing.Size(62, 13);
             opis_artiklaLabel.TabIndex = 8;
@@ -343,16 +346,35 @@
             // opis_artiklaTextBox
             // 
             this.opis_artiklaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.artikliBindingSource, "Opis_artikla", true));
-            this.opis_artiklaTextBox.Location = new System.Drawing.Point(298, 35);
+            this.opis_artiklaTextBox.Location = new System.Drawing.Point(293, 38);
             this.opis_artiklaTextBox.Name = "opis_artiklaTextBox";
             this.opis_artiklaTextBox.Size = new System.Drawing.Size(100, 20);
             this.opis_artiklaTextBox.TabIndex = 9;
+            // 
+            // iD_artiklaLabel
+            // 
+            iD_artiklaLabel.AutoSize = true;
+            iD_artiklaLabel.Location = new System.Drawing.Point(34, 41);
+            iD_artiklaLabel.Name = "iD_artiklaLabel";
+            iD_artiklaLabel.Size = new System.Drawing.Size(31, 13);
+            iD_artiklaLabel.TabIndex = 10;
+            iD_artiklaLabel.Text = "Šifra:";
+            // 
+            // iD_artiklaTextBox
+            // 
+            this.iD_artiklaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.artikliBindingSource, "ID_artikla", true));
+            this.iD_artiklaTextBox.Location = new System.Drawing.Point(71, 38);
+            this.iD_artiklaTextBox.Name = "iD_artiklaTextBox";
+            this.iD_artiklaTextBox.Size = new System.Drawing.Size(100, 20);
+            this.iD_artiklaTextBox.TabIndex = 11;
             // 
             // frmUnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(499, 410);
+            this.Controls.Add(iD_artiklaLabel);
+            this.Controls.Add(this.iD_artiklaTextBox);
             this.Controls.Add(opis_artiklaLabel);
             this.Controls.Add(this.opis_artiklaTextBox);
             this.Controls.Add(jedinica_mjereLabel);
@@ -406,5 +428,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.TextBox opis_artiklaTextBox;
+        private System.Windows.Forms.TextBox iD_artiklaTextBox;
     }
 }
