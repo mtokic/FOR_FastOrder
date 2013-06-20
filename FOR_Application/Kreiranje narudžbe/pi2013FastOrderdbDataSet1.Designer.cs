@@ -26,15 +26,9 @@ namespace Kreiranje_narudžbe {
         
         private ArtikliDataTable tableArtikli;
         
-        private Evidencija_o_zaposlenimaDataTable tableEvidencija_o_zaposlenima;
-        
-        private Jedinice_mjereDataTable tableJedinice_mjere;
-        
         private JelovnikDataTable tableJelovnik;
         
         private NarudžbaDataTable tableNarudžba;
-        
-        private PonudaDataTable tablePonuda;
         
         private Popis_stolovaDataTable tablePopis_stolova;
         
@@ -46,23 +40,11 @@ namespace Kreiranje_narudžbe {
         
         private Stavke_narudzbeDataTable tableStavke_narudzbe;
         
-        private Stavke_poundeDataTable tableStavke_pounde;
-        
         private Stavke_racunaDataTable tableStavke_racuna;
-        
-        private global::System.Data.DataRelation relationFK_Artikli_Jedinice_mjere;
-        
-        private global::System.Data.DataRelation relationFK_Jelovnik_Evidencija_o_zaposlenima;
-        
-        private global::System.Data.DataRelation relationFK_Narudžba_Evidencija_o_zaposlenima;
         
         private global::System.Data.DataRelation relationFK_Narudžba_Popis_stolova;
         
-        private global::System.Data.DataRelation relationFK_Ponuda_Evidencija_o_zaposlenima;
-        
         private global::System.Data.DataRelation relationFK_Povratna_informacija_Narudžba;
-        
-        private global::System.Data.DataRelation relationFK_Racun_za_gosta_Evidencija_o_zaposlenima;
         
         private global::System.Data.DataRelation relationFK_Stavke_jelovnika_Artikli;
         
@@ -71,10 +53,6 @@ namespace Kreiranje_narudžbe {
         private global::System.Data.DataRelation relationFK_Stavke_narudzbe_Artikli;
         
         private global::System.Data.DataRelation relationFK_Stavke_narudzbe_Narudžba;
-        
-        private global::System.Data.DataRelation relationFK_Stavke_pounde_Artikli;
-        
-        private global::System.Data.DataRelation relationFK_Stavke_pounde_Ponuda;
         
         private global::System.Data.DataRelation relationFK_Stavke_racuna_Narudžba;
         
@@ -111,20 +89,11 @@ namespace Kreiranje_narudžbe {
                 if ((ds.Tables["Artikli"] != null)) {
                     base.Tables.Add(new ArtikliDataTable(ds.Tables["Artikli"]));
                 }
-                if ((ds.Tables["Evidencija o zaposlenima"] != null)) {
-                    base.Tables.Add(new Evidencija_o_zaposlenimaDataTable(ds.Tables["Evidencija o zaposlenima"]));
-                }
-                if ((ds.Tables["Jedinice mjere"] != null)) {
-                    base.Tables.Add(new Jedinice_mjereDataTable(ds.Tables["Jedinice mjere"]));
-                }
                 if ((ds.Tables["Jelovnik"] != null)) {
                     base.Tables.Add(new JelovnikDataTable(ds.Tables["Jelovnik"]));
                 }
                 if ((ds.Tables["Narudžba"] != null)) {
                     base.Tables.Add(new NarudžbaDataTable(ds.Tables["Narudžba"]));
-                }
-                if ((ds.Tables["Ponuda"] != null)) {
-                    base.Tables.Add(new PonudaDataTable(ds.Tables["Ponuda"]));
                 }
                 if ((ds.Tables["Popis stolova"] != null)) {
                     base.Tables.Add(new Popis_stolovaDataTable(ds.Tables["Popis stolova"]));
@@ -140,9 +109,6 @@ namespace Kreiranje_narudžbe {
                 }
                 if ((ds.Tables["Stavke narudzbe"] != null)) {
                     base.Tables.Add(new Stavke_narudzbeDataTable(ds.Tables["Stavke narudzbe"]));
-                }
-                if ((ds.Tables["Stavke pounde"] != null)) {
-                    base.Tables.Add(new Stavke_poundeDataTable(ds.Tables["Stavke pounde"]));
                 }
                 if ((ds.Tables["Stavke racuna"] != null)) {
                     base.Tables.Add(new Stavke_racunaDataTable(ds.Tables["Stavke racuna"]));
@@ -179,26 +145,6 @@ namespace Kreiranje_narudžbe {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public Evidencija_o_zaposlenimaDataTable Evidencija_o_zaposlenima {
-            get {
-                return this.tableEvidencija_o_zaposlenima;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public Jedinice_mjereDataTable Jedinice_mjere {
-            get {
-                return this.tableJedinice_mjere;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
         public JelovnikDataTable Jelovnik {
             get {
                 return this.tableJelovnik;
@@ -212,16 +158,6 @@ namespace Kreiranje_narudžbe {
         public NarudžbaDataTable Narudžba {
             get {
                 return this.tableNarudžba;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public PonudaDataTable Ponuda {
-            get {
-                return this.tablePonuda;
             }
         }
         
@@ -272,16 +208,6 @@ namespace Kreiranje_narudžbe {
         public Stavke_narudzbeDataTable Stavke_narudzbe {
             get {
                 return this.tableStavke_narudzbe;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public Stavke_poundeDataTable Stavke_pounde {
-            get {
-                return this.tableStavke_pounde;
             }
         }
         
@@ -365,20 +291,11 @@ namespace Kreiranje_narudžbe {
                 if ((ds.Tables["Artikli"] != null)) {
                     base.Tables.Add(new ArtikliDataTable(ds.Tables["Artikli"]));
                 }
-                if ((ds.Tables["Evidencija o zaposlenima"] != null)) {
-                    base.Tables.Add(new Evidencija_o_zaposlenimaDataTable(ds.Tables["Evidencija o zaposlenima"]));
-                }
-                if ((ds.Tables["Jedinice mjere"] != null)) {
-                    base.Tables.Add(new Jedinice_mjereDataTable(ds.Tables["Jedinice mjere"]));
-                }
                 if ((ds.Tables["Jelovnik"] != null)) {
                     base.Tables.Add(new JelovnikDataTable(ds.Tables["Jelovnik"]));
                 }
                 if ((ds.Tables["Narudžba"] != null)) {
                     base.Tables.Add(new NarudžbaDataTable(ds.Tables["Narudžba"]));
-                }
-                if ((ds.Tables["Ponuda"] != null)) {
-                    base.Tables.Add(new PonudaDataTable(ds.Tables["Ponuda"]));
                 }
                 if ((ds.Tables["Popis stolova"] != null)) {
                     base.Tables.Add(new Popis_stolovaDataTable(ds.Tables["Popis stolova"]));
@@ -394,9 +311,6 @@ namespace Kreiranje_narudžbe {
                 }
                 if ((ds.Tables["Stavke narudzbe"] != null)) {
                     base.Tables.Add(new Stavke_narudzbeDataTable(ds.Tables["Stavke narudzbe"]));
-                }
-                if ((ds.Tables["Stavke pounde"] != null)) {
-                    base.Tables.Add(new Stavke_poundeDataTable(ds.Tables["Stavke pounde"]));
                 }
                 if ((ds.Tables["Stavke racuna"] != null)) {
                     base.Tables.Add(new Stavke_racunaDataTable(ds.Tables["Stavke racuna"]));
@@ -440,18 +354,6 @@ namespace Kreiranje_narudžbe {
                     this.tableArtikli.InitVars();
                 }
             }
-            this.tableEvidencija_o_zaposlenima = ((Evidencija_o_zaposlenimaDataTable)(base.Tables["Evidencija o zaposlenima"]));
-            if ((initTable == true)) {
-                if ((this.tableEvidencija_o_zaposlenima != null)) {
-                    this.tableEvidencija_o_zaposlenima.InitVars();
-                }
-            }
-            this.tableJedinice_mjere = ((Jedinice_mjereDataTable)(base.Tables["Jedinice mjere"]));
-            if ((initTable == true)) {
-                if ((this.tableJedinice_mjere != null)) {
-                    this.tableJedinice_mjere.InitVars();
-                }
-            }
             this.tableJelovnik = ((JelovnikDataTable)(base.Tables["Jelovnik"]));
             if ((initTable == true)) {
                 if ((this.tableJelovnik != null)) {
@@ -462,12 +364,6 @@ namespace Kreiranje_narudžbe {
             if ((initTable == true)) {
                 if ((this.tableNarudžba != null)) {
                     this.tableNarudžba.InitVars();
-                }
-            }
-            this.tablePonuda = ((PonudaDataTable)(base.Tables["Ponuda"]));
-            if ((initTable == true)) {
-                if ((this.tablePonuda != null)) {
-                    this.tablePonuda.InitVars();
                 }
             }
             this.tablePopis_stolova = ((Popis_stolovaDataTable)(base.Tables["Popis stolova"]));
@@ -500,31 +396,18 @@ namespace Kreiranje_narudžbe {
                     this.tableStavke_narudzbe.InitVars();
                 }
             }
-            this.tableStavke_pounde = ((Stavke_poundeDataTable)(base.Tables["Stavke pounde"]));
-            if ((initTable == true)) {
-                if ((this.tableStavke_pounde != null)) {
-                    this.tableStavke_pounde.InitVars();
-                }
-            }
             this.tableStavke_racuna = ((Stavke_racunaDataTable)(base.Tables["Stavke racuna"]));
             if ((initTable == true)) {
                 if ((this.tableStavke_racuna != null)) {
                     this.tableStavke_racuna.InitVars();
                 }
             }
-            this.relationFK_Artikli_Jedinice_mjere = this.Relations["FK_Artikli_Jedinice mjere"];
-            this.relationFK_Jelovnik_Evidencija_o_zaposlenima = this.Relations["FK_Jelovnik_Evidencija o zaposlenima"];
-            this.relationFK_Narudžba_Evidencija_o_zaposlenima = this.Relations["FK_Narudžba_Evidencija o zaposlenima"];
             this.relationFK_Narudžba_Popis_stolova = this.Relations["FK_Narudžba_Popis stolova"];
-            this.relationFK_Ponuda_Evidencija_o_zaposlenima = this.Relations["FK_Ponuda_Evidencija o zaposlenima"];
             this.relationFK_Povratna_informacija_Narudžba = this.Relations["FK_Povratna informacija_Narudžba"];
-            this.relationFK_Racun_za_gosta_Evidencija_o_zaposlenima = this.Relations["FK_Racun za gosta_Evidencija o zaposlenima"];
             this.relationFK_Stavke_jelovnika_Artikli = this.Relations["FK_Stavke jelovnika_Artikli"];
             this.relationFK_Stavke_jelovnika_Jelovnik = this.Relations["FK_Stavke jelovnika_Jelovnik"];
             this.relationFK_Stavke_narudzbe_Artikli = this.Relations["FK_Stavke narudzbe_Artikli"];
             this.relationFK_Stavke_narudzbe_Narudžba = this.Relations["FK_Stavke narudzbe_Narudžba"];
-            this.relationFK_Stavke_pounde_Artikli = this.Relations["FK_Stavke pounde_Artikli"];
-            this.relationFK_Stavke_pounde_Ponuda = this.Relations["FK_Stavke pounde_Ponuda"];
             this.relationFK_Stavke_racuna_Narudžba = this.Relations["FK_Stavke racuna_Narudžba"];
             this.relationFK_Stavke_racuna_Racun_za_gosta = this.Relations["FK_Stavke racuna_Racun za gosta"];
         }
@@ -539,16 +422,10 @@ namespace Kreiranje_narudžbe {
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableArtikli = new ArtikliDataTable();
             base.Tables.Add(this.tableArtikli);
-            this.tableEvidencija_o_zaposlenima = new Evidencija_o_zaposlenimaDataTable();
-            base.Tables.Add(this.tableEvidencija_o_zaposlenima);
-            this.tableJedinice_mjere = new Jedinice_mjereDataTable();
-            base.Tables.Add(this.tableJedinice_mjere);
             this.tableJelovnik = new JelovnikDataTable();
             base.Tables.Add(this.tableJelovnik);
             this.tableNarudžba = new NarudžbaDataTable();
             base.Tables.Add(this.tableNarudžba);
-            this.tablePonuda = new PonudaDataTable();
-            base.Tables.Add(this.tablePonuda);
             this.tablePopis_stolova = new Popis_stolovaDataTable();
             base.Tables.Add(this.tablePopis_stolova);
             this.tablePovratna_informacija = new Povratna_informacijaDataTable();
@@ -559,38 +436,16 @@ namespace Kreiranje_narudžbe {
             base.Tables.Add(this.tableStavke_jelovnika);
             this.tableStavke_narudzbe = new Stavke_narudzbeDataTable();
             base.Tables.Add(this.tableStavke_narudzbe);
-            this.tableStavke_pounde = new Stavke_poundeDataTable();
-            base.Tables.Add(this.tableStavke_pounde);
             this.tableStavke_racuna = new Stavke_racunaDataTable();
             base.Tables.Add(this.tableStavke_racuna);
-            this.relationFK_Artikli_Jedinice_mjere = new global::System.Data.DataRelation("FK_Artikli_Jedinice mjere", new global::System.Data.DataColumn[] {
-                        this.tableJedinice_mjere.ID_jedinica_mjereColumn}, new global::System.Data.DataColumn[] {
-                        this.tableArtikli.FK_ID_jedinica_mjereColumn}, false);
-            this.Relations.Add(this.relationFK_Artikli_Jedinice_mjere);
-            this.relationFK_Jelovnik_Evidencija_o_zaposlenima = new global::System.Data.DataRelation("FK_Jelovnik_Evidencija o zaposlenima", new global::System.Data.DataColumn[] {
-                        this.tableEvidencija_o_zaposlenima.ID_zaposlenikaColumn}, new global::System.Data.DataColumn[] {
-                        this.tableJelovnik.FK_ID_zaposlenikaColumn}, false);
-            this.Relations.Add(this.relationFK_Jelovnik_Evidencija_o_zaposlenima);
-            this.relationFK_Narudžba_Evidencija_o_zaposlenima = new global::System.Data.DataRelation("FK_Narudžba_Evidencija o zaposlenima", new global::System.Data.DataColumn[] {
-                        this.tableEvidencija_o_zaposlenima.ID_zaposlenikaColumn}, new global::System.Data.DataColumn[] {
-                        this.tableNarudžba.FK_ID_zaposlenikaColumn}, false);
-            this.Relations.Add(this.relationFK_Narudžba_Evidencija_o_zaposlenima);
             this.relationFK_Narudžba_Popis_stolova = new global::System.Data.DataRelation("FK_Narudžba_Popis stolova", new global::System.Data.DataColumn[] {
                         this.tablePopis_stolova.ID_stolaColumn}, new global::System.Data.DataColumn[] {
                         this.tableNarudžba.FK_ID_stolaColumn}, false);
             this.Relations.Add(this.relationFK_Narudžba_Popis_stolova);
-            this.relationFK_Ponuda_Evidencija_o_zaposlenima = new global::System.Data.DataRelation("FK_Ponuda_Evidencija o zaposlenima", new global::System.Data.DataColumn[] {
-                        this.tableEvidencija_o_zaposlenima.ID_zaposlenikaColumn}, new global::System.Data.DataColumn[] {
-                        this.tablePonuda.FK_ID_zaposlenikaColumn}, false);
-            this.Relations.Add(this.relationFK_Ponuda_Evidencija_o_zaposlenima);
             this.relationFK_Povratna_informacija_Narudžba = new global::System.Data.DataRelation("FK_Povratna informacija_Narudžba", new global::System.Data.DataColumn[] {
                         this.tableNarudžba.ID_narudžbeColumn}, new global::System.Data.DataColumn[] {
                         this.tablePovratna_informacija.FK_ID_narudzbeColumn}, false);
             this.Relations.Add(this.relationFK_Povratna_informacija_Narudžba);
-            this.relationFK_Racun_za_gosta_Evidencija_o_zaposlenima = new global::System.Data.DataRelation("FK_Racun za gosta_Evidencija o zaposlenima", new global::System.Data.DataColumn[] {
-                        this.tableEvidencija_o_zaposlenima.ID_zaposlenikaColumn}, new global::System.Data.DataColumn[] {
-                        this.tableRacun_za_gosta.FK_ID_zaposlenikaColumn}, false);
-            this.Relations.Add(this.relationFK_Racun_za_gosta_Evidencija_o_zaposlenima);
             this.relationFK_Stavke_jelovnika_Artikli = new global::System.Data.DataRelation("FK_Stavke jelovnika_Artikli", new global::System.Data.DataColumn[] {
                         this.tableArtikli.ID_artiklaColumn}, new global::System.Data.DataColumn[] {
                         this.tableStavke_jelovnika.FK_ID_artiklaColumn}, false);
@@ -607,14 +462,6 @@ namespace Kreiranje_narudžbe {
                         this.tableNarudžba.ID_narudžbeColumn}, new global::System.Data.DataColumn[] {
                         this.tableStavke_narudzbe.FK_ID_narudzbeColumn}, false);
             this.Relations.Add(this.relationFK_Stavke_narudzbe_Narudžba);
-            this.relationFK_Stavke_pounde_Artikli = new global::System.Data.DataRelation("FK_Stavke pounde_Artikli", new global::System.Data.DataColumn[] {
-                        this.tableArtikli.ID_artiklaColumn}, new global::System.Data.DataColumn[] {
-                        this.tableStavke_pounde.FK_ID_artiklaColumn}, false);
-            this.Relations.Add(this.relationFK_Stavke_pounde_Artikli);
-            this.relationFK_Stavke_pounde_Ponuda = new global::System.Data.DataRelation("FK_Stavke pounde_Ponuda", new global::System.Data.DataColumn[] {
-                        this.tablePonuda.ID_ponudeColumn}, new global::System.Data.DataColumn[] {
-                        this.tableStavke_pounde.FK_ID_ponudeColumn}, false);
-            this.Relations.Add(this.relationFK_Stavke_pounde_Ponuda);
             this.relationFK_Stavke_racuna_Narudžba = new global::System.Data.DataRelation("FK_Stavke racuna_Narudžba", new global::System.Data.DataColumn[] {
                         this.tableNarudžba.ID_narudžbeColumn}, new global::System.Data.DataColumn[] {
                         this.tableStavke_racuna.FK_ID_narudzbeColumn}, false);
@@ -633,18 +480,6 @@ namespace Kreiranje_narudžbe {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeEvidencija_o_zaposlenima() {
-            return false;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeJedinice_mjere() {
-            return false;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializeJelovnik() {
             return false;
         }
@@ -652,12 +487,6 @@ namespace Kreiranje_narudžbe {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializeNarudžba() {
-            return false;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializePonuda() {
             return false;
         }
         
@@ -688,12 +517,6 @@ namespace Kreiranje_narudžbe {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializeStavke_narudzbe() {
-            return false;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeStavke_pounde() {
             return false;
         }
         
@@ -762,19 +585,10 @@ namespace Kreiranje_narudžbe {
         public delegate void ArtikliRowChangeEventHandler(object sender, ArtikliRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void Evidencija_o_zaposlenimaRowChangeEventHandler(object sender, Evidencija_o_zaposlenimaRowChangeEvent e);
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void Jedinice_mjereRowChangeEventHandler(object sender, Jedinice_mjereRowChangeEvent e);
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void JelovnikRowChangeEventHandler(object sender, JelovnikRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void NarudžbaRowChangeEventHandler(object sender, NarudžbaRowChangeEvent e);
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void PonudaRowChangeEventHandler(object sender, PonudaRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void Popis_stolovaRowChangeEventHandler(object sender, Popis_stolovaRowChangeEvent e);
@@ -792,9 +606,6 @@ namespace Kreiranje_narudžbe {
         public delegate void Stavke_narudzbeRowChangeEventHandler(object sender, Stavke_narudzbeRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void Stavke_poundeRowChangeEventHandler(object sender, Stavke_poundeRowChangeEvent e);
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void Stavke_racunaRowChangeEventHandler(object sender, Stavke_racunaRowChangeEvent e);
         
         /// <summary>
@@ -810,9 +621,9 @@ namespace Kreiranje_narudžbe {
             
             private global::System.Data.DataColumn columnJedinična_cijena;
             
-            private global::System.Data.DataColumn columnOpis;
+            private global::System.Data.DataColumn columnOpis_artikla;
             
-            private global::System.Data.DataColumn columnFK_ID_jedinica_mjere;
+            private global::System.Data.DataColumn columnJedinica_mjere;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -873,17 +684,17 @@ namespace Kreiranje_narudžbe {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn OpisColumn {
+            public global::System.Data.DataColumn Opis_artiklaColumn {
                 get {
-                    return this.columnOpis;
+                    return this.columnOpis_artikla;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn FK_ID_jedinica_mjereColumn {
+            public global::System.Data.DataColumn Jedinica_mjereColumn {
                 get {
-                    return this.columnFK_ID_jedinica_mjere;
+                    return this.columnJedinica_mjere;
                 }
             }
             
@@ -924,17 +735,14 @@ namespace Kreiranje_narudžbe {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ArtikliRow AddArtikliRow(int ID_artikla, byte[] Naziv, double Jedinična_cijena, string Opis, Jedinice_mjereRow parentJedinice_mjereRowByFK_Artikli_Jedinice_mjere) {
+            public ArtikliRow AddArtikliRow(int ID_artikla, string Naziv, double Jedinična_cijena, string Opis_artikla, string Jedinica_mjere) {
                 ArtikliRow rowArtikliRow = ((ArtikliRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID_artikla,
                         Naziv,
                         Jedinična_cijena,
-                        Opis,
-                        null};
-                if ((parentJedinice_mjereRowByFK_Artikli_Jedinice_mjere != null)) {
-                    columnValuesArray[4] = parentJedinice_mjereRowByFK_Artikli_Jedinice_mjere[0];
-                }
+                        Opis_artikla,
+                        Jedinica_mjere};
                 rowArtikliRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowArtikliRow);
                 return rowArtikliRow;
@@ -967,8 +775,8 @@ namespace Kreiranje_narudžbe {
                 this.columnID_artikla = base.Columns["ID_artikla"];
                 this.columnNaziv = base.Columns["Naziv"];
                 this.columnJedinična_cijena = base.Columns["Jedinična_cijena"];
-                this.columnOpis = base.Columns["Opis"];
-                this.columnFK_ID_jedinica_mjere = base.Columns["FK_ID_jedinica_mjere"];
+                this.columnOpis_artikla = base.Columns["Opis_artikla"];
+                this.columnJedinica_mjere = base.Columns["Jedinica_mjere"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -976,22 +784,24 @@ namespace Kreiranje_narudžbe {
             private void InitClass() {
                 this.columnID_artikla = new global::System.Data.DataColumn("ID_artikla", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID_artikla);
-                this.columnNaziv = new global::System.Data.DataColumn("Naziv", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                this.columnNaziv = new global::System.Data.DataColumn("Naziv", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNaziv);
                 this.columnJedinična_cijena = new global::System.Data.DataColumn("Jedinična_cijena", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnJedinična_cijena);
-                this.columnOpis = new global::System.Data.DataColumn("Opis", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnOpis);
-                this.columnFK_ID_jedinica_mjere = new global::System.Data.DataColumn("FK_ID_jedinica_mjere", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFK_ID_jedinica_mjere);
+                this.columnOpis_artikla = new global::System.Data.DataColumn("Opis_artikla", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOpis_artikla);
+                this.columnJedinica_mjere = new global::System.Data.DataColumn("Jedinica_mjere", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnJedinica_mjere);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID_artikla}, true));
                 this.columnID_artikla.AllowDBNull = false;
                 this.columnID_artikla.Unique = true;
                 this.columnNaziv.AllowDBNull = false;
+                this.columnNaziv.MaxLength = 50;
                 this.columnJedinična_cijena.AllowDBNull = false;
-                this.columnOpis.MaxLength = 50;
-                this.columnFK_ID_jedinica_mjere.AllowDBNull = false;
+                this.columnOpis_artikla.MaxLength = 50;
+                this.columnJedinica_mjere.AllowDBNull = false;
+                this.columnJedinica_mjere.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1123,601 +933,6 @@ namespace Kreiranje_narudžbe {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class Evidencija_o_zaposlenimaDataTable : global::System.Data.TypedTableBase<Evidencija_o_zaposlenimaRow> {
-            
-            private global::System.Data.DataColumn columnID_zaposlenika;
-            
-            private global::System.Data.DataColumn columnRadno_mjesto;
-            
-            private global::System.Data.DataColumn columnIme;
-            
-            private global::System.Data.DataColumn columnPrezime;
-            
-            private global::System.Data.DataColumn columnAdresa;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Evidencija_o_zaposlenimaDataTable() {
-                this.TableName = "Evidencija o zaposlenima";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal Evidencija_o_zaposlenimaDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected Evidencija_o_zaposlenimaDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ID_zaposlenikaColumn {
-                get {
-                    return this.columnID_zaposlenika;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Radno_mjestoColumn {
-                get {
-                    return this.columnRadno_mjesto;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ImeColumn {
-                get {
-                    return this.columnIme;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn PrezimeColumn {
-                get {
-                    return this.columnPrezime;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn AdresaColumn {
-                get {
-                    return this.columnAdresa;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Evidencija_o_zaposlenimaRow this[int index] {
-                get {
-                    return ((Evidencija_o_zaposlenimaRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Evidencija_o_zaposlenimaRowChangeEventHandler Evidencija_o_zaposlenimaRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Evidencija_o_zaposlenimaRowChangeEventHandler Evidencija_o_zaposlenimaRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Evidencija_o_zaposlenimaRowChangeEventHandler Evidencija_o_zaposlenimaRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Evidencija_o_zaposlenimaRowChangeEventHandler Evidencija_o_zaposlenimaRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddEvidencija_o_zaposlenimaRow(Evidencija_o_zaposlenimaRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Evidencija_o_zaposlenimaRow AddEvidencija_o_zaposlenimaRow(int ID_zaposlenika, string Radno_mjesto, string Ime, string Prezime, string Adresa) {
-                Evidencija_o_zaposlenimaRow rowEvidencija_o_zaposlenimaRow = ((Evidencija_o_zaposlenimaRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        ID_zaposlenika,
-                        Radno_mjesto,
-                        Ime,
-                        Prezime,
-                        Adresa};
-                rowEvidencija_o_zaposlenimaRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowEvidencija_o_zaposlenimaRow);
-                return rowEvidencija_o_zaposlenimaRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Evidencija_o_zaposlenimaRow FindByID_zaposlenika(int ID_zaposlenika) {
-                return ((Evidencija_o_zaposlenimaRow)(this.Rows.Find(new object[] {
-                            ID_zaposlenika})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                Evidencija_o_zaposlenimaDataTable cln = ((Evidencija_o_zaposlenimaDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new Evidencija_o_zaposlenimaDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal void InitVars() {
-                this.columnID_zaposlenika = base.Columns["ID_zaposlenika"];
-                this.columnRadno_mjesto = base.Columns["Radno_mjesto"];
-                this.columnIme = base.Columns["Ime"];
-                this.columnPrezime = base.Columns["Prezime"];
-                this.columnAdresa = base.Columns["Adresa"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            private void InitClass() {
-                this.columnID_zaposlenika = new global::System.Data.DataColumn("ID_zaposlenika", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID_zaposlenika);
-                this.columnRadno_mjesto = new global::System.Data.DataColumn("Radno_mjesto", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnRadno_mjesto);
-                this.columnIme = new global::System.Data.DataColumn("Ime", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnIme);
-                this.columnPrezime = new global::System.Data.DataColumn("Prezime", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPrezime);
-                this.columnAdresa = new global::System.Data.DataColumn("Adresa", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAdresa);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnID_zaposlenika}, true));
-                this.columnID_zaposlenika.AllowDBNull = false;
-                this.columnID_zaposlenika.Unique = true;
-                this.columnRadno_mjesto.AllowDBNull = false;
-                this.columnRadno_mjesto.MaxLength = 10;
-                this.columnIme.AllowDBNull = false;
-                this.columnIme.MaxLength = 10;
-                this.columnPrezime.AllowDBNull = false;
-                this.columnPrezime.MaxLength = 10;
-                this.columnAdresa.MaxLength = 50;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Evidencija_o_zaposlenimaRow NewEvidencija_o_zaposlenimaRow() {
-                return ((Evidencija_o_zaposlenimaRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new Evidencija_o_zaposlenimaRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(Evidencija_o_zaposlenimaRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.Evidencija_o_zaposlenimaRowChanged != null)) {
-                    this.Evidencija_o_zaposlenimaRowChanged(this, new Evidencija_o_zaposlenimaRowChangeEvent(((Evidencija_o_zaposlenimaRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.Evidencija_o_zaposlenimaRowChanging != null)) {
-                    this.Evidencija_o_zaposlenimaRowChanging(this, new Evidencija_o_zaposlenimaRowChangeEvent(((Evidencija_o_zaposlenimaRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.Evidencija_o_zaposlenimaRowDeleted != null)) {
-                    this.Evidencija_o_zaposlenimaRowDeleted(this, new Evidencija_o_zaposlenimaRowChangeEvent(((Evidencija_o_zaposlenimaRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.Evidencija_o_zaposlenimaRowDeleting != null)) {
-                    this.Evidencija_o_zaposlenimaRowDeleting(this, new Evidencija_o_zaposlenimaRowChangeEvent(((Evidencija_o_zaposlenimaRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveEvidencija_o_zaposlenimaRow(Evidencija_o_zaposlenimaRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                pi2013FastOrderdbDataSet ds = new pi2013FastOrderdbDataSet();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "Evidencija_o_zaposlenimaDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class Jedinice_mjereDataTable : global::System.Data.TypedTableBase<Jedinice_mjereRow> {
-            
-            private global::System.Data.DataColumn columnID_jedinica_mjere;
-            
-            private global::System.Data.DataColumn columnNaziv;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Jedinice_mjereDataTable() {
-                this.TableName = "Jedinice mjere";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal Jedinice_mjereDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected Jedinice_mjereDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ID_jedinica_mjereColumn {
-                get {
-                    return this.columnID_jedinica_mjere;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn NazivColumn {
-                get {
-                    return this.columnNaziv;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Jedinice_mjereRow this[int index] {
-                get {
-                    return ((Jedinice_mjereRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Jedinice_mjereRowChangeEventHandler Jedinice_mjereRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Jedinice_mjereRowChangeEventHandler Jedinice_mjereRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Jedinice_mjereRowChangeEventHandler Jedinice_mjereRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Jedinice_mjereRowChangeEventHandler Jedinice_mjereRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddJedinice_mjereRow(Jedinice_mjereRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Jedinice_mjereRow AddJedinice_mjereRow(int ID_jedinica_mjere, string Naziv) {
-                Jedinice_mjereRow rowJedinice_mjereRow = ((Jedinice_mjereRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        ID_jedinica_mjere,
-                        Naziv};
-                rowJedinice_mjereRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowJedinice_mjereRow);
-                return rowJedinice_mjereRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Jedinice_mjereRow FindByID_jedinica_mjere(int ID_jedinica_mjere) {
-                return ((Jedinice_mjereRow)(this.Rows.Find(new object[] {
-                            ID_jedinica_mjere})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                Jedinice_mjereDataTable cln = ((Jedinice_mjereDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new Jedinice_mjereDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal void InitVars() {
-                this.columnID_jedinica_mjere = base.Columns["ID_jedinica_mjere"];
-                this.columnNaziv = base.Columns["Naziv"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            private void InitClass() {
-                this.columnID_jedinica_mjere = new global::System.Data.DataColumn("ID_jedinica_mjere", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID_jedinica_mjere);
-                this.columnNaziv = new global::System.Data.DataColumn("Naziv", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNaziv);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnID_jedinica_mjere}, true));
-                this.columnID_jedinica_mjere.AllowDBNull = false;
-                this.columnID_jedinica_mjere.Unique = true;
-                this.columnNaziv.AllowDBNull = false;
-                this.columnNaziv.MaxLength = 10;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Jedinice_mjereRow NewJedinice_mjereRow() {
-                return ((Jedinice_mjereRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new Jedinice_mjereRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(Jedinice_mjereRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.Jedinice_mjereRowChanged != null)) {
-                    this.Jedinice_mjereRowChanged(this, new Jedinice_mjereRowChangeEvent(((Jedinice_mjereRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.Jedinice_mjereRowChanging != null)) {
-                    this.Jedinice_mjereRowChanging(this, new Jedinice_mjereRowChangeEvent(((Jedinice_mjereRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.Jedinice_mjereRowDeleted != null)) {
-                    this.Jedinice_mjereRowDeleted(this, new Jedinice_mjereRowChangeEvent(((Jedinice_mjereRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.Jedinice_mjereRowDeleting != null)) {
-                    this.Jedinice_mjereRowDeleting(this, new Jedinice_mjereRowChangeEvent(((Jedinice_mjereRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveJedinice_mjereRow(Jedinice_mjereRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                pi2013FastOrderdbDataSet ds = new pi2013FastOrderdbDataSet();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "Jedinice_mjereDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class JelovnikDataTable : global::System.Data.TypedTableBase<JelovnikRow> {
             
             private global::System.Data.DataColumn columnID_jelovnika;
@@ -1725,6 +940,8 @@ namespace Kreiranje_narudžbe {
             private global::System.Data.DataColumn columnDatum;
             
             private global::System.Data.DataColumn columnFK_ID_zaposlenika;
+            
+            private global::System.Data.DataColumn columnDnevna_ponuda;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -1785,6 +1002,14 @@ namespace Kreiranje_narudžbe {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Dnevna_ponudaColumn {
+                get {
+                    return this.columnDnevna_ponuda;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1820,15 +1045,13 @@ namespace Kreiranje_narudžbe {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public JelovnikRow AddJelovnikRow(int ID_jelovnika, System.DateTime Datum, Evidencija_o_zaposlenimaRow parentEvidencija_o_zaposlenimaRowByFK_Jelovnik_Evidencija_o_zaposlenima) {
+            public JelovnikRow AddJelovnikRow(int ID_jelovnika, System.DateTime Datum, int FK_ID_zaposlenika, string Dnevna_ponuda) {
                 JelovnikRow rowJelovnikRow = ((JelovnikRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID_jelovnika,
                         Datum,
-                        null};
-                if ((parentEvidencija_o_zaposlenimaRowByFK_Jelovnik_Evidencija_o_zaposlenima != null)) {
-                    columnValuesArray[2] = parentEvidencija_o_zaposlenimaRowByFK_Jelovnik_Evidencija_o_zaposlenima[0];
-                }
+                        FK_ID_zaposlenika,
+                        Dnevna_ponuda};
                 rowJelovnikRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowJelovnikRow);
                 return rowJelovnikRow;
@@ -1861,6 +1084,7 @@ namespace Kreiranje_narudžbe {
                 this.columnID_jelovnika = base.Columns["ID_jelovnika"];
                 this.columnDatum = base.Columns["Datum"];
                 this.columnFK_ID_zaposlenika = base.Columns["FK_ID_zaposlenika"];
+                this.columnDnevna_ponuda = base.Columns["Dnevna_ponuda"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1872,11 +1096,15 @@ namespace Kreiranje_narudžbe {
                 base.Columns.Add(this.columnDatum);
                 this.columnFK_ID_zaposlenika = new global::System.Data.DataColumn("FK_ID_zaposlenika", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFK_ID_zaposlenika);
+                this.columnDnevna_ponuda = new global::System.Data.DataColumn("Dnevna_ponuda", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDnevna_ponuda);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID_jelovnika}, true));
                 this.columnID_jelovnika.AllowDBNull = false;
                 this.columnID_jelovnika.Unique = true;
                 this.columnFK_ID_zaposlenika.AllowDBNull = false;
+                this.columnDnevna_ponuda.AllowDBNull = false;
+                this.columnDnevna_ponuda.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2150,7 +1378,7 @@ namespace Kreiranje_narudžbe {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public NarudžbaRow AddNarudžbaRow(int ID_narudžbe, System.DateTime Datum, System.TimeSpan Vrijeme, int ID_stola, string Zahtjevi_narudžbe, Popis_stolovaRow parentPopis_stolovaRowByFK_Narudžba_Popis_stolova, Evidencija_o_zaposlenimaRow parentEvidencija_o_zaposlenimaRowByFK_Narudžba_Evidencija_o_zaposlenima) {
+            public NarudžbaRow AddNarudžbaRow(int ID_narudžbe, System.DateTime Datum, System.TimeSpan Vrijeme, int ID_stola, string Zahtjevi_narudžbe, Popis_stolovaRow parentPopis_stolovaRowByFK_Narudžba_Popis_stolova, int FK_ID_zaposlenika) {
                 NarudžbaRow rowNarudžbaRow = ((NarudžbaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID_narudžbe,
@@ -2159,12 +1387,9 @@ namespace Kreiranje_narudžbe {
                         ID_stola,
                         Zahtjevi_narudžbe,
                         null,
-                        null};
+                        FK_ID_zaposlenika};
                 if ((parentPopis_stolovaRowByFK_Narudžba_Popis_stolova != null)) {
                     columnValuesArray[5] = parentPopis_stolovaRowByFK_Narudžba_Popis_stolova[0];
-                }
-                if ((parentEvidencija_o_zaposlenimaRowByFK_Narudžba_Evidencija_o_zaposlenima != null)) {
-                    columnValuesArray[6] = parentEvidencija_o_zaposlenimaRowByFK_Narudžba_Evidencija_o_zaposlenima[0];
                 }
                 rowNarudžbaRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowNarudžbaRow);
@@ -2317,296 +1542,6 @@ namespace Kreiranje_narudžbe {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "NarudžbaDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class PonudaDataTable : global::System.Data.TypedTableBase<PonudaRow> {
-            
-            private global::System.Data.DataColumn columnID_ponude;
-            
-            private global::System.Data.DataColumn columnDatum;
-            
-            private global::System.Data.DataColumn columnFK_ID_zaposlenika;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public PonudaDataTable() {
-                this.TableName = "Ponuda";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal PonudaDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected PonudaDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ID_ponudeColumn {
-                get {
-                    return this.columnID_ponude;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn DatumColumn {
-                get {
-                    return this.columnDatum;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn FK_ID_zaposlenikaColumn {
-                get {
-                    return this.columnFK_ID_zaposlenika;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public PonudaRow this[int index] {
-                get {
-                    return ((PonudaRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event PonudaRowChangeEventHandler PonudaRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event PonudaRowChangeEventHandler PonudaRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event PonudaRowChangeEventHandler PonudaRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event PonudaRowChangeEventHandler PonudaRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddPonudaRow(PonudaRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public PonudaRow AddPonudaRow(int ID_ponude, System.DateTime Datum, Evidencija_o_zaposlenimaRow parentEvidencija_o_zaposlenimaRowByFK_Ponuda_Evidencija_o_zaposlenima) {
-                PonudaRow rowPonudaRow = ((PonudaRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        ID_ponude,
-                        Datum,
-                        null};
-                if ((parentEvidencija_o_zaposlenimaRowByFK_Ponuda_Evidencija_o_zaposlenima != null)) {
-                    columnValuesArray[2] = parentEvidencija_o_zaposlenimaRowByFK_Ponuda_Evidencija_o_zaposlenima[0];
-                }
-                rowPonudaRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowPonudaRow);
-                return rowPonudaRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public PonudaRow FindByID_ponude(int ID_ponude) {
-                return ((PonudaRow)(this.Rows.Find(new object[] {
-                            ID_ponude})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                PonudaDataTable cln = ((PonudaDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new PonudaDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal void InitVars() {
-                this.columnID_ponude = base.Columns["ID_ponude"];
-                this.columnDatum = base.Columns["Datum"];
-                this.columnFK_ID_zaposlenika = base.Columns["FK_ID_zaposlenika"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            private void InitClass() {
-                this.columnID_ponude = new global::System.Data.DataColumn("ID_ponude", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID_ponude);
-                this.columnDatum = new global::System.Data.DataColumn("Datum", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDatum);
-                this.columnFK_ID_zaposlenika = new global::System.Data.DataColumn("FK_ID_zaposlenika", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFK_ID_zaposlenika);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnID_ponude}, true));
-                this.columnID_ponude.AllowDBNull = false;
-                this.columnID_ponude.Unique = true;
-                this.columnFK_ID_zaposlenika.AllowDBNull = false;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public PonudaRow NewPonudaRow() {
-                return ((PonudaRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new PonudaRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(PonudaRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.PonudaRowChanged != null)) {
-                    this.PonudaRowChanged(this, new PonudaRowChangeEvent(((PonudaRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.PonudaRowChanging != null)) {
-                    this.PonudaRowChanging(this, new PonudaRowChangeEvent(((PonudaRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.PonudaRowDeleted != null)) {
-                    this.PonudaRowDeleted(this, new PonudaRowChangeEvent(((PonudaRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.PonudaRowDeleting != null)) {
-                    this.PonudaRowDeleting(this, new PonudaRowChangeEvent(((PonudaRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemovePonudaRow(PonudaRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                pi2013FastOrderdbDataSet ds = new pi2013FastOrderdbDataSet();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "PonudaDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -3328,16 +2263,13 @@ namespace Kreiranje_narudžbe {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Racun_za_gostaRow AddRacun_za_gostaRow(int ID_racuna, System.DateTime Datum, System.TimeSpan Vrijeme, Evidencija_o_zaposlenimaRow parentEvidencija_o_zaposlenimaRowByFK_Racun_za_gosta_Evidencija_o_zaposlenima) {
+            public Racun_za_gostaRow AddRacun_za_gostaRow(int ID_racuna, System.DateTime Datum, System.TimeSpan Vrijeme, int FK_ID_zaposlenika) {
                 Racun_za_gostaRow rowRacun_za_gostaRow = ((Racun_za_gostaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID_racuna,
                         Datum,
                         Vrijeme,
-                        null};
-                if ((parentEvidencija_o_zaposlenimaRowByFK_Racun_za_gosta_Evidencija_o_zaposlenima != null)) {
-                    columnValuesArray[3] = parentEvidencija_o_zaposlenimaRowByFK_Racun_za_gosta_Evidencija_o_zaposlenima[0];
-                }
+                        FK_ID_zaposlenika};
                 rowRacun_za_gostaRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowRacun_za_gostaRow);
                 return rowRacun_za_gostaRow;
@@ -4059,275 +2991,6 @@ namespace Kreiranje_narudžbe {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class Stavke_poundeDataTable : global::System.Data.TypedTableBase<Stavke_poundeRow> {
-            
-            private global::System.Data.DataColumn columnFK_ID_ponude;
-            
-            private global::System.Data.DataColumn columnFK_ID_artikla;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Stavke_poundeDataTable() {
-                this.TableName = "Stavke pounde";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal Stavke_poundeDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected Stavke_poundeDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn FK_ID_ponudeColumn {
-                get {
-                    return this.columnFK_ID_ponude;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn FK_ID_artiklaColumn {
-                get {
-                    return this.columnFK_ID_artikla;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Stavke_poundeRow this[int index] {
-                get {
-                    return ((Stavke_poundeRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Stavke_poundeRowChangeEventHandler Stavke_poundeRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Stavke_poundeRowChangeEventHandler Stavke_poundeRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Stavke_poundeRowChangeEventHandler Stavke_poundeRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Stavke_poundeRowChangeEventHandler Stavke_poundeRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddStavke_poundeRow(Stavke_poundeRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Stavke_poundeRow AddStavke_poundeRow(PonudaRow parentPonudaRowByFK_Stavke_pounde_Ponuda, ArtikliRow parentArtikliRowByFK_Stavke_pounde_Artikli) {
-                Stavke_poundeRow rowStavke_poundeRow = ((Stavke_poundeRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        null,
-                        null};
-                if ((parentPonudaRowByFK_Stavke_pounde_Ponuda != null)) {
-                    columnValuesArray[0] = parentPonudaRowByFK_Stavke_pounde_Ponuda[0];
-                }
-                if ((parentArtikliRowByFK_Stavke_pounde_Artikli != null)) {
-                    columnValuesArray[1] = parentArtikliRowByFK_Stavke_pounde_Artikli[0];
-                }
-                rowStavke_poundeRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowStavke_poundeRow);
-                return rowStavke_poundeRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                Stavke_poundeDataTable cln = ((Stavke_poundeDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new Stavke_poundeDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal void InitVars() {
-                this.columnFK_ID_ponude = base.Columns["FK_ID_ponude"];
-                this.columnFK_ID_artikla = base.Columns["FK_ID_artikla"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            private void InitClass() {
-                this.columnFK_ID_ponude = new global::System.Data.DataColumn("FK_ID_ponude", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFK_ID_ponude);
-                this.columnFK_ID_artikla = new global::System.Data.DataColumn("FK_ID_artikla", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFK_ID_artikla);
-                this.columnFK_ID_ponude.AllowDBNull = false;
-                this.columnFK_ID_artikla.AllowDBNull = false;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Stavke_poundeRow NewStavke_poundeRow() {
-                return ((Stavke_poundeRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new Stavke_poundeRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(Stavke_poundeRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.Stavke_poundeRowChanged != null)) {
-                    this.Stavke_poundeRowChanged(this, new Stavke_poundeRowChangeEvent(((Stavke_poundeRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.Stavke_poundeRowChanging != null)) {
-                    this.Stavke_poundeRowChanging(this, new Stavke_poundeRowChangeEvent(((Stavke_poundeRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.Stavke_poundeRowDeleted != null)) {
-                    this.Stavke_poundeRowDeleted(this, new Stavke_poundeRowChangeEvent(((Stavke_poundeRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.Stavke_poundeRowDeleting != null)) {
-                    this.Stavke_poundeRowDeleting(this, new Stavke_poundeRowChangeEvent(((Stavke_poundeRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveStavke_poundeRow(Stavke_poundeRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                pi2013FastOrderdbDataSet ds = new pi2013FastOrderdbDataSet();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "Stavke_poundeDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class Stavke_racunaDataTable : global::System.Data.TypedTableBase<Stavke_racunaRow> {
             
             private global::System.Data.DataColumn columnFK_ID_narudzbe;
@@ -4619,9 +3282,9 @@ namespace Kreiranje_narudžbe {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public byte[] Naziv {
+            public string Naziv {
                 get {
-                    return ((byte[])(this[this.tableArtikli.NazivColumn]));
+                    return ((string)(this[this.tableArtikli.NazivColumn]));
                 }
                 set {
                     this[this.tableArtikli.NazivColumn] = value;
@@ -4641,52 +3304,41 @@ namespace Kreiranje_narudžbe {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Opis {
+            public string Opis_artikla {
                 get {
                     try {
-                        return ((string)(this[this.tableArtikli.OpisColumn]));
+                        return ((string)(this[this.tableArtikli.Opis_artiklaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Opis\' in table \'Artikli\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Opis_artikla\' in table \'Artikli\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableArtikli.OpisColumn] = value;
+                    this[this.tableArtikli.Opis_artiklaColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int FK_ID_jedinica_mjere {
+            public string Jedinica_mjere {
                 get {
-                    return ((int)(this[this.tableArtikli.FK_ID_jedinica_mjereColumn]));
+                    return ((string)(this[this.tableArtikli.Jedinica_mjereColumn]));
                 }
                 set {
-                    this[this.tableArtikli.FK_ID_jedinica_mjereColumn] = value;
+                    this[this.tableArtikli.Jedinica_mjereColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Jedinice_mjereRow Jedinice_mjereRow {
-                get {
-                    return ((Jedinice_mjereRow)(this.GetParentRow(this.Table.ParentRelations["FK_Artikli_Jedinice mjere"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_Artikli_Jedinice mjere"]);
-                }
+            public bool IsOpis_artiklaNull() {
+                return this.IsNull(this.tableArtikli.Opis_artiklaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsOpisNull() {
-                return this.IsNull(this.tableArtikli.OpisColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetOpisNull() {
-                this[this.tableArtikli.OpisColumn] = global::System.Convert.DBNull;
+            public void SetOpis_artiklaNull() {
+                this[this.tableArtikli.Opis_artiklaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4708,196 +3360,6 @@ namespace Kreiranje_narudžbe {
                 }
                 else {
                     return ((Stavke_narudzbeRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Stavke narudzbe_Artikli"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Stavke_poundeRow[] GetStavke_poundeRows() {
-                if ((this.Table.ChildRelations["FK_Stavke pounde_Artikli"] == null)) {
-                    return new Stavke_poundeRow[0];
-                }
-                else {
-                    return ((Stavke_poundeRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Stavke pounde_Artikli"])));
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class Evidencija_o_zaposlenimaRow : global::System.Data.DataRow {
-            
-            private Evidencija_o_zaposlenimaDataTable tableEvidencija_o_zaposlenima;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal Evidencija_o_zaposlenimaRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableEvidencija_o_zaposlenima = ((Evidencija_o_zaposlenimaDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int ID_zaposlenika {
-                get {
-                    return ((int)(this[this.tableEvidencija_o_zaposlenima.ID_zaposlenikaColumn]));
-                }
-                set {
-                    this[this.tableEvidencija_o_zaposlenima.ID_zaposlenikaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Radno_mjesto {
-                get {
-                    return ((string)(this[this.tableEvidencija_o_zaposlenima.Radno_mjestoColumn]));
-                }
-                set {
-                    this[this.tableEvidencija_o_zaposlenima.Radno_mjestoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Ime {
-                get {
-                    return ((string)(this[this.tableEvidencija_o_zaposlenima.ImeColumn]));
-                }
-                set {
-                    this[this.tableEvidencija_o_zaposlenima.ImeColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Prezime {
-                get {
-                    return ((string)(this[this.tableEvidencija_o_zaposlenima.PrezimeColumn]));
-                }
-                set {
-                    this[this.tableEvidencija_o_zaposlenima.PrezimeColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Adresa {
-                get {
-                    try {
-                        return ((string)(this[this.tableEvidencija_o_zaposlenima.AdresaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Adresa\' in table \'Evidencija o zaposlenima\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableEvidencija_o_zaposlenima.AdresaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsAdresaNull() {
-                return this.IsNull(this.tableEvidencija_o_zaposlenima.AdresaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetAdresaNull() {
-                this[this.tableEvidencija_o_zaposlenima.AdresaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public JelovnikRow[] GetJelovnikRows() {
-                if ((this.Table.ChildRelations["FK_Jelovnik_Evidencija o zaposlenima"] == null)) {
-                    return new JelovnikRow[0];
-                }
-                else {
-                    return ((JelovnikRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Jelovnik_Evidencija o zaposlenima"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public NarudžbaRow[] GetNarudžbaRows() {
-                if ((this.Table.ChildRelations["FK_Narudžba_Evidencija o zaposlenima"] == null)) {
-                    return new NarudžbaRow[0];
-                }
-                else {
-                    return ((NarudžbaRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Narudžba_Evidencija o zaposlenima"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public PonudaRow[] GetPonudaRows() {
-                if ((this.Table.ChildRelations["FK_Ponuda_Evidencija o zaposlenima"] == null)) {
-                    return new PonudaRow[0];
-                }
-                else {
-                    return ((PonudaRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Ponuda_Evidencija o zaposlenima"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Racun_za_gostaRow[] GetRacun_za_gostaRows() {
-                if ((this.Table.ChildRelations["FK_Racun za gosta_Evidencija o zaposlenima"] == null)) {
-                    return new Racun_za_gostaRow[0];
-                }
-                else {
-                    return ((Racun_za_gostaRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Racun za gosta_Evidencija o zaposlenima"])));
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class Jedinice_mjereRow : global::System.Data.DataRow {
-            
-            private Jedinice_mjereDataTable tableJedinice_mjere;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal Jedinice_mjereRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableJedinice_mjere = ((Jedinice_mjereDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int ID_jedinica_mjere {
-                get {
-                    return ((int)(this[this.tableJedinice_mjere.ID_jedinica_mjereColumn]));
-                }
-                set {
-                    this[this.tableJedinice_mjere.ID_jedinica_mjereColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Naziv {
-                get {
-                    return ((string)(this[this.tableJedinice_mjere.NazivColumn]));
-                }
-                set {
-                    this[this.tableJedinice_mjere.NazivColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ArtikliRow[] GetArtikliRows() {
-                if ((this.Table.ChildRelations["FK_Artikli_Jedinice mjere"] == null)) {
-                    return new ArtikliRow[0];
-                }
-                else {
-                    return ((ArtikliRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Artikli_Jedinice mjere"])));
                 }
             }
         }
@@ -4956,12 +3418,12 @@ namespace Kreiranje_narudžbe {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Evidencija_o_zaposlenimaRow Evidencija_o_zaposlenimaRow {
+            public string Dnevna_ponuda {
                 get {
-                    return ((Evidencija_o_zaposlenimaRow)(this.GetParentRow(this.Table.ParentRelations["FK_Jelovnik_Evidencija o zaposlenima"])));
+                    return ((string)(this[this.tableJelovnik.Dnevna_ponudaColumn]));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_Jelovnik_Evidencija o zaposlenima"]);
+                    this[this.tableJelovnik.Dnevna_ponudaColumn] = value;
                 }
             }
             
@@ -5087,17 +3549,6 @@ namespace Kreiranje_narudžbe {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Evidencija_o_zaposlenimaRow Evidencija_o_zaposlenimaRow {
-                get {
-                    return ((Evidencija_o_zaposlenimaRow)(this.GetParentRow(this.Table.ParentRelations["FK_Narudžba_Evidencija o zaposlenima"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_Narudžba_Evidencija o zaposlenima"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public Popis_stolovaRow Popis_stolovaRow {
                 get {
                     return ((Popis_stolovaRow)(this.GetParentRow(this.Table.ParentRelations["FK_Narudžba_Popis stolova"])));
@@ -5149,93 +3600,6 @@ namespace Kreiranje_narudžbe {
                 }
                 else {
                     return ((Stavke_racunaRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Stavke racuna_Narudžba"])));
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class PonudaRow : global::System.Data.DataRow {
-            
-            private PonudaDataTable tablePonuda;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal PonudaRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tablePonuda = ((PonudaDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int ID_ponude {
-                get {
-                    return ((int)(this[this.tablePonuda.ID_ponudeColumn]));
-                }
-                set {
-                    this[this.tablePonuda.ID_ponudeColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime Datum {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tablePonuda.DatumColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Datum\' in table \'Ponuda\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePonuda.DatumColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int FK_ID_zaposlenika {
-                get {
-                    return ((int)(this[this.tablePonuda.FK_ID_zaposlenikaColumn]));
-                }
-                set {
-                    this[this.tablePonuda.FK_ID_zaposlenikaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Evidencija_o_zaposlenimaRow Evidencija_o_zaposlenimaRow {
-                get {
-                    return ((Evidencija_o_zaposlenimaRow)(this.GetParentRow(this.Table.ParentRelations["FK_Ponuda_Evidencija o zaposlenima"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_Ponuda_Evidencija o zaposlenima"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsDatumNull() {
-                return this.IsNull(this.tablePonuda.DatumColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetDatumNull() {
-                this[this.tablePonuda.DatumColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Stavke_poundeRow[] GetStavke_poundeRows() {
-                if ((this.Table.ChildRelations["FK_Stavke pounde_Ponuda"] == null)) {
-                    return new Stavke_poundeRow[0];
-                }
-                else {
-                    return ((Stavke_poundeRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Stavke pounde_Ponuda"])));
                 }
             }
         }
@@ -5441,17 +3805,6 @@ namespace Kreiranje_narudžbe {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Evidencija_o_zaposlenimaRow Evidencija_o_zaposlenimaRow {
-                get {
-                    return ((Evidencija_o_zaposlenimaRow)(this.GetParentRow(this.Table.ParentRelations["FK_Racun za gosta_Evidencija o zaposlenima"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_Racun za gosta_Evidencija o zaposlenima"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public Stavke_racunaRow[] GetStavke_racunaRows() {
                 if ((this.Table.ChildRelations["FK_Stavke racuna_Racun za gosta"] == null)) {
                     return new Stavke_racunaRow[0];
@@ -5600,65 +3953,6 @@ namespace Kreiranje_narudžbe {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class Stavke_poundeRow : global::System.Data.DataRow {
-            
-            private Stavke_poundeDataTable tableStavke_pounde;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal Stavke_poundeRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableStavke_pounde = ((Stavke_poundeDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int FK_ID_ponude {
-                get {
-                    return ((int)(this[this.tableStavke_pounde.FK_ID_ponudeColumn]));
-                }
-                set {
-                    this[this.tableStavke_pounde.FK_ID_ponudeColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int FK_ID_artikla {
-                get {
-                    return ((int)(this[this.tableStavke_pounde.FK_ID_artiklaColumn]));
-                }
-                set {
-                    this[this.tableStavke_pounde.FK_ID_artiklaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ArtikliRow ArtikliRow {
-                get {
-                    return ((ArtikliRow)(this.GetParentRow(this.Table.ParentRelations["FK_Stavke pounde_Artikli"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_Stavke pounde_Artikli"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public PonudaRow PonudaRow {
-                get {
-                    return ((PonudaRow)(this.GetParentRow(this.Table.ParentRelations["FK_Stavke pounde_Ponuda"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_Stavke pounde_Ponuda"]);
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
         public partial class Stavke_racunaRow : global::System.Data.DataRow {
             
             private Stavke_racunaDataTable tableStavke_racuna;
@@ -5753,74 +4047,6 @@ namespace Kreiranje_narudžbe {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class Evidencija_o_zaposlenimaRowChangeEvent : global::System.EventArgs {
-            
-            private Evidencija_o_zaposlenimaRow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Evidencija_o_zaposlenimaRowChangeEvent(Evidencija_o_zaposlenimaRow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Evidencija_o_zaposlenimaRow Row {
-                get {
-                    return this.eventRow;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataRowAction Action {
-                get {
-                    return this.eventAction;
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Row event argument class
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class Jedinice_mjereRowChangeEvent : global::System.EventArgs {
-            
-            private Jedinice_mjereRow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Jedinice_mjereRowChangeEvent(Jedinice_mjereRow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Jedinice_mjereRow Row {
-                get {
-                    return this.eventRow;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataRowAction Action {
-                get {
-                    return this.eventAction;
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Row event argument class
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public class JelovnikRowChangeEvent : global::System.EventArgs {
             
             private JelovnikRow eventRow;
@@ -5871,40 +4097,6 @@ namespace Kreiranje_narudžbe {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public NarudžbaRow Row {
-                get {
-                    return this.eventRow;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataRowAction Action {
-                get {
-                    return this.eventAction;
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Row event argument class
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class PonudaRowChangeEvent : global::System.EventArgs {
-            
-            private PonudaRow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public PonudaRowChangeEvent(PonudaRow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public PonudaRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -6093,40 +4285,6 @@ namespace Kreiranje_narudžbe {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class Stavke_poundeRowChangeEvent : global::System.EventArgs {
-            
-            private Stavke_poundeRow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Stavke_poundeRowChangeEvent(Stavke_poundeRow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Stavke_poundeRow Row {
-                get {
-                    return this.eventRow;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataRowAction Action {
-                get {
-                    return this.eventAction;
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Row event argument class
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public class Stavke_racunaRowChangeEvent : global::System.EventArgs {
             
             private Stavke_racunaRow eventRow;
@@ -6285,45 +4443,45 @@ namespace Kreiranje_narudžbe.pi2013FastOrderdbDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("ID_artikla", "ID_artikla");
             tableMapping.ColumnMappings.Add("Naziv", "Naziv");
             tableMapping.ColumnMappings.Add("Jedinična_cijena", "Jedinična_cijena");
-            tableMapping.ColumnMappings.Add("Opis", "Opis");
-            tableMapping.ColumnMappings.Add("FK_ID_jedinica_mjere", "FK_ID_jedinica_mjere");
+            tableMapping.ColumnMappings.Add("Opis_artikla", "Opis_artikla");
+            tableMapping.ColumnMappings.Add("Jedinica_mjere", "Jedinica_mjere");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Artikli] WHERE (([ID_artikla] = @Original_ID_artikla) AND ([Naziv] = @Original_Naziv) AND ([Jedinična_cijena] = @Original_Jedinična_cijena) AND ((@IsNull_Opis = 1 AND [Opis] IS NULL) OR ([Opis] = @Original_Opis)) AND ([FK_ID_jedinica_mjere] = @Original_FK_ID_jedinica_mjere))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Artikli] WHERE (([ID_artikla] = @Original_ID_artikla) AND ([Naziv] = @Original_Naziv) AND ([Jedinična_cijena] = @Original_Jedinična_cijena) AND ((@IsNull_Opis_artikla = 1 AND [Opis_artikla] IS NULL) OR ([Opis_artikla] = @Original_Opis_artikla)) AND ([Jedinica_mjere] = @Original_Jedinica_mjere))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_artikla", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_artikla", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Naziv", global::System.Data.SqlDbType.VarBinary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Naziv", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Naziv", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Naziv", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Jedinična_cijena", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Jedinična_cijena", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Opis", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Opis", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Opis", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Opis", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FK_ID_jedinica_mjere", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FK_ID_jedinica_mjere", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Opis_artikla", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Opis_artikla", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Opis_artikla", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Opis_artikla", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Jedinica_mjere", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Jedinica_mjere", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Artikli] ([ID_artikla], [Naziv], [Jedinična_cijena], [Opis], [FK_ID_jedinica_mjere]) VALUES (@ID_artikla, @Naziv, @Jedinična_cijena, @Opis, @FK_ID_jedinica_mjere);
-SELECT ID_artikla, Naziv, Jedinična_cijena, Opis, FK_ID_jedinica_mjere FROM Artikli WHERE (ID_artikla = @ID_artikla)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Artikli] ([ID_artikla], [Naziv], [Jedinična_cijena], [Opis_artikla], [Jedinica_mjere]) VALUES (@ID_artikla, @Naziv, @Jedinična_cijena, @Opis_artikla, @Jedinica_mjere);
+SELECT ID_artikla, Naziv, Jedinična_cijena, Opis_artikla, Jedinica_mjere FROM Artikli WHERE (ID_artikla = @ID_artikla)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_artikla", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_artikla", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Naziv", global::System.Data.SqlDbType.VarBinary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Naziv", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Naziv", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Naziv", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Jedinična_cijena", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Jedinična_cijena", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Opis", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Opis", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FK_ID_jedinica_mjere", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FK_ID_jedinica_mjere", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Opis_artikla", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Opis_artikla", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Jedinica_mjere", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Jedinica_mjere", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Artikli] SET [ID_artikla] = @ID_artikla, [Naziv] = @Naziv, [Jedinična_cijena] = @Jedinična_cijena, [Opis] = @Opis, [FK_ID_jedinica_mjere] = @FK_ID_jedinica_mjere WHERE (([ID_artikla] = @Original_ID_artikla) AND ([Naziv] = @Original_Naziv) AND ([Jedinična_cijena] = @Original_Jedinična_cijena) AND ((@IsNull_Opis = 1 AND [Opis] IS NULL) OR ([Opis] = @Original_Opis)) AND ([FK_ID_jedinica_mjere] = @Original_FK_ID_jedinica_mjere));
-SELECT ID_artikla, Naziv, Jedinična_cijena, Opis, FK_ID_jedinica_mjere FROM Artikli WHERE (ID_artikla = @ID_artikla)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Artikli] SET [ID_artikla] = @ID_artikla, [Naziv] = @Naziv, [Jedinična_cijena] = @Jedinična_cijena, [Opis_artikla] = @Opis_artikla, [Jedinica_mjere] = @Jedinica_mjere WHERE (([ID_artikla] = @Original_ID_artikla) AND ([Naziv] = @Original_Naziv) AND ([Jedinična_cijena] = @Original_Jedinična_cijena) AND ((@IsNull_Opis_artikla = 1 AND [Opis_artikla] IS NULL) OR ([Opis_artikla] = @Original_Opis_artikla)) AND ([Jedinica_mjere] = @Original_Jedinica_mjere));
+SELECT ID_artikla, Naziv, Jedinična_cijena, Opis_artikla, Jedinica_mjere FROM Artikli WHERE (ID_artikla = @ID_artikla)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_artikla", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_artikla", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Naziv", global::System.Data.SqlDbType.VarBinary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Naziv", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Naziv", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Naziv", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Jedinična_cijena", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Jedinična_cijena", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Opis", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Opis", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FK_ID_jedinica_mjere", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FK_ID_jedinica_mjere", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Opis_artikla", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Opis_artikla", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Jedinica_mjere", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Jedinica_mjere", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_artikla", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_artikla", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Naziv", global::System.Data.SqlDbType.VarBinary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Naziv", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Naziv", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Naziv", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Jedinična_cijena", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Jedinična_cijena", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Opis", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Opis", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Opis", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Opis", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FK_ID_jedinica_mjere", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FK_ID_jedinica_mjere", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Opis_artikla", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Opis_artikla", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Opis_artikla", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Opis_artikla", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Jedinica_mjere", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Jedinica_mjere", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6339,8 +4497,8 @@ SELECT ID_artikla, Naziv, Jedinična_cijena, Opis, FK_ID_jedinica_mjere FROM Art
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID_artikla, Naziv, Jedinična_cijena, Opis, FK_ID_jedinica_mjere FROM dbo.A" +
-                "rtikli";
+            this._commandCollection[0].CommandText = "SELECT ID_artikla, Naziv, Jedinična_cijena, Opis_artikla, Jedinica_mjere FROM dbo" +
+                ".Artikli";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -6401,782 +4559,29 @@ SELECT ID_artikla, Naziv, Jedinična_cijena, Opis, FK_ID_jedinica_mjere FROM Art
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID_artikla, byte[] Original_Naziv, double Original_Jedinična_cijena, string Original_Opis, int Original_FK_ID_jedinica_mjere) {
+        public virtual int Delete(int Original_ID_artikla, string Original_Naziv, double Original_Jedinična_cijena, string Original_Opis_artikla, string Original_Jedinica_mjere) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID_artikla));
-            if ((Original_Naziv == null)) {
-                throw new global::System.ArgumentNullException("Original_Naziv");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((byte[])(Original_Naziv));
-            }
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((double)(Original_Jedinična_cijena));
-            if ((Original_Opis == null)) {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Opis));
-            }
-            this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_FK_ID_jedinica_mjere));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int ID_artikla, byte[] Naziv, double Jedinična_cijena, string Opis, int FK_ID_jedinica_mjere) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID_artikla));
-            if ((Naziv == null)) {
-                throw new global::System.ArgumentNullException("Naziv");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((byte[])(Naziv));
-            }
-            this.Adapter.InsertCommand.Parameters[2].Value = ((double)(Jedinična_cijena));
-            if ((Opis == null)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Opis));
-            }
-            this.Adapter.InsertCommand.Parameters[4].Value = ((int)(FK_ID_jedinica_mjere));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int ID_artikla, byte[] Naziv, double Jedinična_cijena, string Opis, int FK_ID_jedinica_mjere, int Original_ID_artikla, byte[] Original_Naziv, double Original_Jedinična_cijena, string Original_Opis, int Original_FK_ID_jedinica_mjere) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ID_artikla));
-            if ((Naziv == null)) {
-                throw new global::System.ArgumentNullException("Naziv");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((byte[])(Naziv));
-            }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((double)(Jedinična_cijena));
-            if ((Opis == null)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Opis));
-            }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(FK_ID_jedinica_mjere));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_ID_artikla));
-            if ((Original_Naziv == null)) {
-                throw new global::System.ArgumentNullException("Original_Naziv");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((byte[])(Original_Naziv));
-            }
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((double)(Original_Jedinična_cijena));
-            if ((Original_Opis == null)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_Opis));
-            }
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_FK_ID_jedinica_mjere));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(byte[] Naziv, double Jedinična_cijena, string Opis, int FK_ID_jedinica_mjere, int Original_ID_artikla, byte[] Original_Naziv, double Original_Jedinična_cijena, string Original_Opis, int Original_FK_ID_jedinica_mjere) {
-            return this.Update(Original_ID_artikla, Naziv, Jedinična_cijena, Opis, FK_ID_jedinica_mjere, Original_ID_artikla, Original_Naziv, Original_Jedinična_cijena, Original_Opis, Original_FK_ID_jedinica_mjere);
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class Evidencija_o_zaposlenimaTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public Evidencija_o_zaposlenimaTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Evidencija o zaposlenima";
-            tableMapping.ColumnMappings.Add("ID_zaposlenika", "ID_zaposlenika");
-            tableMapping.ColumnMappings.Add("Radno_mjesto", "Radno_mjesto");
-            tableMapping.ColumnMappings.Add("Ime", "Ime");
-            tableMapping.ColumnMappings.Add("Prezime", "Prezime");
-            tableMapping.ColumnMappings.Add("Adresa", "Adresa");
-            this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Evidencija o zaposlenima] WHERE (([ID_zaposlenika] = @Original_ID_zaposlenika) AND ([Radno_mjesto] = @Original_Radno_mjesto) AND ([Ime] = @Original_Ime) AND ([Prezime] = @Original_Prezime) AND ((@IsNull_Adresa = 1 AND [Adresa] IS NULL) OR ([Adresa] = @Original_Adresa)))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_zaposlenika", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_zaposlenika", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Radno_mjesto", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Radno_mjesto", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ime", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Prezime", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prezime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Adresa", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Adresa", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Adresa", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Adresa", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Evidencija o zaposlenima] ([ID_zaposlenika], [Radno_mjesto], [Ime], [Prezime], [Adresa]) VALUES (@ID_zaposlenika, @Radno_mjesto, @Ime, @Prezime, @Adresa);
-SELECT ID_zaposlenika, Radno_mjesto, Ime, Prezime, Adresa FROM [Evidencija o zaposlenima] WHERE (ID_zaposlenika = @ID_zaposlenika)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_zaposlenika", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_zaposlenika", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Radno_mjesto", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Radno_mjesto", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ime", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Prezime", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prezime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Adresa", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Adresa", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Evidencija o zaposlenima] SET [ID_zaposlenika] = @ID_zaposlenika, [Radno_mjesto] = @Radno_mjesto, [Ime] = @Ime, [Prezime] = @Prezime, [Adresa] = @Adresa WHERE (([ID_zaposlenika] = @Original_ID_zaposlenika) AND ([Radno_mjesto] = @Original_Radno_mjesto) AND ([Ime] = @Original_Ime) AND ([Prezime] = @Original_Prezime) AND ((@IsNull_Adresa = 1 AND [Adresa] IS NULL) OR ([Adresa] = @Original_Adresa)));
-SELECT ID_zaposlenika, Radno_mjesto, Ime, Prezime, Adresa FROM [Evidencija o zaposlenima] WHERE (ID_zaposlenika = @ID_zaposlenika)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_zaposlenika", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_zaposlenika", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Radno_mjesto", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Radno_mjesto", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ime", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Prezime", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prezime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Adresa", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Adresa", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_zaposlenika", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_zaposlenika", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Radno_mjesto", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Radno_mjesto", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ime", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Prezime", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prezime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Adresa", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Adresa", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Adresa", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Adresa", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Kreiranje_narudžbe.Properties.Settings.Default.pi2013FastOrderdbConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID_zaposlenika, Radno_mjesto, Ime, Prezime, Adresa FROM dbo.[Evidencija o " +
-                "zaposlenima]";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(pi2013FastOrderdbDataSet.Evidencija_o_zaposlenimaDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual pi2013FastOrderdbDataSet.Evidencija_o_zaposlenimaDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            pi2013FastOrderdbDataSet.Evidencija_o_zaposlenimaDataTable dataTable = new pi2013FastOrderdbDataSet.Evidencija_o_zaposlenimaDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(pi2013FastOrderdbDataSet.Evidencija_o_zaposlenimaDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(pi2013FastOrderdbDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Evidencija o zaposlenima");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID_zaposlenika, string Original_Radno_mjesto, string Original_Ime, string Original_Prezime, string Original_Adresa) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID_zaposlenika));
-            if ((Original_Radno_mjesto == null)) {
-                throw new global::System.ArgumentNullException("Original_Radno_mjesto");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Radno_mjesto));
-            }
-            if ((Original_Ime == null)) {
-                throw new global::System.ArgumentNullException("Original_Ime");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Ime));
-            }
-            if ((Original_Prezime == null)) {
-                throw new global::System.ArgumentNullException("Original_Prezime");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Prezime));
-            }
-            if ((Original_Adresa == null)) {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_Adresa));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int ID_zaposlenika, string Radno_mjesto, string Ime, string Prezime, string Adresa) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID_zaposlenika));
-            if ((Radno_mjesto == null)) {
-                throw new global::System.ArgumentNullException("Radno_mjesto");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Radno_mjesto));
-            }
-            if ((Ime == null)) {
-                throw new global::System.ArgumentNullException("Ime");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Ime));
-            }
-            if ((Prezime == null)) {
-                throw new global::System.ArgumentNullException("Prezime");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Prezime));
-            }
-            if ((Adresa == null)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Adresa));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int ID_zaposlenika, string Radno_mjesto, string Ime, string Prezime, string Adresa, int Original_ID_zaposlenika, string Original_Radno_mjesto, string Original_Ime, string Original_Prezime, string Original_Adresa) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ID_zaposlenika));
-            if ((Radno_mjesto == null)) {
-                throw new global::System.ArgumentNullException("Radno_mjesto");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Radno_mjesto));
-            }
-            if ((Ime == null)) {
-                throw new global::System.ArgumentNullException("Ime");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Ime));
-            }
-            if ((Prezime == null)) {
-                throw new global::System.ArgumentNullException("Prezime");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Prezime));
-            }
-            if ((Adresa == null)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Adresa));
-            }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_ID_zaposlenika));
-            if ((Original_Radno_mjesto == null)) {
-                throw new global::System.ArgumentNullException("Original_Radno_mjesto");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_Radno_mjesto));
-            }
-            if ((Original_Ime == null)) {
-                throw new global::System.ArgumentNullException("Original_Ime");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_Ime));
-            }
-            if ((Original_Prezime == null)) {
-                throw new global::System.ArgumentNullException("Original_Prezime");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_Prezime));
-            }
-            if ((Original_Adresa == null)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Adresa));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Radno_mjesto, string Ime, string Prezime, string Adresa, int Original_ID_zaposlenika, string Original_Radno_mjesto, string Original_Ime, string Original_Prezime, string Original_Adresa) {
-            return this.Update(Original_ID_zaposlenika, Radno_mjesto, Ime, Prezime, Adresa, Original_ID_zaposlenika, Original_Radno_mjesto, Original_Ime, Original_Prezime, Original_Adresa);
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class Jedinice_mjereTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public Jedinice_mjereTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Jedinice mjere";
-            tableMapping.ColumnMappings.Add("ID_jedinica_mjere", "ID_jedinica_mjere");
-            tableMapping.ColumnMappings.Add("Naziv", "Naziv");
-            this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Jedinice mjere] WHERE (([ID_jedinica_mjere] = @Original_ID_jed" +
-                "inica_mjere) AND ([Naziv] = @Original_Naziv))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_jedinica_mjere", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_jedinica_mjere", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Naziv", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Naziv", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Jedinice mjere] ([ID_jedinica_mjere], [Naziv]) VALUES (@ID_jed" +
-                "inica_mjere, @Naziv);\r\nSELECT ID_jedinica_mjere, Naziv FROM [Jedinice mjere] WHE" +
-                "RE (ID_jedinica_mjere = @ID_jedinica_mjere)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_jedinica_mjere", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_jedinica_mjere", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Naziv", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Naziv", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Jedinice mjere] SET [ID_jedinica_mjere] = @ID_jedinica_mjere, [Naziv] = @Naziv WHERE (([ID_jedinica_mjere] = @Original_ID_jedinica_mjere) AND ([Naziv] = @Original_Naziv));
-SELECT ID_jedinica_mjere, Naziv FROM [Jedinice mjere] WHERE (ID_jedinica_mjere = @ID_jedinica_mjere)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_jedinica_mjere", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_jedinica_mjere", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Naziv", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Naziv", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_jedinica_mjere", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_jedinica_mjere", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Naziv", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Naziv", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Kreiranje_narudžbe.Properties.Settings.Default.pi2013FastOrderdbConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID_jedinica_mjere, Naziv FROM dbo.[Jedinice mjere]";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(pi2013FastOrderdbDataSet.Jedinice_mjereDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual pi2013FastOrderdbDataSet.Jedinice_mjereDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            pi2013FastOrderdbDataSet.Jedinice_mjereDataTable dataTable = new pi2013FastOrderdbDataSet.Jedinice_mjereDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(pi2013FastOrderdbDataSet.Jedinice_mjereDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(pi2013FastOrderdbDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Jedinice mjere");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID_jedinica_mjere, string Original_Naziv) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID_jedinica_mjere));
             if ((Original_Naziv == null)) {
                 throw new global::System.ArgumentNullException("Original_Naziv");
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Naziv));
             }
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((double)(Original_Jedinična_cijena));
+            if ((Original_Opis_artikla == null)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Opis_artikla));
+            }
+            if ((Original_Jedinica_mjere == null)) {
+                throw new global::System.ArgumentNullException("Original_Jedinica_mjere");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_Jedinica_mjere));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7197,13 +4602,26 @@ SELECT ID_jedinica_mjere, Naziv FROM [Jedinice mjere] WHERE (ID_jedinica_mjere =
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int ID_jedinica_mjere, string Naziv) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID_jedinica_mjere));
+        public virtual int Insert(int ID_artikla, string Naziv, double Jedinična_cijena, string Opis_artikla, string Jedinica_mjere) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID_artikla));
             if ((Naziv == null)) {
                 throw new global::System.ArgumentNullException("Naziv");
             }
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Naziv));
+            }
+            this.Adapter.InsertCommand.Parameters[2].Value = ((double)(Jedinična_cijena));
+            if ((Opis_artikla == null)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Opis_artikla));
+            }
+            if ((Jedinica_mjere == null)) {
+                throw new global::System.ArgumentNullException("Jedinica_mjere");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Jedinica_mjere));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -7225,20 +4643,48 @@ SELECT ID_jedinica_mjere, Naziv FROM [Jedinice mjere] WHERE (ID_jedinica_mjere =
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int ID_jedinica_mjere, string Naziv, int Original_ID_jedinica_mjere, string Original_Naziv) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ID_jedinica_mjere));
+        public virtual int Update(int ID_artikla, string Naziv, double Jedinična_cijena, string Opis_artikla, string Jedinica_mjere, int Original_ID_artikla, string Original_Naziv, double Original_Jedinična_cijena, string Original_Opis_artikla, string Original_Jedinica_mjere) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ID_artikla));
             if ((Naziv == null)) {
                 throw new global::System.ArgumentNullException("Naziv");
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Naziv));
             }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_ID_jedinica_mjere));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((double)(Jedinična_cijena));
+            if ((Opis_artikla == null)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Opis_artikla));
+            }
+            if ((Jedinica_mjere == null)) {
+                throw new global::System.ArgumentNullException("Jedinica_mjere");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Jedinica_mjere));
+            }
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_ID_artikla));
             if ((Original_Naziv == null)) {
                 throw new global::System.ArgumentNullException("Original_Naziv");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_Naziv));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_Naziv));
+            }
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((double)(Original_Jedinična_cijena));
+            if ((Original_Opis_artikla == null)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_Opis_artikla));
+            }
+            if ((Original_Jedinica_mjere == null)) {
+                throw new global::System.ArgumentNullException("Original_Jedinica_mjere");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Jedinica_mjere));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -7260,8 +4706,8 @@ SELECT ID_jedinica_mjere, Naziv FROM [Jedinice mjere] WHERE (ID_jedinica_mjere =
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Naziv, int Original_ID_jedinica_mjere, string Original_Naziv) {
-            return this.Update(Original_ID_jedinica_mjere, Naziv, Original_ID_jedinica_mjere, Original_Naziv);
+        public virtual int Update(string Naziv, double Jedinična_cijena, string Opis_artikla, string Jedinica_mjere, int Original_ID_artikla, string Original_Naziv, double Original_Jedinična_cijena, string Original_Opis_artikla, string Original_Jedinica_mjere) {
+            return this.Update(Original_ID_artikla, Naziv, Jedinična_cijena, Opis_artikla, Jedinica_mjere, Original_ID_artikla, Original_Naziv, Original_Jedinična_cijena, Original_Opis_artikla, Original_Jedinica_mjere);
         }
     }
     
@@ -7389,38 +4835,40 @@ SELECT ID_jedinica_mjere, Naziv FROM [Jedinice mjere] WHERE (ID_jedinica_mjere =
             tableMapping.ColumnMappings.Add("ID_jelovnika", "ID_jelovnika");
             tableMapping.ColumnMappings.Add("Datum", "Datum");
             tableMapping.ColumnMappings.Add("FK_ID_zaposlenika", "FK_ID_zaposlenika");
+            tableMapping.ColumnMappings.Add("Dnevna_ponuda", "Dnevna_ponuda");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Jelovnik] WHERE (([ID_jelovnika] = @Original_ID_jelovnika) AND" +
-                " ((@IsNull_Datum = 1 AND [Datum] IS NULL) OR ([Datum] = @Original_Datum)) AND ([" +
-                "FK_ID_zaposlenika] = @Original_FK_ID_zaposlenika))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Jelovnik] WHERE (([ID_jelovnika] = @Original_ID_jelovnika) AND ((@IsNull_Datum = 1 AND [Datum] IS NULL) OR ([Datum] = @Original_Datum)) AND ([FK_ID_zaposlenika] = @Original_FK_ID_zaposlenika) AND ([Dnevna_ponuda] = @Original_Dnevna_ponuda))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_jelovnika", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_jelovnika", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Datum", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Datum", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Datum", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Datum", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FK_ID_zaposlenika", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FK_ID_zaposlenika", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Dnevna_ponuda", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Dnevna_ponuda", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Jelovnik] ([ID_jelovnika], [Datum], [FK_ID_zaposlenika]) VALUE" +
-                "S (@ID_jelovnika, @Datum, @FK_ID_zaposlenika);\r\nSELECT ID_jelovnika, Datum, FK_I" +
-                "D_zaposlenika FROM Jelovnik WHERE (ID_jelovnika = @ID_jelovnika)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Jelovnik] ([ID_jelovnika], [Datum], [FK_ID_zaposlenika], [Dnevna_ponuda]) VALUES (@ID_jelovnika, @Datum, @FK_ID_zaposlenika, @Dnevna_ponuda);
+SELECT ID_jelovnika, Datum, FK_ID_zaposlenika, Dnevna_ponuda FROM Jelovnik WHERE (ID_jelovnika = @ID_jelovnika)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_jelovnika", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_jelovnika", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Datum", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Datum", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FK_ID_zaposlenika", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FK_ID_zaposlenika", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Dnevna_ponuda", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Dnevna_ponuda", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Jelovnik] SET [ID_jelovnika] = @ID_jelovnika, [Datum] = @Datum, [FK_ID_zaposlenika] = @FK_ID_zaposlenika WHERE (([ID_jelovnika] = @Original_ID_jelovnika) AND ((@IsNull_Datum = 1 AND [Datum] IS NULL) OR ([Datum] = @Original_Datum)) AND ([FK_ID_zaposlenika] = @Original_FK_ID_zaposlenika));
-SELECT ID_jelovnika, Datum, FK_ID_zaposlenika FROM Jelovnik WHERE (ID_jelovnika = @ID_jelovnika)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Jelovnik] SET [ID_jelovnika] = @ID_jelovnika, [Datum] = @Datum, [FK_ID_zaposlenika] = @FK_ID_zaposlenika, [Dnevna_ponuda] = @Dnevna_ponuda WHERE (([ID_jelovnika] = @Original_ID_jelovnika) AND ((@IsNull_Datum = 1 AND [Datum] IS NULL) OR ([Datum] = @Original_Datum)) AND ([FK_ID_zaposlenika] = @Original_FK_ID_zaposlenika) AND ([Dnevna_ponuda] = @Original_Dnevna_ponuda));
+SELECT ID_jelovnika, Datum, FK_ID_zaposlenika, Dnevna_ponuda FROM Jelovnik WHERE (ID_jelovnika = @ID_jelovnika)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_jelovnika", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_jelovnika", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Datum", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Datum", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FK_ID_zaposlenika", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FK_ID_zaposlenika", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Dnevna_ponuda", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Dnevna_ponuda", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_jelovnika", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_jelovnika", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Datum", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Datum", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Datum", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Datum", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FK_ID_zaposlenika", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FK_ID_zaposlenika", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Dnevna_ponuda", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Dnevna_ponuda", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7436,7 +4884,7 @@ SELECT ID_jelovnika, Datum, FK_ID_zaposlenika FROM Jelovnik WHERE (ID_jelovnika 
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID_jelovnika, Datum, FK_ID_zaposlenika FROM dbo.Jelovnik";
+            this._commandCollection[0].CommandText = "SELECT ID_jelovnika, Datum, FK_ID_zaposlenika, Dnevna_ponuda FROM dbo.Jelovnik";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -7497,7 +4945,7 @@ SELECT ID_jelovnika, Datum, FK_ID_zaposlenika FROM Jelovnik WHERE (ID_jelovnika 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID_jelovnika, global::System.Nullable<global::System.DateTime> Original_Datum, int Original_FK_ID_zaposlenika) {
+        public virtual int Delete(int Original_ID_jelovnika, global::System.Nullable<global::System.DateTime> Original_Datum, int Original_FK_ID_zaposlenika, string Original_Dnevna_ponuda) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID_jelovnika));
             if ((Original_Datum.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
@@ -7508,6 +4956,12 @@ SELECT ID_jelovnika, Datum, FK_ID_zaposlenika FROM Jelovnik WHERE (ID_jelovnika 
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_FK_ID_zaposlenika));
+            if ((Original_Dnevna_ponuda == null)) {
+                throw new global::System.ArgumentNullException("Original_Dnevna_ponuda");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Dnevna_ponuda));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7528,7 +4982,7 @@ SELECT ID_jelovnika, Datum, FK_ID_zaposlenika FROM Jelovnik WHERE (ID_jelovnika 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int ID_jelovnika, global::System.Nullable<global::System.DateTime> Datum, int FK_ID_zaposlenika) {
+        public virtual int Insert(int ID_jelovnika, global::System.Nullable<global::System.DateTime> Datum, int FK_ID_zaposlenika, string Dnevna_ponuda) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID_jelovnika));
             if ((Datum.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((System.DateTime)(Datum.Value));
@@ -7537,6 +4991,12 @@ SELECT ID_jelovnika, Datum, FK_ID_zaposlenika FROM Jelovnik WHERE (ID_jelovnika 
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             this.Adapter.InsertCommand.Parameters[2].Value = ((int)(FK_ID_zaposlenika));
+            if ((Dnevna_ponuda == null)) {
+                throw new global::System.ArgumentNullException("Dnevna_ponuda");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Dnevna_ponuda));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7557,7 +5017,7 @@ SELECT ID_jelovnika, Datum, FK_ID_zaposlenika FROM Jelovnik WHERE (ID_jelovnika 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int ID_jelovnika, global::System.Nullable<global::System.DateTime> Datum, int FK_ID_zaposlenika, int Original_ID_jelovnika, global::System.Nullable<global::System.DateTime> Original_Datum, int Original_FK_ID_zaposlenika) {
+        public virtual int Update(int ID_jelovnika, global::System.Nullable<global::System.DateTime> Datum, int FK_ID_zaposlenika, string Dnevna_ponuda, int Original_ID_jelovnika, global::System.Nullable<global::System.DateTime> Original_Datum, int Original_FK_ID_zaposlenika, string Original_Dnevna_ponuda) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ID_jelovnika));
             if ((Datum.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((System.DateTime)(Datum.Value));
@@ -7566,16 +5026,28 @@ SELECT ID_jelovnika, Datum, FK_ID_zaposlenika FROM Jelovnik WHERE (ID_jelovnika 
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(FK_ID_zaposlenika));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_ID_jelovnika));
-            if ((Original_Datum.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(Original_Datum.Value));
+            if ((Dnevna_ponuda == null)) {
+                throw new global::System.ArgumentNullException("Dnevna_ponuda");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Dnevna_ponuda));
             }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_FK_ID_zaposlenika));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_ID_jelovnika));
+            if ((Original_Datum.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((System.DateTime)(Original_Datum.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_FK_ID_zaposlenika));
+            if ((Original_Dnevna_ponuda == null)) {
+                throw new global::System.ArgumentNullException("Original_Dnevna_ponuda");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_Dnevna_ponuda));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7596,8 +5068,8 @@ SELECT ID_jelovnika, Datum, FK_ID_zaposlenika FROM Jelovnik WHERE (ID_jelovnika 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<global::System.DateTime> Datum, int FK_ID_zaposlenika, int Original_ID_jelovnika, global::System.Nullable<global::System.DateTime> Original_Datum, int Original_FK_ID_zaposlenika) {
-            return this.Update(Original_ID_jelovnika, Datum, FK_ID_zaposlenika, Original_ID_jelovnika, Original_Datum, Original_FK_ID_zaposlenika);
+        public virtual int Update(global::System.Nullable<global::System.DateTime> Datum, int FK_ID_zaposlenika, string Dnevna_ponuda, int Original_ID_jelovnika, global::System.Nullable<global::System.DateTime> Original_Datum, int Original_FK_ID_zaposlenika, string Original_Dnevna_ponuda) {
+            return this.Update(Original_ID_jelovnika, Datum, FK_ID_zaposlenika, Dnevna_ponuda, Original_ID_jelovnika, Original_Datum, Original_FK_ID_zaposlenika, Original_Dnevna_ponuda);
         }
     }
     
@@ -7968,342 +5440,6 @@ SELECT ID_narudžbe, Datum, Vrijeme, ID_stola, Zahtjevi_narudžbe, FK_ID_stola, 
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(System.DateTime Datum, System.TimeSpan Vrijeme, int ID_stola, string Zahtjevi_narudžbe, int FK_ID_stola, int FK_ID_zaposlenika, int Original_ID_narudžbe, System.DateTime Original_Datum, System.TimeSpan Original_Vrijeme, int Original_ID_stola, string Original_Zahtjevi_narudžbe, int Original_FK_ID_stola, int Original_FK_ID_zaposlenika) {
             return this.Update(Original_ID_narudžbe, Datum, Vrijeme, ID_stola, Zahtjevi_narudžbe, FK_ID_stola, FK_ID_zaposlenika, Original_ID_narudžbe, Original_Datum, Original_Vrijeme, Original_ID_stola, Original_Zahtjevi_narudžbe, Original_FK_ID_stola, Original_FK_ID_zaposlenika);
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class PonudaTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public PonudaTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Ponuda";
-            tableMapping.ColumnMappings.Add("ID_ponude", "ID_ponude");
-            tableMapping.ColumnMappings.Add("Datum", "Datum");
-            tableMapping.ColumnMappings.Add("FK_ID_zaposlenika", "FK_ID_zaposlenika");
-            this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Ponuda] WHERE (([ID_ponude] = @Original_ID_ponude) AND ((@IsNu" +
-                "ll_Datum = 1 AND [Datum] IS NULL) OR ([Datum] = @Original_Datum)) AND ([FK_ID_za" +
-                "poslenika] = @Original_FK_ID_zaposlenika))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_ponude", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_ponude", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Datum", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Datum", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Datum", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Datum", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FK_ID_zaposlenika", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FK_ID_zaposlenika", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Ponuda] ([ID_ponude], [Datum], [FK_ID_zaposlenika]) VALUES (@I" +
-                "D_ponude, @Datum, @FK_ID_zaposlenika);\r\nSELECT ID_ponude, Datum, FK_ID_zaposleni" +
-                "ka FROM Ponuda WHERE (ID_ponude = @ID_ponude)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_ponude", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_ponude", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Datum", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Datum", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FK_ID_zaposlenika", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FK_ID_zaposlenika", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Ponuda] SET [ID_ponude] = @ID_ponude, [Datum] = @Datum, [FK_ID_zaposlenika] = @FK_ID_zaposlenika WHERE (([ID_ponude] = @Original_ID_ponude) AND ((@IsNull_Datum = 1 AND [Datum] IS NULL) OR ([Datum] = @Original_Datum)) AND ([FK_ID_zaposlenika] = @Original_FK_ID_zaposlenika));
-SELECT ID_ponude, Datum, FK_ID_zaposlenika FROM Ponuda WHERE (ID_ponude = @ID_ponude)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_ponude", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_ponude", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Datum", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Datum", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FK_ID_zaposlenika", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FK_ID_zaposlenika", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_ponude", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_ponude", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Datum", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Datum", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Datum", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Datum", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FK_ID_zaposlenika", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FK_ID_zaposlenika", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Kreiranje_narudžbe.Properties.Settings.Default.pi2013FastOrderdbConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID_ponude, Datum, FK_ID_zaposlenika FROM dbo.Ponuda";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(pi2013FastOrderdbDataSet.PonudaDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual pi2013FastOrderdbDataSet.PonudaDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            pi2013FastOrderdbDataSet.PonudaDataTable dataTable = new pi2013FastOrderdbDataSet.PonudaDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(pi2013FastOrderdbDataSet.PonudaDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(pi2013FastOrderdbDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Ponuda");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID_ponude, global::System.Nullable<global::System.DateTime> Original_Datum, int Original_FK_ID_zaposlenika) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID_ponude));
-            if ((Original_Datum.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((System.DateTime)(Original_Datum.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_FK_ID_zaposlenika));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int ID_ponude, global::System.Nullable<global::System.DateTime> Datum, int FK_ID_zaposlenika) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID_ponude));
-            if ((Datum.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((System.DateTime)(Datum.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(FK_ID_zaposlenika));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int ID_ponude, global::System.Nullable<global::System.DateTime> Datum, int FK_ID_zaposlenika, int Original_ID_ponude, global::System.Nullable<global::System.DateTime> Original_Datum, int Original_FK_ID_zaposlenika) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ID_ponude));
-            if ((Datum.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((System.DateTime)(Datum.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(FK_ID_zaposlenika));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_ID_ponude));
-            if ((Original_Datum.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(Original_Datum.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_FK_ID_zaposlenika));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<global::System.DateTime> Datum, int FK_ID_zaposlenika, int Original_ID_ponude, global::System.Nullable<global::System.DateTime> Original_Datum, int Original_FK_ID_zaposlenika) {
-            return this.Update(Original_ID_ponude, Datum, FK_ID_zaposlenika, Original_ID_ponude, Original_Datum, Original_FK_ID_zaposlenika);
         }
     }
     
@@ -9756,233 +6892,6 @@ SELECT ID_racuna, Datum, Vrijeme, FK_ID_zaposlenika FROM [Racun za gosta] WHERE 
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class Stavke_poundeTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public Stavke_poundeTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Stavke pounde";
-            tableMapping.ColumnMappings.Add("FK_ID_ponude", "FK_ID_ponude");
-            tableMapping.ColumnMappings.Add("FK_ID_artikla", "FK_ID_artikla");
-            this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Stavke pounde] ([FK_ID_ponude], [FK_ID_artikla]) VALUES (@FK_I" +
-                "D_ponude, @FK_ID_artikla)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FK_ID_ponude", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FK_ID_ponude", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FK_ID_artikla", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FK_ID_artikla", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Kreiranje_narudžbe.Properties.Settings.Default.pi2013FastOrderdbConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT FK_ID_ponude, FK_ID_artikla FROM dbo.[Stavke pounde]";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(pi2013FastOrderdbDataSet.Stavke_poundeDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual pi2013FastOrderdbDataSet.Stavke_poundeDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            pi2013FastOrderdbDataSet.Stavke_poundeDataTable dataTable = new pi2013FastOrderdbDataSet.Stavke_poundeDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(pi2013FastOrderdbDataSet.Stavke_poundeDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(pi2013FastOrderdbDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Stavke pounde");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int FK_ID_ponude, int FK_ID_artikla) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(FK_ID_ponude));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(FK_ID_artikla));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
     public partial class Stavke_racunaTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
@@ -10215,15 +7124,9 @@ SELECT ID_racuna, Datum, Vrijeme, FK_ID_zaposlenika FROM [Racun za gosta] WHERE 
         
         private ArtikliTableAdapter _artikliTableAdapter;
         
-        private Evidencija_o_zaposlenimaTableAdapter _evidencija_o_zaposlenimaTableAdapter;
-        
-        private Jedinice_mjereTableAdapter _jedinice_mjereTableAdapter;
-        
         private JelovnikTableAdapter _jelovnikTableAdapter;
         
         private NarudžbaTableAdapter _narudžbaTableAdapter;
-        
-        private PonudaTableAdapter _ponudaTableAdapter;
         
         private Popis_stolovaTableAdapter _popis_stolovaTableAdapter;
         
@@ -10234,8 +7137,6 @@ SELECT ID_racuna, Datum, Vrijeme, FK_ID_zaposlenika FROM [Racun za gosta] WHERE 
         private Stavke_jelovnikaTableAdapter _stavke_jelovnikaTableAdapter;
         
         private Stavke_narudzbeTableAdapter _stavke_narudzbeTableAdapter;
-        
-        private Stavke_poundeTableAdapter _stavke_poundeTableAdapter;
         
         private Stavke_racunaTableAdapter _stavke_racunaTableAdapter;
         
@@ -10273,34 +7174,6 @@ SELECT ID_racuna, Datum, Vrijeme, FK_ID_zaposlenika FROM [Racun za gosta] WHERE 
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public Evidencija_o_zaposlenimaTableAdapter Evidencija_o_zaposlenimaTableAdapter {
-            get {
-                return this._evidencija_o_zaposlenimaTableAdapter;
-            }
-            set {
-                this._evidencija_o_zaposlenimaTableAdapter = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
-        public Jedinice_mjereTableAdapter Jedinice_mjereTableAdapter {
-            get {
-                return this._jedinice_mjereTableAdapter;
-            }
-            set {
-                this._jedinice_mjereTableAdapter = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
         public JelovnikTableAdapter JelovnikTableAdapter {
             get {
                 return this._jelovnikTableAdapter;
@@ -10321,20 +7194,6 @@ SELECT ID_racuna, Datum, Vrijeme, FK_ID_zaposlenika FROM [Racun za gosta] WHERE 
             }
             set {
                 this._narudžbaTableAdapter = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
-        public PonudaTableAdapter PonudaTableAdapter {
-            get {
-                return this._ponudaTableAdapter;
-            }
-            set {
-                this._ponudaTableAdapter = value;
             }
         }
         
@@ -10413,20 +7272,6 @@ SELECT ID_racuna, Datum, Vrijeme, FK_ID_zaposlenika FROM [Racun za gosta] WHERE 
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public Stavke_poundeTableAdapter Stavke_poundeTableAdapter {
-            get {
-                return this._stavke_poundeTableAdapter;
-            }
-            set {
-                this._stavke_poundeTableAdapter = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
         public Stavke_racunaTableAdapter Stavke_racunaTableAdapter {
             get {
                 return this._stavke_racunaTableAdapter;
@@ -10459,14 +7304,6 @@ SELECT ID_racuna, Datum, Vrijeme, FK_ID_zaposlenika FROM [Racun za gosta] WHERE 
                             && (this._artikliTableAdapter.Connection != null))) {
                     return this._artikliTableAdapter.Connection;
                 }
-                if (((this._evidencija_o_zaposlenimaTableAdapter != null) 
-                            && (this._evidencija_o_zaposlenimaTableAdapter.Connection != null))) {
-                    return this._evidencija_o_zaposlenimaTableAdapter.Connection;
-                }
-                if (((this._jedinice_mjereTableAdapter != null) 
-                            && (this._jedinice_mjereTableAdapter.Connection != null))) {
-                    return this._jedinice_mjereTableAdapter.Connection;
-                }
                 if (((this._jelovnikTableAdapter != null) 
                             && (this._jelovnikTableAdapter.Connection != null))) {
                     return this._jelovnikTableAdapter.Connection;
@@ -10474,10 +7311,6 @@ SELECT ID_racuna, Datum, Vrijeme, FK_ID_zaposlenika FROM [Racun za gosta] WHERE 
                 if (((this._narudžbaTableAdapter != null) 
                             && (this._narudžbaTableAdapter.Connection != null))) {
                     return this._narudžbaTableAdapter.Connection;
-                }
-                if (((this._ponudaTableAdapter != null) 
-                            && (this._ponudaTableAdapter.Connection != null))) {
-                    return this._ponudaTableAdapter.Connection;
                 }
                 if (((this._popis_stolovaTableAdapter != null) 
                             && (this._popis_stolovaTableAdapter.Connection != null))) {
@@ -10499,10 +7332,6 @@ SELECT ID_racuna, Datum, Vrijeme, FK_ID_zaposlenika FROM [Racun za gosta] WHERE 
                             && (this._stavke_narudzbeTableAdapter.Connection != null))) {
                     return this._stavke_narudzbeTableAdapter.Connection;
                 }
-                if (((this._stavke_poundeTableAdapter != null) 
-                            && (this._stavke_poundeTableAdapter.Connection != null))) {
-                    return this._stavke_poundeTableAdapter.Connection;
-                }
                 if (((this._stavke_racunaTableAdapter != null) 
                             && (this._stavke_racunaTableAdapter.Connection != null))) {
                     return this._stavke_racunaTableAdapter.Connection;
@@ -10523,19 +7352,10 @@ SELECT ID_racuna, Datum, Vrijeme, FK_ID_zaposlenika FROM [Racun za gosta] WHERE 
                 if ((this._artikliTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._evidencija_o_zaposlenimaTableAdapter != null)) {
-                    count = (count + 1);
-                }
-                if ((this._jedinice_mjereTableAdapter != null)) {
-                    count = (count + 1);
-                }
                 if ((this._jelovnikTableAdapter != null)) {
                     count = (count + 1);
                 }
                 if ((this._narudžbaTableAdapter != null)) {
-                    count = (count + 1);
-                }
-                if ((this._ponudaTableAdapter != null)) {
                     count = (count + 1);
                 }
                 if ((this._popis_stolovaTableAdapter != null)) {
@@ -10553,9 +7373,6 @@ SELECT ID_racuna, Datum, Vrijeme, FK_ID_zaposlenika FROM [Racun za gosta] WHERE 
                 if ((this._stavke_narudzbeTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._stavke_poundeTableAdapter != null)) {
-                    count = (count + 1);
-                }
                 if ((this._stavke_racunaTableAdapter != null)) {
                     count = (count + 1);
                 }
@@ -10570,24 +7387,6 @@ SELECT ID_racuna, Datum, Vrijeme, FK_ID_zaposlenika FROM [Racun za gosta] WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateUpdatedRows(pi2013FastOrderdbDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._evidencija_o_zaposlenimaTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Evidencija_o_zaposlenima.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._evidencija_o_zaposlenimaTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._jedinice_mjereTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Jedinice_mjere.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._jedinice_mjereTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._popis_stolovaTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Popis_stolova.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -10621,15 +7420,6 @@ SELECT ID_racuna, Datum, Vrijeme, FK_ID_zaposlenika FROM [Racun za gosta] WHERE 
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._narudžbaTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._ponudaTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Ponuda.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._ponudaTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -10669,15 +7459,6 @@ SELECT ID_racuna, Datum, Vrijeme, FK_ID_zaposlenika FROM [Racun za gosta] WHERE 
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._stavke_poundeTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Stavke_pounde.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._stavke_poundeTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._stavke_racunaTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Stavke_racuna.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -10697,22 +7478,6 @@ SELECT ID_racuna, Datum, Vrijeme, FK_ID_zaposlenika FROM [Racun za gosta] WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateInsertedRows(pi2013FastOrderdbDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._evidencija_o_zaposlenimaTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Evidencija_o_zaposlenima.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._evidencija_o_zaposlenimaTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._jedinice_mjereTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Jedinice_mjere.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._jedinice_mjereTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._popis_stolovaTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Popis_stolova.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -10742,14 +7507,6 @@ SELECT ID_racuna, Datum, Vrijeme, FK_ID_zaposlenika FROM [Racun za gosta] WHERE 
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._narudžbaTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._ponudaTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Ponuda.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._ponudaTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -10785,14 +7542,6 @@ SELECT ID_racuna, Datum, Vrijeme, FK_ID_zaposlenika FROM [Racun za gosta] WHERE 
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._stavke_poundeTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Stavke_pounde.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._stavke_poundeTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._stavke_racunaTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Stavke_racuna.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -10816,14 +7565,6 @@ SELECT ID_racuna, Datum, Vrijeme, FK_ID_zaposlenika FROM [Racun za gosta] WHERE 
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._stavke_racunaTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._stavke_poundeTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Stavke_pounde.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._stavke_poundeTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -10859,14 +7600,6 @@ SELECT ID_racuna, Datum, Vrijeme, FK_ID_zaposlenika FROM [Racun za gosta] WHERE 
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._ponudaTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Ponuda.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._ponudaTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._narudžbaTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Narudžba.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -10896,22 +7629,6 @@ SELECT ID_racuna, Datum, Vrijeme, FK_ID_zaposlenika FROM [Racun za gosta] WHERE 
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._popis_stolovaTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._jedinice_mjereTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Jedinice_mjere.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._jedinice_mjereTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._evidencija_o_zaposlenimaTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Evidencija_o_zaposlenima.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._evidencija_o_zaposlenimaTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -10959,16 +7676,6 @@ SELECT ID_racuna, Datum, Vrijeme, FK_ID_zaposlenika FROM [Racun za gosta] WHERE 
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._evidencija_o_zaposlenimaTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._evidencija_o_zaposlenimaTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
-                        "tring.");
-            }
-            if (((this._jedinice_mjereTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._jedinice_mjereTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
-                        "tring.");
-            }
             if (((this._jelovnikTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._jelovnikTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
@@ -10976,11 +7683,6 @@ SELECT ID_racuna, Datum, Vrijeme, FK_ID_zaposlenika FROM [Racun za gosta] WHERE 
             }
             if (((this._narudžbaTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._narudžbaTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
-                        "tring.");
-            }
-            if (((this._ponudaTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._ponudaTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -11006,11 +7708,6 @@ SELECT ID_racuna, Datum, Vrijeme, FK_ID_zaposlenika FROM [Racun za gosta] WHERE 
             }
             if (((this._stavke_narudzbeTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._stavke_narudzbeTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
-                        "tring.");
-            }
-            if (((this._stavke_poundeTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._stavke_poundeTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -11060,24 +7757,6 @@ SELECT ID_racuna, Datum, Vrijeme, FK_ID_zaposlenika FROM [Racun za gosta] WHERE 
                         adaptersWithAcceptChangesDuringUpdate.Add(this._artikliTableAdapter.Adapter);
                     }
                 }
-                if ((this._evidencija_o_zaposlenimaTableAdapter != null)) {
-                    revertConnections.Add(this._evidencija_o_zaposlenimaTableAdapter, this._evidencija_o_zaposlenimaTableAdapter.Connection);
-                    this._evidencija_o_zaposlenimaTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._evidencija_o_zaposlenimaTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._evidencija_o_zaposlenimaTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._evidencija_o_zaposlenimaTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._evidencija_o_zaposlenimaTableAdapter.Adapter);
-                    }
-                }
-                if ((this._jedinice_mjereTableAdapter != null)) {
-                    revertConnections.Add(this._jedinice_mjereTableAdapter, this._jedinice_mjereTableAdapter.Connection);
-                    this._jedinice_mjereTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._jedinice_mjereTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._jedinice_mjereTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._jedinice_mjereTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._jedinice_mjereTableAdapter.Adapter);
-                    }
-                }
                 if ((this._jelovnikTableAdapter != null)) {
                     revertConnections.Add(this._jelovnikTableAdapter, this._jelovnikTableAdapter.Connection);
                     this._jelovnikTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
@@ -11094,15 +7773,6 @@ SELECT ID_racuna, Datum, Vrijeme, FK_ID_zaposlenika FROM [Racun za gosta] WHERE 
                     if (this._narudžbaTableAdapter.Adapter.AcceptChangesDuringUpdate) {
                         this._narudžbaTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
                         adaptersWithAcceptChangesDuringUpdate.Add(this._narudžbaTableAdapter.Adapter);
-                    }
-                }
-                if ((this._ponudaTableAdapter != null)) {
-                    revertConnections.Add(this._ponudaTableAdapter, this._ponudaTableAdapter.Connection);
-                    this._ponudaTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._ponudaTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._ponudaTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._ponudaTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._ponudaTableAdapter.Adapter);
                     }
                 }
                 if ((this._popis_stolovaTableAdapter != null)) {
@@ -11148,15 +7818,6 @@ SELECT ID_racuna, Datum, Vrijeme, FK_ID_zaposlenika FROM [Racun za gosta] WHERE 
                     if (this._stavke_narudzbeTableAdapter.Adapter.AcceptChangesDuringUpdate) {
                         this._stavke_narudzbeTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
                         adaptersWithAcceptChangesDuringUpdate.Add(this._stavke_narudzbeTableAdapter.Adapter);
-                    }
-                }
-                if ((this._stavke_poundeTableAdapter != null)) {
-                    revertConnections.Add(this._stavke_poundeTableAdapter, this._stavke_poundeTableAdapter.Connection);
-                    this._stavke_poundeTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._stavke_poundeTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._stavke_poundeTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._stavke_poundeTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._stavke_poundeTableAdapter.Adapter);
                     }
                 }
                 if ((this._stavke_racunaTableAdapter != null)) {
@@ -11230,14 +7891,6 @@ SELECT ID_racuna, Datum, Vrijeme, FK_ID_zaposlenika FROM [Racun za gosta] WHERE 
                     this._artikliTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._artikliTableAdapter]));
                     this._artikliTableAdapter.Transaction = null;
                 }
-                if ((this._evidencija_o_zaposlenimaTableAdapter != null)) {
-                    this._evidencija_o_zaposlenimaTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._evidencija_o_zaposlenimaTableAdapter]));
-                    this._evidencija_o_zaposlenimaTableAdapter.Transaction = null;
-                }
-                if ((this._jedinice_mjereTableAdapter != null)) {
-                    this._jedinice_mjereTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._jedinice_mjereTableAdapter]));
-                    this._jedinice_mjereTableAdapter.Transaction = null;
-                }
                 if ((this._jelovnikTableAdapter != null)) {
                     this._jelovnikTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._jelovnikTableAdapter]));
                     this._jelovnikTableAdapter.Transaction = null;
@@ -11245,10 +7898,6 @@ SELECT ID_racuna, Datum, Vrijeme, FK_ID_zaposlenika FROM [Racun za gosta] WHERE 
                 if ((this._narudžbaTableAdapter != null)) {
                     this._narudžbaTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._narudžbaTableAdapter]));
                     this._narudžbaTableAdapter.Transaction = null;
-                }
-                if ((this._ponudaTableAdapter != null)) {
-                    this._ponudaTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._ponudaTableAdapter]));
-                    this._ponudaTableAdapter.Transaction = null;
                 }
                 if ((this._popis_stolovaTableAdapter != null)) {
                     this._popis_stolovaTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._popis_stolovaTableAdapter]));
@@ -11269,10 +7918,6 @@ SELECT ID_racuna, Datum, Vrijeme, FK_ID_zaposlenika FROM [Racun za gosta] WHERE 
                 if ((this._stavke_narudzbeTableAdapter != null)) {
                     this._stavke_narudzbeTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._stavke_narudzbeTableAdapter]));
                     this._stavke_narudzbeTableAdapter.Transaction = null;
-                }
-                if ((this._stavke_poundeTableAdapter != null)) {
-                    this._stavke_poundeTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._stavke_poundeTableAdapter]));
-                    this._stavke_poundeTableAdapter.Transaction = null;
                 }
                 if ((this._stavke_racunaTableAdapter != null)) {
                     this._stavke_racunaTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._stavke_racunaTableAdapter]));
