@@ -4494,12 +4494,22 @@ SELECT ID_artikla, Naziv, Jedinična_cijena, Opis_artikla, Jedinica_mjere FROM A
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT ID_artikla, Naziv, Jedinična_cijena, Opis_artikla, Jedinica_mjere FROM dbo" +
                 ".Artikli";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT      ID_artikla, Naziv, Jedinična_cijena, Opis_artikla, Jedinica_mjere\r\nFR" +
+                "OM          Artikli\r\nWHERE      (Opis_artikla = 1)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "SELECT      ID_artikla, Naziv, Jedinična_cijena, Opis_artikla, Jedinica_mjere\r\nFR" +
+                "OM          Artikli\r\nWHERE      (Opis_artikla = 2)";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4521,6 +4531,54 @@ SELECT ID_artikla, Naziv, Jedinična_cijena, Opis_artikla, Jedinica_mjere FROM A
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual pi2013FastOrderdbDataSet.ArtikliDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            pi2013FastOrderdbDataSet.ArtikliDataTable dataTable = new pi2013FastOrderdbDataSet.ArtikliDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByOpis_artikla1(pi2013FastOrderdbDataSet.ArtikliDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual pi2013FastOrderdbDataSet.ArtikliDataTable GetDataByOpis_artikla1() {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            pi2013FastOrderdbDataSet.ArtikliDataTable dataTable = new pi2013FastOrderdbDataSet.ArtikliDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByOpis_artikla2(pi2013FastOrderdbDataSet.ArtikliDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual pi2013FastOrderdbDataSet.ArtikliDataTable GetDataByOpis_artikla2() {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             pi2013FastOrderdbDataSet.ArtikliDataTable dataTable = new pi2013FastOrderdbDataSet.ArtikliDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
