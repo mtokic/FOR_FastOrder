@@ -54,7 +54,7 @@
             dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             dateTimePicker1.Checked = false;
             dateTimePicker1.Enabled = false;
-            dateTimePicker1.Location = new System.Drawing.Point(446, 4);
+            dateTimePicker1.Location = new System.Drawing.Point(659, 4);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             dateTimePicker1.Size = new System.Drawing.Size(125, 20);
@@ -66,7 +66,7 @@
             this.msPomoc});
             this.msIzbornikHelp.Location = new System.Drawing.Point(0, 0);
             this.msIzbornikHelp.Name = "msIzbornikHelp";
-            this.msIzbornikHelp.Size = new System.Drawing.Size(571, 24);
+            this.msIzbornikHelp.Size = new System.Drawing.Size(784, 24);
             this.msIzbornikHelp.TabIndex = 0;
             this.msIzbornikHelp.Text = "menuStrip1";
             // 
@@ -76,7 +76,7 @@
             this.msUputeZaKoristenje,
             this.msIzlaz});
             this.msPomoc.Name = "msPomoc";
-            this.msPomoc.Size = new System.Drawing.Size(53, 20);
+            this.msPomoc.Size = new System.Drawing.Size(57, 20);
             this.msPomoc.Text = "Pomoć";
             // 
             // msUputeZaKoristenje
@@ -91,13 +91,13 @@
             // englishToolStripMenuItem
             // 
             this.englishToolStripMenuItem.Name = "englishToolStripMenuItem";
-            this.englishToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.englishToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.englishToolStripMenuItem.Text = "English";
             // 
             // croatianToolStripMenuItem
             // 
             this.croatianToolStripMenuItem.Name = "croatianToolStripMenuItem";
-            this.croatianToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.croatianToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.croatianToolStripMenuItem.Text = "Croatian";
             this.croatianToolStripMenuItem.Click += new System.EventHandler(this.croatianToolStripMenuItem_Click);
             // 
@@ -110,9 +110,9 @@
             // btnOdaberiJelo
             // 
             this.btnOdaberiJelo.Font = new System.Drawing.Font("Segoe Script", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnOdaberiJelo.Location = new System.Drawing.Point(12, 220);
+            this.btnOdaberiJelo.Location = new System.Drawing.Point(33, 236);
             this.btnOdaberiJelo.Name = "btnOdaberiJelo";
-            this.btnOdaberiJelo.Size = new System.Drawing.Size(157, 65);
+            this.btnOdaberiJelo.Size = new System.Drawing.Size(254, 94);
             this.btnOdaberiJelo.TabIndex = 2;
             this.btnOdaberiJelo.Text = "Odaberi jelo";
             this.btnOdaberiJelo.UseVisualStyleBackColor = true;
@@ -121,9 +121,9 @@
             // btnOdaberiPice
             // 
             this.btnOdaberiPice.Font = new System.Drawing.Font("Segoe Script", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnOdaberiPice.Location = new System.Drawing.Point(12, 308);
+            this.btnOdaberiPice.Location = new System.Drawing.Point(33, 362);
             this.btnOdaberiPice.Name = "btnOdaberiPice";
-            this.btnOdaberiPice.Size = new System.Drawing.Size(157, 67);
+            this.btnOdaberiPice.Size = new System.Drawing.Size(254, 94);
             this.btnOdaberiPice.TabIndex = 3;
             this.btnOdaberiPice.Text = "Odaberi piće";
             this.btnOdaberiPice.UseVisualStyleBackColor = true;
@@ -132,7 +132,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 48);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 48);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(166, 161);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -142,9 +142,9 @@
             // lstNaruceneStavke
             // 
             this.lstNaruceneStavke.FormattingEnabled = true;
-            this.lstNaruceneStavke.Location = new System.Drawing.Point(199, 134);
+            this.lstNaruceneStavke.Location = new System.Drawing.Point(371, 153);
             this.lstNaruceneStavke.Name = "lstNaruceneStavke";
-            this.lstNaruceneStavke.Size = new System.Drawing.Size(347, 342);
+            this.lstNaruceneStavke.Size = new System.Drawing.Size(347, 303);
             this.lstNaruceneStavke.TabIndex = 5;
             // 
             // lblNaruceneStavke
@@ -193,7 +193,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Maroon;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(571, 565);
+            this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblUkupno);
             this.Controls.Add(this.btnNaruci);

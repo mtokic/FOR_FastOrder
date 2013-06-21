@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 using DBHelper;
 
 namespace FOR_Application
@@ -24,7 +25,21 @@ namespace FOR_Application
 
         public void pregledajNoveZahtjeve()
         {
+            try
+            {
+                SqlDataReader reader = QueryReader(upit);
+                while (reader.Read())
+                {
+                    //postavljamo novu vrijednost na button kako bi prikazivali broj novih zahtjeva
+                    //moram dodati jos jednu metodu u pregled naruzdbi-->ispod tickera.....
+                   // pregled.changebtnNotification(reader.GetValue(0).ToString());
+                }
 
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
 
 
         }
