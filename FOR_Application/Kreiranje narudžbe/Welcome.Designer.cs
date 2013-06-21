@@ -87,7 +87,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(789, 504);
+            this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.btnCreated);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
