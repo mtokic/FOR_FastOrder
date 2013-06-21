@@ -29,8 +29,7 @@ namespace FOR_Application
 
         private void btnKreiraj_Click(object sender, EventArgs e)
         {
-            DBHelper dbHelper = new DBHelper();
-            dbHelper.OpenConnection();
+        
         }
         
 

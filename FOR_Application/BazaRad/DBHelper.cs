@@ -14,7 +14,7 @@ namespace bazaRad
     /// Kreiramo klasu za rad s bazom podataka
     /// </summary>
     
-    public class DBHelper
+    public class dbHelper
     {
         private SqlConnection connection;
         private string ConnectionString = "Data Source=161.53.120.217\\VARAZDIN,1433;Initial Catalog=pi2013FastOrderdb;User ID=pi2013FastOrder;Password=pi2013FastOrder";
@@ -23,7 +23,7 @@ namespace bazaRad
         /// <summary>
         /// Kreiramo konstruktor
         /// </summary>
-        public DBHelper()
+        public dbHelper()
         {
         }
 
