@@ -29,6 +29,7 @@ namespace Kreiranje_narudžbe
             bazaRad bazaRad = new bazaRad();
             bazaRad.OpenConnection();
         }
+        
 
        
     }
