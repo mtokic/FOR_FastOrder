@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using System.Data.SqlClient;
 
 
@@ -13,7 +14,7 @@ namespace bazaRad
     /// Kreiramo klasu za rad s bazom podataka
     /// </summary>
     
-    public class bazaRad
+    public class DBHelper
     {
         private SqlConnection connection;
         private string ConnectionString = "Data Source=161.53.120.217\\VARAZDIN,1433;Initial Catalog=pi2013FastOrderdb;User ID=pi2013FastOrder;Password=pi2013FastOrder";
@@ -22,14 +23,14 @@ namespace bazaRad
         /// <summary>
         /// Kreiramo konstruktor
         /// </summary>
-        public bazaRad()
+        public DBHelper()
         {
         }
 
         /// <summary>
         /// Metoda kojom cemo otvarati nove konekcije prema bazi
         /// </summary>
-        private bool OpenConnection()
+        public bool OpenConnection()
         {
             connection = new SqlConnection(ConnectionString);
             try
@@ -39,7 +40,6 @@ namespace bazaRad
             }
             catch (SqlException e)
             {
-//           MessageBox.Show(e.Message);
                 return false;
             }
         }
@@ -61,7 +61,7 @@ namespace bazaRad
                 }
                 catch (SqlException e)
                 {
-  //                  MessageBox.Show(e.Message);
+                    
                     val = false;
                 }
             }
