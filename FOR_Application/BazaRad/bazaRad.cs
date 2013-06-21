@@ -3,18 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using System.Data.SqlClient;
 
 
 
-namespace bazaRad
+namespace DBHelper
 {
     /// <summary>
     /// Kreiramo klasu za rad s bazom podataka
     /// </summary>
     
-    public class dbHelper
+    public class bazaRad
     {
         private SqlConnection connection;
         private string ConnectionString = "Data Source=161.53.120.217\\VARAZDIN,1433;Initial Catalog=pi2013FastOrderdb;User ID=pi2013FastOrder;Password=pi2013FastOrder";
@@ -23,7 +22,7 @@ namespace bazaRad
         /// <summary>
         /// Kreiramo konstruktor
         /// </summary>
-        public dbHelper()
+        public bazaRad()
         {
         }
 
@@ -38,7 +37,7 @@ namespace bazaRad
                 connection.Open();
                 return true;
             }
-            catch (SqlException e)
+            catch (SqlException )
             {
                 return false;
             }
@@ -59,7 +58,7 @@ namespace bazaRad
                     cmd.ExecuteNonQuery();
                     val = true;
                 }
-                catch (SqlException e)
+                catch (SqlException )
                 {
                     
                     val = false;

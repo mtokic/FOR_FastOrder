@@ -76,6 +76,7 @@
             this.dbListaJela.ReadOnly = true;
             this.dbListaJela.Size = new System.Drawing.Size(301, 437);
             this.dbListaJela.TabIndex = 3;
+            this.dbListaJela.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dbListaJela_CellContentClick);
             // 
             // lblOdabranaJela
             // 

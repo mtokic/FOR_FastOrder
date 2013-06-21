@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DBHelper;
+
+
 
 namespace Kreiranje_narudžbe
 {
@@ -20,6 +23,12 @@ namespace Kreiranje_narudžbe
         private void btnSpremiOdabirJela_Click(object sender, EventArgs e)
         {
             frmOdabirJela.ActiveForm.Close();
+        }
+
+        private void dbListaJela_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            bazaRad bazaRad = new bazaRad();
+            bazaRad.OpenConnection();
         }
 
        
