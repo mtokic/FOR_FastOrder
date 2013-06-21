@@ -29,6 +29,14 @@ namespace Kreiranje_narudžbe
             bazaRad bazaRad = new bazaRad();
             bazaRad.OpenConnection();
         }
+
+        private void frmOdabirJela_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'pi2013FastOrderdbDataSet.Artikli' table. You can move, or remove it, as needed.
+            this.artikliTableAdapter.FillByOpis_artikla2(this.pi2013FastOrderdbDataSet.Artikli);
+
+        }
+
         
 
        
