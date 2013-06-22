@@ -33,21 +33,21 @@
             this.btnSpremiOdabirJela = new System.Windows.Forms.Button();
             this.lstOdabranaJela = new System.Windows.Forms.ListBox();
             this.dbListaJela = new System.Windows.Forms.DataGridView();
+            this.artikliBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pi2013FastOrderdbDataSet = new Kreiranje_narudžbe.pi2013FastOrderdbDataSet();
             this.lblOdabranaJela = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pi2013FastOrderdbDataSet = new Kreiranje_narudžbe.pi2013FastOrderdbDataSet();
-            this.artikliBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.artikliTableAdapter = new Kreiranje_narudžbe.pi2013FastOrderdbDataSetTableAdapters.ArtikliTableAdapter();
             this.tableAdapterManager = new Kreiranje_narudžbe.pi2013FastOrderdbDataSetTableAdapters.TableAdapterManager();
             this.iDartiklaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jediničnacijenaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jedinicnacijenaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.opisartiklaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.jedinicamjereDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dbListaJela)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pi2013FastOrderdbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.artikliBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pi2013FastOrderdbDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSpremiOdabirJela
@@ -81,7 +81,7 @@
             this.dbListaJela.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDartiklaDataGridViewTextBoxColumn,
             this.nazivDataGridViewTextBoxColumn,
-            this.jediničnacijenaDataGridViewTextBoxColumn,
+            this.jedinicnacijenaDataGridViewTextBoxColumn,
             this.opisartiklaDataGridViewTextBoxColumn,
             this.jedinicamjereDataGridViewTextBoxColumn});
             this.dbListaJela.DataSource = this.artikliBindingSource;
@@ -92,6 +92,16 @@
             this.dbListaJela.Size = new System.Drawing.Size(301, 437);
             this.dbListaJela.TabIndex = 3;
             this.dbListaJela.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dbListaJela_CellContentClick);
+            // 
+            // artikliBindingSource
+            // 
+            this.artikliBindingSource.DataMember = "Artikli";
+            this.artikliBindingSource.DataSource = this.pi2013FastOrderdbDataSet;
+            // 
+            // pi2013FastOrderdbDataSet
+            // 
+            this.pi2013FastOrderdbDataSet.DataSetName = "pi2013FastOrderdbDataSet";
+            this.pi2013FastOrderdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lblOdabranaJela
             // 
@@ -118,16 +128,6 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
-            // pi2013FastOrderdbDataSet
-            // 
-            this.pi2013FastOrderdbDataSet.DataSetName = "pi2013FastOrderdbDataSet";
-            this.pi2013FastOrderdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // artikliBindingSource
-            // 
-            this.artikliBindingSource.DataMember = "Artikli";
-            this.artikliBindingSource.DataSource = this.pi2013FastOrderdbDataSet;
-            // 
             // artikliTableAdapter
             // 
             this.artikliTableAdapter.ClearBeforeFill = true;
@@ -136,6 +136,7 @@
             // 
             this.tableAdapterManager.ArtikliTableAdapter = this.artikliTableAdapter;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.Evidencija_o_zaposlenimaTableAdapter = null;
             this.tableAdapterManager.JelovnikTableAdapter = null;
             this.tableAdapterManager.NarudzbaTableAdapter = null;
             this.tableAdapterManager.Popis_stolovaTableAdapter = null;
@@ -161,12 +162,12 @@
             this.nazivDataGridViewTextBoxColumn.Name = "nazivDataGridViewTextBoxColumn";
             this.nazivDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // jediničnacijenaDataGridViewTextBoxColumn
+            // jedinicnacijenaDataGridViewTextBoxColumn
             // 
-            this.jediničnacijenaDataGridViewTextBoxColumn.DataPropertyName = "Jedinična_cijena";
-            this.jediničnacijenaDataGridViewTextBoxColumn.HeaderText = "Cijena";
-            this.jediničnacijenaDataGridViewTextBoxColumn.Name = "jediničnacijenaDataGridViewTextBoxColumn";
-            this.jediničnacijenaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.jedinicnacijenaDataGridViewTextBoxColumn.DataPropertyName = "Jedinicna_cijena";
+            this.jedinicnacijenaDataGridViewTextBoxColumn.HeaderText = "Cijena";
+            this.jedinicnacijenaDataGridViewTextBoxColumn.Name = "jedinicnacijenaDataGridViewTextBoxColumn";
+            this.jedinicnacijenaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // opisartiklaDataGridViewTextBoxColumn
             // 
@@ -201,9 +202,9 @@
             this.Text = "Ponuda jela";
             this.Load += new System.EventHandler(this.frmOdabirJela_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dbListaJela)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pi2013FastOrderdbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.artikliBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pi2013FastOrderdbDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,9 +221,10 @@
         private System.Windows.Forms.BindingSource artikliBindingSource;
         private pi2013FastOrderdbDataSetTableAdapters.ArtikliTableAdapter artikliTableAdapter;
         private pi2013FastOrderdbDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        
         private System.Windows.Forms.DataGridViewTextBoxColumn iDartiklaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nazivDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn jediničnacijenaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn jedinicnacijenaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn opisartiklaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn jedinicamjereDataGridViewTextBoxColumn;
     }
