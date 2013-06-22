@@ -68,9 +68,19 @@ namespace FOR_Application
 
         private void frmPregledNarudzbi_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'pi2013FastOrderdbDataSet.Artikli' table. You can move, or remove it, as needed.
+            this.artikliTableAdapter.Fill(this.pi2013FastOrderdbDataSet.Artikli);
+            // TODO: This line of code loads data into the 'pi2013FastOrderdbDataSet.Stavke_narudzbe' table. You can move, or remove it, as needed.
+            this.stavke_narudzbeTableAdapter.Fill(this.pi2013FastOrderdbDataSet.Stavke_narudzbe);
             // TODO: This line of code loads data into the 'pi2013FastOrderdbDataSet.Narudzba' table. You can move, or remove it, as needed.
             this.narudzbaTableAdapter.Fill(this.pi2013FastOrderdbDataSet.Narudzba);
 
+        }
+
+        private void unosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUnosArtikla frmUnos = new frmUnosArtikla();
+            frmUnos.ShowDialog();
         }
     }
 }
