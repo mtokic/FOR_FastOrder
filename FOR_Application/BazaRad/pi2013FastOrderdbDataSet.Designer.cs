@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace FOR_Application {
+namespace bazaRad {
     
     
     /// <summary>
@@ -4931,7 +4931,7 @@ namespace FOR_Application {
         }
     }
 }
-namespace FOR_Application.pi2013FastOrderdbDataSetTableAdapters {
+namespace bazaRad.pi2013FastOrderdbDataSetTableAdapters {
     
     
     /// <summary>
@@ -5103,7 +5103,7 @@ SELECT ID_artikla, Naziv, Jedinicna_cijena, Opis_artikla, Jedinica_mjere FROM Ar
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::FOR_Application.Properties.Settings.Default.pi2013FastOrderdbConnectionString;
+            this._connection.ConnectionString = global::bazaRad.Properties.Settings.Default.pi2013FastOrderdbConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5495,7 +5495,7 @@ SELECT ID_zaposlenika, Radno_mjesto, Ime, Prezime, Adresa FROM [Evidencija o zap
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::FOR_Application.Properties.Settings.Default.pi2013FastOrderdbConnectionString;
+            this._connection.ConnectionString = global::bazaRad.Properties.Settings.Default.pi2013FastOrderdbConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5902,7 +5902,7 @@ SELECT ID_jelovnika, Datum, FK_ID_zaposlenika, Dnevna_ponuda FROM Jelovnik WHERE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::FOR_Application.Properties.Settings.Default.pi2013FastOrderdbConnectionString;
+            this._connection.ConnectionString = global::bazaRad.Properties.Settings.Default.pi2013FastOrderdbConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6286,7 +6286,7 @@ SELECT ID_narudzbe, Datum, Vrijeme, ID_stola, Zahtjevi_narudzbe, FK_ID_stola, FK
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::FOR_Application.Properties.Settings.Default.pi2013FastOrderdbConnectionString;
+            this._connection.ConnectionString = global::bazaRad.Properties.Settings.Default.pi2013FastOrderdbConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6676,7 +6676,7 @@ SELECT ID_stola, Opis FROM [Popis stolova] WHERE (ID_stola = @ID_stola)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::FOR_Application.Properties.Settings.Default.pi2013FastOrderdbConnectionString;
+            this._connection.ConnectionString = global::bazaRad.Properties.Settings.Default.pi2013FastOrderdbConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7007,7 +7007,7 @@ SELECT [ID_povratne informacije], Opis, FK_ID_narudzbe FROM [Povratna informacij
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::FOR_Application.Properties.Settings.Default.pi2013FastOrderdbConnectionString;
+            this._connection.ConnectionString = global::bazaRad.Properties.Settings.Default.pi2013FastOrderdbConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7348,7 +7348,7 @@ SELECT ID_racuna, Datum, Vrijeme, FK_ID_zaposlenika FROM [Racun za gosta] WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::FOR_Application.Properties.Settings.Default.pi2013FastOrderdbConnectionString;
+            this._connection.ConnectionString = global::bazaRad.Properties.Settings.Default.pi2013FastOrderdbConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7639,7 +7639,7 @@ SELECT ID_racuna, Datum, Vrijeme, FK_ID_zaposlenika FROM [Racun za gosta] WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::FOR_Application.Properties.Settings.Default.pi2013FastOrderdbConnectionString;
+            this._connection.ConnectionString = global::bazaRad.Properties.Settings.Default.pi2013FastOrderdbConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7866,7 +7866,7 @@ SELECT ID_racuna, Datum, Vrijeme, FK_ID_zaposlenika FROM [Racun za gosta] WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::FOR_Application.Properties.Settings.Default.pi2013FastOrderdbConnectionString;
+            this._connection.ConnectionString = global::bazaRad.Properties.Settings.Default.pi2013FastOrderdbConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8098,7 +8098,7 @@ SELECT ID_racuna, Datum, Vrijeme, FK_ID_zaposlenika FROM [Racun za gosta] WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::FOR_Application.Properties.Settings.Default.pi2013FastOrderdbConnectionString;
+            this._connection.ConnectionString = global::bazaRad.Properties.Settings.Default.pi2013FastOrderdbConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

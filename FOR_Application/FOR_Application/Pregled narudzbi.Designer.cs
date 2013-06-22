@@ -30,126 +30,91 @@
         {
             this.components = new System.ComponentModel.Container();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnGotovo = new System.Windows.Forms.Button();
-            this.btnKreiraj = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.iDnarudžbeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lstStatus = new System.Windows.Forms.ListBox();
+            this.pi2013FastOrderdbDataSet = new FOR_Application.pi2013FastOrderdbDataSet();
+            this.narudzbaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.narudzbaTableAdapter = new FOR_Application.pi2013FastOrderdbDataSetTableAdapters.NarudzbaTableAdapter();
+            this.iDnarudzbeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vrijemeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDstolaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.zahtjevinarudžbeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.zahtjevinarudzbeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fKIDstolaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fKIDzaposlenikaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.narudžbaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.pi2013FastOrderdbDataSet = new FOR_Application.pi2013FastOrderdbDataSet();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.izbornikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.zatvoriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pomoćToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.artikliBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pi2013FastOrderdbDataSet1 = new FOR_Application.pi2013FastOrderdbDataSet();
-            this.stavkeNarudzbeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.narudžbaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.narudžbaTableAdapter = new FOR_Application.pi2013FastOrderdbDataSetTableAdapters.NarudžbaTableAdapter();
-            this.stavke_narudzbeTableAdapter = new FOR_Application.pi2013FastOrderdbDataSetTableAdapters.Stavke_narudzbeTableAdapter();
-            this.pi2013FastOrderdbDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.artikliTableAdapter = new FOR_Application.pi2013FastOrderdbDataSetTableAdapters.ArtikliTableAdapter();
+            this.iDStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.narudžbaBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pi2013FastOrderdbDataSet)).BeginInit();
-            this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.artikliBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pi2013FastOrderdbDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stavkeNarudzbeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.narudžbaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pi2013FastOrderdbDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.narudzbaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Location = new System.Drawing.Point(2, 25);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.button1);
-            this.splitContainer1.Panel1.Controls.Add(this.btnGotovo);
-            this.splitContainer1.Panel1.Controls.Add(this.btnKreiraj);
             this.splitContainer1.Panel1.Controls.Add(this.dataGridView1);
-            this.splitContainer1.Panel1.Controls.Add(this.menuStrip1);
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.AutoScroll = true;
-            this.splitContainer1.Panel2.Controls.Add(this.listBox1);
-            this.splitContainer1.Size = new System.Drawing.Size(1045, 571);
-            this.splitContainer1.SplitterDistance = 348;
+            this.splitContainer1.Panel2.Controls.Add(this.lstStatus);
+            this.splitContainer1.Size = new System.Drawing.Size(912, 400);
+            this.splitContainer1.SplitterDistance = 239;
             this.splitContainer1.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(742, 307);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 38);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Dodaj artikl";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnGotovo
-            // 
-            this.btnGotovo.Location = new System.Drawing.Point(943, 306);
-            this.btnGotovo.Name = "btnGotovo";
-            this.btnGotovo.Size = new System.Drawing.Size(90, 39);
-            this.btnGotovo.TabIndex = 2;
-            this.btnGotovo.Text = "Gotovo jelo";
-            this.btnGotovo.UseVisualStyleBackColor = true;
-            // 
-            // btnKreiraj
-            // 
-            this.btnKreiraj.Location = new System.Drawing.Point(845, 306);
-            this.btnKreiraj.Name = "btnKreiraj";
-            this.btnKreiraj.Size = new System.Drawing.Size(92, 39);
-            this.btnKreiraj.TabIndex = 1;
-            this.btnKreiraj.Text = "Kreiraj račun";
-            this.btnKreiraj.UseVisualStyleBackColor = true;
-            this.btnKreiraj.Click += new System.EventHandler(this.btnKreiraj_Click);
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDnarudžbeDataGridViewTextBoxColumn,
+            this.iDnarudzbeDataGridViewTextBoxColumn,
             this.datumDataGridViewTextBoxColumn,
             this.vrijemeDataGridViewTextBoxColumn,
             this.iDstolaDataGridViewTextBoxColumn,
-            this.zahtjevinarudžbeDataGridViewTextBoxColumn,
+            this.zahtjevinarudzbeDataGridViewTextBoxColumn,
             this.fKIDstolaDataGridViewTextBoxColumn,
-            this.fKIDzaposlenikaDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.narudžbaBindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 28);
+            this.fKIDzaposlenikaDataGridViewTextBoxColumn,
+            this.iDStatusDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.narudzbaBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1039, 272);
+            this.dataGridView1.Size = new System.Drawing.Size(906, 233);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // iDnarudžbeDataGridViewTextBoxColumn
+            // lstStatus
             // 
-            this.iDnarudžbeDataGridViewTextBoxColumn.DataPropertyName = "ID_narudžbe";
-            this.iDnarudžbeDataGridViewTextBoxColumn.HeaderText = "ID_narudžbe";
-            this.iDnarudžbeDataGridViewTextBoxColumn.Name = "iDnarudžbeDataGridViewTextBoxColumn";
+            this.lstStatus.FormattingEnabled = true;
+            this.lstStatus.Location = new System.Drawing.Point(685, 3);
+            this.lstStatus.Name = "lstStatus";
+            this.lstStatus.Size = new System.Drawing.Size(224, 147);
+            this.lstStatus.TabIndex = 0;
+            // 
+            // pi2013FastOrderdbDataSet
+            // 
+            this.pi2013FastOrderdbDataSet.DataSetName = "pi2013FastOrderdbDataSet";
+            this.pi2013FastOrderdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // narudzbaBindingSource
+            // 
+            this.narudzbaBindingSource.DataMember = "Narudzba";
+            this.narudzbaBindingSource.DataSource = this.pi2013FastOrderdbDataSet;
+            // 
+            // narudzbaTableAdapter
+            // 
+            this.narudzbaTableAdapter.ClearBeforeFill = true;
+            // 
+            // iDnarudzbeDataGridViewTextBoxColumn
+            // 
+            this.iDnarudzbeDataGridViewTextBoxColumn.DataPropertyName = "ID_narudzbe";
+            this.iDnarudzbeDataGridViewTextBoxColumn.HeaderText = "ID_narudzbe";
+            this.iDnarudzbeDataGridViewTextBoxColumn.Name = "iDnarudzbeDataGridViewTextBoxColumn";
             // 
             // datumDataGridViewTextBoxColumn
             // 
@@ -169,11 +134,11 @@
             this.iDstolaDataGridViewTextBoxColumn.HeaderText = "ID_stola";
             this.iDstolaDataGridViewTextBoxColumn.Name = "iDstolaDataGridViewTextBoxColumn";
             // 
-            // zahtjevinarudžbeDataGridViewTextBoxColumn
+            // zahtjevinarudzbeDataGridViewTextBoxColumn
             // 
-            this.zahtjevinarudžbeDataGridViewTextBoxColumn.DataPropertyName = "Zahtjevi_narudžbe";
-            this.zahtjevinarudžbeDataGridViewTextBoxColumn.HeaderText = "Zahtjevi_narudžbe";
-            this.zahtjevinarudžbeDataGridViewTextBoxColumn.Name = "zahtjevinarudžbeDataGridViewTextBoxColumn";
+            this.zahtjevinarudzbeDataGridViewTextBoxColumn.DataPropertyName = "Zahtjevi_narudzbe";
+            this.zahtjevinarudzbeDataGridViewTextBoxColumn.HeaderText = "Zahtjevi_narudzbe";
+            this.zahtjevinarudzbeDataGridViewTextBoxColumn.Name = "zahtjevinarudzbeDataGridViewTextBoxColumn";
             // 
             // fKIDstolaDataGridViewTextBoxColumn
             // 
@@ -187,117 +152,28 @@
             this.fKIDzaposlenikaDataGridViewTextBoxColumn.HeaderText = "FK_ID_zaposlenika";
             this.fKIDzaposlenikaDataGridViewTextBoxColumn.Name = "fKIDzaposlenikaDataGridViewTextBoxColumn";
             // 
-            // narudžbaBindingSource1
+            // iDStatusDataGridViewTextBoxColumn
             // 
-            this.narudžbaBindingSource1.DataMember = "Narudžba";
-            this.narudžbaBindingSource1.DataSource = this.pi2013FastOrderdbDataSet;
-            // 
-            // pi2013FastOrderdbDataSet
-            // 
-            this.pi2013FastOrderdbDataSet.DataSetName = "pi2013FastOrderdbDataSet";
-            this.pi2013FastOrderdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.izbornikToolStripMenuItem,
-            this.pomoćToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1045, 24);
-            this.menuStrip1.TabIndex = 3;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // izbornikToolStripMenuItem
-            // 
-            this.izbornikToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.zatvoriToolStripMenuItem});
-            this.izbornikToolStripMenuItem.Name = "izbornikToolStripMenuItem";
-            this.izbornikToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.izbornikToolStripMenuItem.Text = "Izbornik";
-            // 
-            // zatvoriToolStripMenuItem
-            // 
-            this.zatvoriToolStripMenuItem.Name = "zatvoriToolStripMenuItem";
-            this.zatvoriToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
-            this.zatvoriToolStripMenuItem.Text = "Zatvori";
-            // 
-            // pomoćToolStripMenuItem
-            // 
-            this.pomoćToolStripMenuItem.Name = "pomoćToolStripMenuItem";
-            this.pomoćToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
-            this.pomoćToolStripMenuItem.Text = "Pomoć";
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(646, 3);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(396, 212);
-            this.listBox1.TabIndex = 1;
-            // 
-            // artikliBindingSource
-            // 
-            this.artikliBindingSource.DataMember = "Artikli";
-            this.artikliBindingSource.DataSource = this.pi2013FastOrderdbDataSet1;
-            // 
-            // pi2013FastOrderdbDataSet1
-            // 
-            this.pi2013FastOrderdbDataSet1.DataSetName = "pi2013FastOrderdbDataSet";
-            this.pi2013FastOrderdbDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // stavkeNarudzbeBindingSource
-            // 
-            this.stavkeNarudzbeBindingSource.DataMember = "Stavke narudzbe";
-            this.stavkeNarudzbeBindingSource.DataSource = this.pi2013FastOrderdbDataSet;
-            // 
-            // narudžbaBindingSource
-            // 
-            this.narudžbaBindingSource.DataMember = "Narudžba";
-            this.narudžbaBindingSource.DataSource = this.pi2013FastOrderdbDataSet;
-            // 
-            // narudžbaTableAdapter
-            // 
-            this.narudžbaTableAdapter.ClearBeforeFill = true;
-            // 
-            // stavke_narudzbeTableAdapter
-            // 
-            this.stavke_narudzbeTableAdapter.ClearBeforeFill = true;
-            // 
-            // pi2013FastOrderdbDataSetBindingSource
-            // 
-            this.pi2013FastOrderdbDataSetBindingSource.DataSource = this.pi2013FastOrderdbDataSet;
-            this.pi2013FastOrderdbDataSetBindingSource.Position = 0;
-            // 
-            // artikliTableAdapter
-            // 
-            this.artikliTableAdapter.ClearBeforeFill = true;
+            this.iDStatusDataGridViewTextBoxColumn.DataPropertyName = "IDStatus";
+            this.iDStatusDataGridViewTextBoxColumn.HeaderText = "IDStatus";
+            this.iDStatusDataGridViewTextBoxColumn.Name = "iDStatusDataGridViewTextBoxColumn";
             // 
             // frmPregledNarudzbi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1045, 571);
+            this.ClientSize = new System.Drawing.Size(917, 428);
             this.Controls.Add(this.splitContainer1);
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmPregledNarudzbi";
-            this.Text = "Pregled narudžbi";
+            this.Text = "Pregled_narudzbi";
             this.Load += new System.EventHandler(this.frmPregledNarudzbi_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.narudžbaBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pi2013FastOrderdbDataSet)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.artikliBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pi2013FastOrderdbDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stavkeNarudzbeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.narudžbaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pi2013FastOrderdbDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.narudzbaBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -305,33 +181,18 @@
         #endregion
 
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.Button btnKreiraj;
+        private System.Windows.Forms.ListBox lstStatus;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btnGotovo;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem izbornikToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem zatvoriToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pomoćToolStripMenuItem;
-        private System.Windows.Forms.ListBox listBox1;
         private pi2013FastOrderdbDataSet pi2013FastOrderdbDataSet;
-        private System.Windows.Forms.BindingSource narudžbaBindingSource;
-        private pi2013FastOrderdbDataSetTableAdapters.NarudžbaTableAdapter narudžbaTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDnarudžbeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource narudzbaBindingSource;
+        private pi2013FastOrderdbDataSetTableAdapters.NarudzbaTableAdapter narudzbaTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDnarudzbeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn datumDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn vrijemeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDstolaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn zahtjevinarudžbeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn zahtjevinarudzbeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fKIDstolaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fKIDzaposlenikaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource narudžbaBindingSource1;
-        private System.Windows.Forms.BindingSource stavkeNarudzbeBindingSource;
-        private pi2013FastOrderdbDataSetTableAdapters.Stavke_narudzbeTableAdapter stavke_narudzbeTableAdapter;
-        private System.Windows.Forms.BindingSource pi2013FastOrderdbDataSetBindingSource;
-        private pi2013FastOrderdbDataSet pi2013FastOrderdbDataSet1;
-        private System.Windows.Forms.BindingSource artikliBindingSource;
-        private pi2013FastOrderdbDataSetTableAdapters.ArtikliTableAdapter artikliTableAdapter;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ToolStripStatusLabel status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDStatusDataGridViewTextBoxColumn;
     }
 }
-
