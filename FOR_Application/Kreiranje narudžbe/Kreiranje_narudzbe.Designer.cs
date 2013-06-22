@@ -39,14 +39,18 @@
             this.btnOdaberiJelo = new System.Windows.Forms.Button();
             this.btnOdaberiPice = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lstNaruceneStavke = new System.Windows.Forms.ListBox();
             this.lblNaruceneStavke = new System.Windows.Forms.Label();
             this.btnNaruci = new System.Windows.Forms.Button();
             this.lblUkupno = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.dgv1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.msIzbornikHelp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
             this.SuspendLayout();
             // 
             // dateTimePicker1
@@ -139,14 +143,6 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // lstNaruceneStavke
-            // 
-            this.lstNaruceneStavke.FormattingEnabled = true;
-            this.lstNaruceneStavke.Location = new System.Drawing.Point(371, 153);
-            this.lstNaruceneStavke.Name = "lstNaruceneStavke";
-            this.lstNaruceneStavke.Size = new System.Drawing.Size(347, 303);
-            this.lstNaruceneStavke.TabIndex = 5;
-            // 
             // lblNaruceneStavke
             // 
             this.lblNaruceneStavke.AutoSize = true;
@@ -187,6 +183,33 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Restoran Victoria";
             // 
+            // dgv1
+            // 
+            this.dgv1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
+            this.dgv1.Location = new System.Drawing.Point(371, 236);
+            this.dgv1.Name = "dgv1";
+            this.dgv1.Size = new System.Drawing.Size(369, 220);
+            this.dgv1.TabIndex = 10;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Column1";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Column2";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Column3";
+            this.Column3.Name = "Column3";
+            // 
             // frmKreiranjeNarudzbeGlavna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -194,11 +217,11 @@
             this.BackColor = System.Drawing.Color.Maroon;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.dgv1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblUkupno);
             this.Controls.Add(this.btnNaruci);
             this.Controls.Add(this.lblNaruceneStavke);
-            this.Controls.Add(this.lstNaruceneStavke);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnOdaberiPice);
             this.Controls.Add(this.btnOdaberiJelo);
@@ -213,6 +236,7 @@
             this.msIzbornikHelp.ResumeLayout(false);
             this.msIzbornikHelp.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -229,11 +253,14 @@
         private System.Windows.Forms.Button btnOdaberiJelo;
         private System.Windows.Forms.Button btnOdaberiPice;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ListBox lstNaruceneStavke;
         private System.Windows.Forms.Label lblNaruceneStavke;
         private System.Windows.Forms.Button btnNaruci;
         private System.Windows.Forms.Label lblUkupno;
         private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.DataGridView dgv1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }
 

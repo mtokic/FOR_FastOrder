@@ -19,7 +19,7 @@ namespace Kreiranje_narudžbe
 
         private void btnOdaberiJelo_Click(object sender, EventArgs e)
         {
-            frmOdabirJela odabir_jela = new frmOdabirJela();
+            frmOdabirJela odabir_jela = new frmOdabirJela(this);
             odabir_jela.Show();
         }
 
