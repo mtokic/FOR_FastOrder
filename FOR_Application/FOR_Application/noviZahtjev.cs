@@ -34,9 +34,8 @@ namespace FOR_Application
                 SqlDataReader reader = QueryReader(upit);
                 while (reader.Read())
                 {
-                    //postavljamo novu vrijednost na button kako bi prikazivali broj novih zahtjeva
-                    //moram dodati jos jednu metodu u pregled naruzdbi-->ispod tickera.....
-                   // pregled.changebtnNotification(reader.GetValue(0).ToString());
+                    //postavljamo novu vrijednost na listbox kako bi prikazivali broj novih zahtjeva
+                    pregled.izmjenaStanja(reader.GetValue(0).ToString());
                 }
 
             }

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace FOR_Application
 {
+
     public partial class frmPregledNarudzbi : Form
     {
         public static ToolStripStatusLabel _status;
@@ -17,14 +18,22 @@ namespace FOR_Application
         private string loggedUser = "";
         noviZahtjev nZ;
 
+        /// <summary>
+        /// kreiramo metodu(dretvu) koja ce pratiti status novopristiglih narudzbi
+        /// </summary>
         public frmPregledNarudzbi()
         {
             InitializeComponent();
             _status = status;
-         //  if(loggedUser =! null)
-          //     loggedUser = loggedUser.
+            if (loggedUser != null)
 
-
+            timer.Tick += new EventHandler(timer_Tick); // svaki put kad timer ticka poziva se event timer_Tick
+            timer.Interval = (3000) * (1);              // ticka svaku sekundu
+            timer.Enabled = true;                       // omoguci timer
+            timer.Start();
+            nZ = new noviZahtjev(this);
+            nZ.pregledajNoveZahtjeve();
+   
         }
         
         /// <summary>
@@ -44,8 +53,19 @@ namespace FOR_Application
         public static void napisiNoviStatus(string text)
         {
             _status.Text = text;
+
         }
 
+
+        /// <summary>
+        /// metoda kojom mijenjamo vrijednost listboxa  koji nam sluzi za prikaz novih zahtjeva 
+        /// klikom na pojedini zahtjev moci cemo vidjeti sve atribute neke narudzbe gosta
+        /// </summary>
+        /// <param name="value"></param>
+        public void izmjenaStanja(string value)
+        {
+        this.listBox1.Text = "(" + value + ") zahtjeva";
+        }
 
 
         private void frmPregledNarudzbi_Load(object sender, EventArgs e)
@@ -61,7 +81,7 @@ namespace FOR_Application
         {
          
         }
-        
+       
 
         private void button1_Click(object sender, EventArgs e)
         {
