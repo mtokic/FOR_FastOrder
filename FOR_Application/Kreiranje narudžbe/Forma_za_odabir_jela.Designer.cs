@@ -137,7 +137,7 @@
             this.tableAdapterManager.ArtikliTableAdapter = this.artikliTableAdapter;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.JelovnikTableAdapter = null;
-            this.tableAdapterManager.NarudžbaTableAdapter = null;
+            this.tableAdapterManager.NarudzbaTableAdapter = null;
             this.tableAdapterManager.Popis_stolovaTableAdapter = null;
             this.tableAdapterManager.Povratna_informacijaTableAdapter = null;
             this.tableAdapterManager.Racun_za_gostaTableAdapter = null;

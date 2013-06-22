@@ -33,7 +33,7 @@ namespace Kreiranje_narudžbe
         private void frmOdabirPica_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'pi2013FastOrderdbDataSet.Artikli' table. You can move, or remove it, as needed.
-            this.artikliTableAdapter.FillByOpis_artikla1(this.pi2013FastOrderdbDataSet.Artikli);
+            this.artikliTableAdapter.FillByOpisArtikla2(this.pi2013FastOrderdbDataSet.Artikli);
 
         }
 
