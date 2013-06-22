@@ -11,6 +11,10 @@ namespace FOR_Application
 {
     class noviZahtjev : bazaRad
     {
+        /// <summary>
+        /// s ovim SQL upitom testirati cemo ID stanje, ako je ono strogo vece od prethodnog onda smo zaprimili novu naruzdbu
+        /// test cemo vrsiti uz pomoc tickera
+        /// </summary>
         string upit = "Select ID_narudzbe from Narudzba where IDstatus = 1;";
         frmPregledNarudzbi pregled;
 

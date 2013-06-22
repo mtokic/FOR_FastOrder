@@ -12,9 +12,19 @@ namespace FOR_Application
 {
     public partial class frmPregledNarudzbi : Form
     {
+        public static ToolStripStatusLabel _status;
+        private Timer timer = new Timer();
+        private string loggedUser = "";
+        noviZahtjev nZ;
+
         public frmPregledNarudzbi()
         {
             InitializeComponent();
+            _status = status;
+         //  if(loggedUser =! null)
+          //     loggedUser = loggedUser.
+
+
         }
 
         private void frmPregledNarudzbi_Load(object sender, EventArgs e)
@@ -36,6 +46,11 @@ namespace FOR_Application
         {
             frmUnos frmUnos = new frmUnos();
             frmUnos.Show();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
         

@@ -143,6 +143,7 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1039, 272);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // iDnarudžbeDataGridViewTextBoxColumn
             // 
@@ -330,6 +331,7 @@
         private System.Windows.Forms.BindingSource artikliBindingSource;
         private pi2013FastOrderdbDataSetTableAdapters.ArtikliTableAdapter artikliTableAdapter;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolStripStatusLabel status;
     }
 }
 
