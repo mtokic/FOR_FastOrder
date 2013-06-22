@@ -190,7 +190,7 @@
             this.kolicina});
             this.dbNaruceno.Location = new System.Drawing.Point(365, 227);
             this.dbNaruceno.Name = "dbNaruceno";
-            this.dbNaruceno.Size = new System.Drawing.Size(375, 203);
+            this.dbNaruceno.Size = new System.Drawing.Size(343, 196);
             this.dbNaruceno.TabIndex = 6;
             // 
             // naziv

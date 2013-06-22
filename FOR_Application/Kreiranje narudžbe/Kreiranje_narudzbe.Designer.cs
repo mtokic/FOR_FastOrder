@@ -190,9 +190,9 @@
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dgv1.Location = new System.Drawing.Point(371, 236);
+            this.dgv1.Location = new System.Drawing.Point(362, 236);
             this.dgv1.Name = "dgv1";
-            this.dgv1.Size = new System.Drawing.Size(369, 220);
+            this.dgv1.Size = new System.Drawing.Size(344, 220);
             this.dgv1.TabIndex = 10;
             // 
             // Column1
