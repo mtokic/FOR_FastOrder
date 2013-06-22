@@ -13,7 +13,7 @@ namespace FOR_Application
     {
         /// <summary>
         /// s ovim SQL upitom testirati cemo ID stanje, ako je ono strogo vece od prethodnog onda smo zaprimili novu naruzdbu
-        /// test cemo vrsiti uz pomoc tickera
+        /// test cemo osvjezavati uz pomoc tickera (klasa pregledavanje narudzbi)
         /// </summary>
         string upit = "Select ID_narudzbe from Narudzba where IDstatus = 1;";
         frmPregledNarudzbi pregled;

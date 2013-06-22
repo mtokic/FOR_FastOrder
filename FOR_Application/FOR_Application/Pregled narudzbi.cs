@@ -26,6 +26,27 @@ namespace FOR_Application
 
 
         }
+        
+        /// <summary>
+        /// metoda koja ce se pozivati tijekom Tick event timera
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        void timer_Tick(object sender, EventArgs e)
+        {
+            nZ.pregledajNoveZahtjeve();
+        }
+
+        /// <summary>
+        /// metoda kojom cemo postaviti tekst u statusnu traku
+        /// </summary>
+        /// <param name="text"></param>
+        public static void napisiNoviStatus(string text)
+        {
+            _status.Text = text;
+        }
+
+
 
         private void frmPregledNarudzbi_Load(object sender, EventArgs e)
         { 

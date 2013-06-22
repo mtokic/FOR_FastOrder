@@ -26,8 +26,7 @@ namespace Kreiranje_narudžbe
 
         private void dbListaJela_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            bazaRad bazaRad = new bazaRad();
-            bazaRad.OpenConnection();
+        
         }
 
         private void frmOdabirJela_Load(object sender, EventArgs e)
