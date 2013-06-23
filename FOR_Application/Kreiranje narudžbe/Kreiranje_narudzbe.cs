@@ -26,6 +26,17 @@ namespace Kreiranje_narudžbe
             this.lblZaposlenik.Text = zaposlenik;
 
 
+
+        }
+
+        private void izracunaj_sumu()
+        {
+            int sum = 0;
+            for (int i = 0; i < dgvNaruceneStavke.Rows.Count; ++i)
+            {
+                sum += Convert.ToInt32(dgvNaruceneStavke.Rows[i].Cells[1].Value);
+            }
+            this.label2.Text = sum.ToString()+" kn";
         }
 
         private void btnOdaberiJelo_Click(object sender, EventArgs e)
@@ -52,12 +63,15 @@ namespace Kreiranje_narudžbe
             if (this.dgvNaruceneStavke.SelectedRows.Count > 0)
             {
                 dgvNaruceneStavke.Rows.RemoveAt(this.dgvNaruceneStavke.SelectedRows[0].Index);
-            }   
+            }
+
+            izracunaj_sumu();
         }
+
+ 
 
         public int ID_status = 0;
         public bool klik = false;
-
         private void btnNaruci_Click(object sender, EventArgs e)
         {
             klik = true;
@@ -72,6 +86,16 @@ namespace Kreiranje_narudžbe
             narudzba.IDStatus = (int)ID_status;
             narudzba.SpremiNarudzbu();
             this.Close();
+        }
+
+        private void frmKreiranjeNarudzbeGlavna_Load(object sender, EventArgs e)
+        {
+            izracunaj_sumu();
+        }
+
+        private void dgvNaruceneStavke_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            izracunaj_sumu();
         }
 
       

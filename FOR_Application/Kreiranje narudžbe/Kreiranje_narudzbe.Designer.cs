@@ -198,6 +198,7 @@
             this.dgvNaruceneStavke.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvNaruceneStavke.Size = new System.Drawing.Size(366, 372);
             this.dgvNaruceneStavke.TabIndex = 10;
+            this.dgvNaruceneStavke.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgvNaruceneStavke_RowsAdded);
             // 
             // Column1
             // 
@@ -343,6 +344,7 @@
             this.Name = "frmKreiranjeNarudzbeGlavna";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kreiranje narudžbe";
+            this.Load += new System.EventHandler(this.frmKreiranjeNarudzbeGlavna_Load);
             this.msIzbornikHelp.ResumeLayout(false);
             this.msIzbornikHelp.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
