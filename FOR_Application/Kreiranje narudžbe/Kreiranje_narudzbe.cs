@@ -7,15 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DBHelper;
+
 
 namespace Kreiranje_narudžbe
 {
     public partial class frmKreiranjeNarudzbeGlavna : Form
     {
+        Narudzba narudzba;
         public frmKreiranjeNarudzbeGlavna()
         {
             InitializeComponent();
-            this.label2.Text = "Proba";
+            narudzba = new Narudzba();
+            int c = (int)bazaRad.Instance.DohvatiVrijednost("select ID_stola from [Popis stolova];");
+            this.lblStol.Text = c.ToString();
+
+
+
         }
 
         private void btnOdaberiJelo_Click(object sender, EventArgs e)
@@ -43,6 +51,25 @@ namespace Kreiranje_narudžbe
             {
                 dgvNaruceneStavke.Rows.RemoveAt(this.dgvNaruceneStavke.SelectedRows[0].Index);
             }   
+        }
+
+        public int ID_status = 0;
+        public bool klik = false;
+
+        private void btnNaruci_Click(object sender, EventArgs e)
+        {
+            klik = true;
+            if (klik)
+            {
+                ID_status = 1;
+            }
+            narudzba.Datum = datum.Value.ToShortDateString();
+            narudzba.Vrijeme = vrijeme.Value.ToShortTimeString();
+            narudzba.Zahtjevi_narudzbe = txtZahtjevi_naruzdbe.Text;
+            narudzba.FK_ID_stola = Convert.ToInt32(lblStol.Text);
+            narudzba.IDStatus = (int)ID_status;
+            narudzba.SpremiNarudzbu();
+            this.Close();
         }
 
       

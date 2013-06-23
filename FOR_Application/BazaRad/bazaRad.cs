@@ -15,9 +15,25 @@ namespace DBHelper
     
     public class bazaRad
     {
+        private static bazaRad instance;
         private SqlConnection connection;
         private string ConnectionString = "Data Source=161.53.120.217\\VARAZDIN,1433;Initial Catalog=pi2013FastOrderdb;User ID=pi2013FastOrder;Password=pi2013FastOrder";
 
+
+        /// <summary>
+        /// Instanca baze
+        /// </summary>
+        public static bazaRad Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new bazaRad();
+                }
+                return instance;
+            }
+        }
 
         /// <summary>
         /// Kreiramo konstruktor
@@ -44,10 +60,10 @@ namespace DBHelper
         }
 
         /// <summary>
-        /// Metoda za izvršavanje SQL upita nad bazom
+        /// Metoda za izvršavanje SQL upita (upis) nad bazom
         /// </summary>
         /// <param name="query">Sadržaj upita</param>
-        protected bool Query(string query)
+        public bool Query(string query)
         {
             bool val = false;
             if (OpenConnection())
@@ -69,7 +85,7 @@ namespace DBHelper
         }
 
         /// <summary>
-        /// Metoda za izvršavanje SQL upita nad bazom
+        /// Metoda za izvršavanje SQL upita (čitanje) nad bazom
         /// </summary>
         /// <param name="query">Upit</param>
         /// <returns></returns>
@@ -78,6 +94,13 @@ namespace DBHelper
             OpenConnection();
             SqlCommand cmd = new SqlCommand(query, connection);
             return cmd.ExecuteReader();
+        }
+
+        public object DohvatiVrijednost(string query)
+        {
+            OpenConnection();
+            SqlCommand cmd = new SqlCommand(query, connection);
+            return cmd.ExecuteScalar();
         }
 
         /// <summary>

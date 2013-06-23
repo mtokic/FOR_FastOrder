@@ -62,6 +62,7 @@
     <Compile Include="Kreiranje_narudzbe.Designer.cs">
       <DependentUpon>Kreiranje_narudzbe.cs</DependentUpon>
     </Compile>
+    <Compile Include="Narudzba.cs" />
     <Compile Include="pi2013FastOrderdbDataSet1.cs">
       <DependentUpon>pi2013FastOrderdbDataSet1.xsd</DependentUpon>
       <SubType>Component</SubType>

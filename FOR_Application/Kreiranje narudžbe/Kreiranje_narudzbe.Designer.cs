@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DateTimePicker dateTimePicker1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmKreiranjeNarudzbeGlavna));
             this.msIzbornikHelp = new System.Windows.Forms.MenuStrip();
             this.msPomoc = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,27 +43,23 @@
             this.lblUkupno = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvNaruceneStavke = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnObrisiStavke = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnObrisiStavke = new System.Windows.Forms.Button();
+            this.lblZahtjev = new System.Windows.Forms.Label();
+            this.txtZahtjevi_naruzdbe = new System.Windows.Forms.TextBox();
+            this.lblStol = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.lblPosluzuje = new System.Windows.Forms.Label();
+            this.lblBrojStola = new System.Windows.Forms.Label();
+            this.vrijeme = new System.Windows.Forms.DateTimePicker();
+            this.datum = new System.Windows.Forms.DateTimePicker();
             this.msIzbornikHelp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNaruceneStavke)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            dateTimePicker1.Checked = false;
-            dateTimePicker1.Enabled = false;
-            dateTimePicker1.Location = new System.Drawing.Point(659, 4);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            dateTimePicker1.Size = new System.Drawing.Size(125, 20);
-            dateTimePicker1.TabIndex = 1;
             // 
             // msIzbornikHelp
             // 
@@ -127,7 +122,7 @@
             // btnOdaberiPice
             // 
             this.btnOdaberiPice.Font = new System.Drawing.Font("Segoe Print", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnOdaberiPice.Location = new System.Drawing.Point(214, 253);
+            this.btnOdaberiPice.Location = new System.Drawing.Point(214, 201);
             this.btnOdaberiPice.Name = "btnOdaberiPice";
             this.btnOdaberiPice.Size = new System.Drawing.Size(156, 52);
             this.btnOdaberiPice.TabIndex = 3;
@@ -138,7 +133,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 119);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 144);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(166, 161);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -167,6 +162,7 @@
             this.btnNaruci.TabIndex = 7;
             this.btnNaruci.Text = "NARUČI";
             this.btnNaruci.UseVisualStyleBackColor = true;
+            this.btnNaruci.Click += new System.EventHandler(this.btnNaruci_Click);
             // 
             // lblUkupno
             // 
@@ -184,7 +180,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe Script", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(23, 44);
+            this.label1.Location = new System.Drawing.Point(14, 61);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(370, 61);
             this.label1.TabIndex = 9;
@@ -203,26 +199,6 @@
             this.dgvNaruceneStavke.Size = new System.Drawing.Size(366, 372);
             this.dgvNaruceneStavke.TabIndex = 10;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(693, 508);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "label2";
-            // 
-            // btnObrisiStavke
-            // 
-            this.btnObrisiStavke.Font = new System.Drawing.Font("Segoe Print", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnObrisiStavke.Location = new System.Drawing.Point(214, 368);
-            this.btnObrisiStavke.Name = "btnObrisiStavke";
-            this.btnObrisiStavke.Size = new System.Drawing.Size(156, 52);
-            this.btnObrisiStavke.TabIndex = 12;
-            this.btnObrisiStavke.Text = "Obriši stavku ";
-            this.btnObrisiStavke.UseVisualStyleBackColor = true;
-            this.btnObrisiStavke.Click += new System.EventHandler(this.btnObrisiStavke_Click);
-            // 
             // Column1
             // 
             this.Column1.HeaderText = "Naziv";
@@ -239,6 +215,99 @@
             this.Column3.HeaderText = " Količina";
             this.Column3.Name = "Column3";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(693, 508);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "label2";
+            // 
+            // btnObrisiStavke
+            // 
+            this.btnObrisiStavke.Font = new System.Drawing.Font("Segoe Print", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnObrisiStavke.Location = new System.Drawing.Point(214, 259);
+            this.btnObrisiStavke.Name = "btnObrisiStavke";
+            this.btnObrisiStavke.Size = new System.Drawing.Size(156, 52);
+            this.btnObrisiStavke.TabIndex = 12;
+            this.btnObrisiStavke.Text = "Obriši stavku ";
+            this.btnObrisiStavke.UseVisualStyleBackColor = true;
+            this.btnObrisiStavke.Click += new System.EventHandler(this.btnObrisiStavke_Click);
+            // 
+            // lblZahtjev
+            // 
+            this.lblZahtjev.AutoSize = true;
+            this.lblZahtjev.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblZahtjev.ForeColor = System.Drawing.Color.White;
+            this.lblZahtjev.Location = new System.Drawing.Point(235, 329);
+            this.lblZahtjev.Name = "lblZahtjev";
+            this.lblZahtjev.Size = new System.Drawing.Size(111, 17);
+            this.lblZahtjev.TabIndex = 25;
+            this.lblZahtjev.Text = "Zahtjevi narudzbe";
+            // 
+            // txtZahtjevi_naruzdbe
+            // 
+            this.txtZahtjevi_naruzdbe.Location = new System.Drawing.Point(214, 349);
+            this.txtZahtjevi_naruzdbe.Multiline = true;
+            this.txtZahtjevi_naruzdbe.Name = "txtZahtjevi_naruzdbe";
+            this.txtZahtjevi_naruzdbe.Size = new System.Drawing.Size(156, 125);
+            this.txtZahtjevi_naruzdbe.TabIndex = 24;
+            // 
+            // lblStol
+            // 
+            this.lblStol.AutoSize = true;
+            this.lblStol.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblStol.ForeColor = System.Drawing.Color.White;
+            this.lblStol.Location = new System.Drawing.Point(148, 508);
+            this.lblStol.Name = "lblStol";
+            this.lblStol.Size = new System.Drawing.Size(0, 17);
+            this.lblStol.TabIndex = 23;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(160, 532);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(153, 20);
+            this.textBox2.TabIndex = 22;
+            // 
+            // lblPosluzuje
+            // 
+            this.lblPosluzuje.AutoSize = true;
+            this.lblPosluzuje.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblPosluzuje.ForeColor = System.Drawing.Color.White;
+            this.lblPosluzuje.Location = new System.Drawing.Point(9, 533);
+            this.lblPosluzuje.Name = "lblPosluzuje";
+            this.lblPosluzuje.Size = new System.Drawing.Size(145, 17);
+            this.lblPosluzuje.TabIndex = 21;
+            this.lblPosluzuje.Text = "Posluzuje vas konobar: ";
+            // 
+            // lblBrojStola
+            // 
+            this.lblBrojStola.AutoSize = true;
+            this.lblBrojStola.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblBrojStola.ForeColor = System.Drawing.Color.White;
+            this.lblBrojStola.Location = new System.Drawing.Point(22, 508);
+            this.lblBrojStola.Name = "lblBrojStola";
+            this.lblBrojStola.Size = new System.Drawing.Size(132, 17);
+            this.lblBrojStola.TabIndex = 20;
+            this.lblBrojStola.Text = "Sjedite na stolu broj: ";
+            // 
+            // vrijeme
+            // 
+            this.vrijeme.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.vrijeme.Location = new System.Drawing.Point(597, 4);
+            this.vrijeme.Name = "vrijeme";
+            this.vrijeme.Size = new System.Drawing.Size(66, 20);
+            this.vrijeme.TabIndex = 27;
+            // 
+            // datum
+            // 
+            this.datum.Location = new System.Drawing.Point(669, 4);
+            this.datum.Name = "datum";
+            this.datum.Size = new System.Drawing.Size(115, 20);
+            this.datum.TabIndex = 26;
+            // 
             // frmKreiranjeNarudzbeGlavna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -246,6 +315,14 @@
             this.BackColor = System.Drawing.Color.Maroon;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.vrijeme);
+            this.Controls.Add(this.datum);
+            this.Controls.Add(this.lblZahtjev);
+            this.Controls.Add(this.txtZahtjevi_naruzdbe);
+            this.Controls.Add(this.lblStol);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.lblPosluzuje);
+            this.Controls.Add(this.lblBrojStola);
             this.Controls.Add(this.btnObrisiStavke);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvNaruceneStavke);
@@ -256,7 +333,6 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnOdaberiPice);
             this.Controls.Add(this.btnOdaberiJelo);
-            this.Controls.Add(dateTimePicker1);
             this.Controls.Add(this.msIzbornikHelp);
             this.MainMenuStrip = this.msIzbornikHelp;
             this.MaximizeBox = false;
@@ -294,6 +370,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.Label lblZahtjev;
+        private System.Windows.Forms.TextBox txtZahtjevi_naruzdbe;
+        private System.Windows.Forms.Label lblStol;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label lblPosluzuje;
+        private System.Windows.Forms.Label lblBrojStola;
+        private System.Windows.Forms.DateTimePicker vrijeme;
+        private System.Windows.Forms.DateTimePicker datum;
     }
 }
 
