@@ -24,19 +24,16 @@ namespace Kreiranje_narudžbe
 
         private void btnSpremiOdabirJela_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow b in this.dbNaruceno.Rows)
+            foreach (DataGridViewRow b in this.dgvNarucenaJela.Rows)
             {
-                a.dgv1.Rows.Add(b.Cells[0].Value, b.Cells[1].Value, b.Cells[2].Value);
+                if(b.Cells[0].Value!=null) a.dgvNaruceneStavke.Rows.Add(b.Cells[0].Value, b.Cells[1].Value, b.Cells[2].Value);
             }
             frmOdabirJela.ActiveForm.Close();
             
             
         }
 
-        private void dbListaJela_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-        
-        }
+       
 
         private void frmOdabirJela_Load(object sender, EventArgs e)
         {
@@ -46,16 +43,21 @@ namespace Kreiranje_narudžbe
             
         }
 
-        private void lstOdabranaJela_SelectedIndexChanged(object sender, EventArgs e)
-        {
+       
 
+        private void btnDodajJelo_Click(object sender, EventArgs e)
+        {
+            var a = this.dgvListaJela.SelectedRows[0];
+            var b = a;
+            this.dgvNarucenaJela.Rows.Add(a.Cells[1].Value, a.Cells[2].Value, a.Cells[4].Value);
         }
 
-        private void btnDodaj_Click(object sender, EventArgs e)
+        private void btnObrisiJelo_Click(object sender, EventArgs e)
         {
-            var a = this.dbListaJela.SelectedRows[0];
-            var b = a;
-            this.dbNaruceno.Rows.Add(a.Cells[1].Value, a.Cells[2].Value, a.Cells[3].Value);
+            if (this.dgvNarucenaJela.SelectedRows.Count > 0)
+            {
+                dgvNarucenaJela.Rows.RemoveAt(this.dgvNarucenaJela.SelectedRows[0].Index);
+            }     
         }
 
         

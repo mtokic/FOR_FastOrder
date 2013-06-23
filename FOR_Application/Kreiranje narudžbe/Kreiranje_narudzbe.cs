@@ -15,6 +15,7 @@ namespace Kreiranje_narudžbe
         public frmKreiranjeNarudzbeGlavna()
         {
             InitializeComponent();
+            this.label2.Text = "Proba";
         }
 
         private void btnOdaberiJelo_Click(object sender, EventArgs e)
@@ -25,7 +26,8 @@ namespace Kreiranje_narudžbe
 
         private void btnOdaberiPice_Click(object sender, EventArgs e)
         {
-            frmOdabirPica odabir_pica = new frmOdabirPica();
+            frmOdabirPica odabir_pica = new frmOdabirPica(this);
+
             odabir_pica.Show();
         }
 
@@ -35,6 +37,17 @@ namespace Kreiranje_narudžbe
             odaberi_upute.Show();
         }
 
+        private void btnObrisiStavke_Click(object sender, EventArgs e)
+        {
+            if (this.dgvNaruceneStavke.SelectedRows.Count > 0)
+            {
+                dgvNaruceneStavke.Rows.RemoveAt(this.dgvNaruceneStavke.SelectedRows[0].Index);
+            }   
+        }
+
+      
+
+        
         
 
      
