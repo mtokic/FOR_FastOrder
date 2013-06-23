@@ -51,11 +51,11 @@
             this.lblZahtjev = new System.Windows.Forms.Label();
             this.txtZahtjevi_naruzdbe = new System.Windows.Forms.TextBox();
             this.lblStol = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.lblPosluzuje = new System.Windows.Forms.Label();
             this.lblBrojStola = new System.Windows.Forms.Label();
             this.vrijeme = new System.Windows.Forms.DateTimePicker();
             this.datum = new System.Windows.Forms.DateTimePicker();
+            this.lblZaposlenik = new System.Windows.Forms.Label();
             this.msIzbornikHelp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNaruceneStavke)).BeginInit();
@@ -77,7 +77,7 @@
             this.msUputeZaKoristenje,
             this.msIzlaz});
             this.msPomoc.Name = "msPomoc";
-            this.msPomoc.Size = new System.Drawing.Size(53, 20);
+            this.msPomoc.Size = new System.Drawing.Size(57, 20);
             this.msPomoc.Text = "Pomoć";
             // 
             // msUputeZaKoristenje
@@ -92,13 +92,13 @@
             // englishToolStripMenuItem
             // 
             this.englishToolStripMenuItem.Name = "englishToolStripMenuItem";
-            this.englishToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.englishToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.englishToolStripMenuItem.Text = "English";
             // 
             // croatianToolStripMenuItem
             // 
             this.croatianToolStripMenuItem.Name = "croatianToolStripMenuItem";
-            this.croatianToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.croatianToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.croatianToolStripMenuItem.Text = "Croatian";
             this.croatianToolStripMenuItem.Click += new System.EventHandler(this.croatianToolStripMenuItem_Click);
             // 
@@ -259,24 +259,17 @@
             this.lblStol.AutoSize = true;
             this.lblStol.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblStol.ForeColor = System.Drawing.Color.White;
-            this.lblStol.Location = new System.Drawing.Point(148, 508);
+            this.lblStol.Location = new System.Drawing.Point(148, 513);
             this.lblStol.Name = "lblStol";
             this.lblStol.Size = new System.Drawing.Size(0, 17);
             this.lblStol.TabIndex = 23;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(160, 532);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(153, 20);
-            this.textBox2.TabIndex = 22;
             // 
             // lblPosluzuje
             // 
             this.lblPosluzuje.AutoSize = true;
             this.lblPosluzuje.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblPosluzuje.ForeColor = System.Drawing.Color.White;
-            this.lblPosluzuje.Location = new System.Drawing.Point(9, 533);
+            this.lblPosluzuje.Location = new System.Drawing.Point(3, 535);
             this.lblPosluzuje.Name = "lblPosluzuje";
             this.lblPosluzuje.Size = new System.Drawing.Size(145, 17);
             this.lblPosluzuje.TabIndex = 21;
@@ -287,7 +280,7 @@
             this.lblBrojStola.AutoSize = true;
             this.lblBrojStola.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblBrojStola.ForeColor = System.Drawing.Color.White;
-            this.lblBrojStola.Location = new System.Drawing.Point(22, 508);
+            this.lblBrojStola.Location = new System.Drawing.Point(16, 513);
             this.lblBrojStola.Name = "lblBrojStola";
             this.lblBrojStola.Size = new System.Drawing.Size(132, 17);
             this.lblBrojStola.TabIndex = 20;
@@ -308,6 +301,16 @@
             this.datum.Size = new System.Drawing.Size(115, 20);
             this.datum.TabIndex = 26;
             // 
+            // lblZaposlenik
+            // 
+            this.lblZaposlenik.AutoSize = true;
+            this.lblZaposlenik.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblZaposlenik.ForeColor = System.Drawing.Color.White;
+            this.lblZaposlenik.Location = new System.Drawing.Point(148, 535);
+            this.lblZaposlenik.Name = "lblZaposlenik";
+            this.lblZaposlenik.Size = new System.Drawing.Size(0, 17);
+            this.lblZaposlenik.TabIndex = 28;
+            // 
             // frmKreiranjeNarudzbeGlavna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -315,12 +318,12 @@
             this.BackColor = System.Drawing.Color.Maroon;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.lblZaposlenik);
             this.Controls.Add(this.vrijeme);
             this.Controls.Add(this.datum);
             this.Controls.Add(this.lblZahtjev);
             this.Controls.Add(this.txtZahtjevi_naruzdbe);
             this.Controls.Add(this.lblStol);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.lblPosluzuje);
             this.Controls.Add(this.lblBrojStola);
             this.Controls.Add(this.btnObrisiStavke);
@@ -373,11 +376,11 @@
         private System.Windows.Forms.Label lblZahtjev;
         private System.Windows.Forms.TextBox txtZahtjevi_naruzdbe;
         private System.Windows.Forms.Label lblStol;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label lblPosluzuje;
         private System.Windows.Forms.Label lblBrojStola;
         private System.Windows.Forms.DateTimePicker vrijeme;
         private System.Windows.Forms.DateTimePicker datum;
+        private System.Windows.Forms.Label lblZaposlenik;
     }
 }
 

@@ -22,6 +22,8 @@ namespace Kreiranje_narudžbe
             int c = (int)bazaRad.Instance.DohvatiVrijednost("select ID_stola from [Popis stolova];");
             this.lblStol.Text = c.ToString();
 
+            string zaposlenik = (string)bazaRad.Instance.DohvatiVrijednost("select Prezime, Ime from [Evidencija o zaposlenima];");
+            this.lblZaposlenik.Text = zaposlenik;
 
 
         }
