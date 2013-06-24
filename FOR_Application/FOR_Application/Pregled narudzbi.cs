@@ -87,8 +87,8 @@ namespace FOR_Application
 
         private void unosToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            frmUnosArtikla frmUnos = new frmUnosArtikla();
-            frmUnos.ShowDialog();
+            frmModifikacijaArtikala modifikacijaArtikala = new frmModifikacijaArtikala();
+            modifikacijaArtikala.Show();
         }
 
         private void izlazToolStripMenuItem_Click(object sender, EventArgs e)
