@@ -19,6 +19,7 @@ namespace Kreiranje_narudžbe
         public frmKreiranjeNarudzbeGlavna()
         {
             InitializeComponent();
+            
             narudzba = new Narudzba();
             int c = (int)bazaRad.Instance.DohvatiVrijednost("select ID_stola from [Popis stolova];");
             this.lblStol.Text = c.ToString();
@@ -136,6 +137,22 @@ namespace Kreiranje_narudžbe
                 }
             
         }
+            frmPovratnaPoruka povratnaPoruka = new frmPovratnaPoruka();
+            const string poruka =
+            "Želite li ostaviti povratnu informaciju?";
+            const string naslov = "Povratna informacija";
+            var result = MessageBox.Show(poruka, naslov,
+                                         MessageBoxButtons.YesNo,
+                                         MessageBoxIcon.Question);
+
+            // Ako odaberemo Yes 
+            if (result == DialogResult.Yes)
+            {
+                
+                povratnaPoruka.Show();
+            }
+            
+            
             this.Refresh();
             this.Close();
         }
