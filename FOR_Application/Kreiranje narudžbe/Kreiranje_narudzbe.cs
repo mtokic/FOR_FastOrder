@@ -98,6 +98,11 @@ namespace Kreiranje_narudžbe
             izracunaj_sumu();
         }
 
+        private void izlazToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
       
 
         

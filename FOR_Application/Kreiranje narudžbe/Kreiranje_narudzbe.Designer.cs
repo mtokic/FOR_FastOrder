@@ -34,7 +34,6 @@
             this.msUputeZaKoristenje = new System.Windows.Forms.ToolStripMenuItem();
             this.englishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.croatianToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.msIzlaz = new System.Windows.Forms.ToolStripMenuItem();
             this.btnOdaberiJelo = new System.Windows.Forms.Button();
             this.btnOdaberiPice = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -56,6 +55,7 @@
             this.vrijeme = new System.Windows.Forms.DateTimePicker();
             this.datum = new System.Windows.Forms.DateTimePicker();
             this.lblZaposlenik = new System.Windows.Forms.Label();
+            this.izlazToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msIzbornikHelp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNaruceneStavke)).BeginInit();
@@ -64,6 +64,7 @@
             // msIzbornikHelp
             // 
             this.msIzbornikHelp.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.izlazToolStripMenuItem,
             this.msPomoc});
             this.msIzbornikHelp.Location = new System.Drawing.Point(0, 0);
             this.msIzbornikHelp.Name = "msIzbornikHelp";
@@ -74,10 +75,9 @@
             // msPomoc
             // 
             this.msPomoc.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.msUputeZaKoristenje,
-            this.msIzlaz});
+            this.msUputeZaKoristenje});
             this.msPomoc.Name = "msPomoc";
-            this.msPomoc.Size = new System.Drawing.Size(57, 20);
+            this.msPomoc.Size = new System.Drawing.Size(53, 20);
             this.msPomoc.Text = "Pomoć";
             // 
             // msUputeZaKoristenje
@@ -92,21 +92,15 @@
             // englishToolStripMenuItem
             // 
             this.englishToolStripMenuItem.Name = "englishToolStripMenuItem";
-            this.englishToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.englishToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.englishToolStripMenuItem.Text = "English";
             // 
             // croatianToolStripMenuItem
             // 
             this.croatianToolStripMenuItem.Name = "croatianToolStripMenuItem";
-            this.croatianToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.croatianToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.croatianToolStripMenuItem.Text = "Croatian";
             this.croatianToolStripMenuItem.Click += new System.EventHandler(this.croatianToolStripMenuItem_Click);
-            // 
-            // msIzlaz
-            // 
-            this.msIzlaz.Name = "msIzlaz";
-            this.msIzlaz.Size = new System.Drawing.Size(174, 22);
-            this.msIzlaz.Text = "Izlaz";
             // 
             // btnOdaberiJelo
             // 
@@ -312,6 +306,13 @@
             this.lblZaposlenik.Size = new System.Drawing.Size(0, 17);
             this.lblZaposlenik.TabIndex = 28;
             // 
+            // izlazToolStripMenuItem
+            // 
+            this.izlazToolStripMenuItem.Name = "izlazToolStripMenuItem";
+            this.izlazToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.izlazToolStripMenuItem.Text = "Izlaz";
+            this.izlazToolStripMenuItem.Click += new System.EventHandler(this.izlazToolStripMenuItem_Click);
+            // 
             // frmKreiranjeNarudzbeGlavna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -361,7 +362,6 @@
         private System.Windows.Forms.ToolStripMenuItem msUputeZaKoristenje;
         private System.Windows.Forms.ToolStripMenuItem englishToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem croatianToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem msIzlaz;
         private System.Windows.Forms.Button btnOdaberiJelo;
         private System.Windows.Forms.Button btnOdaberiPice;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -383,6 +383,7 @@
         private System.Windows.Forms.DateTimePicker vrijeme;
         private System.Windows.Forms.DateTimePicker datum;
         private System.Windows.Forms.Label lblZaposlenik;
+        private System.Windows.Forms.ToolStripMenuItem izlazToolStripMenuItem;
     }
 }
 
