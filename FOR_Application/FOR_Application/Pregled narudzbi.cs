@@ -34,7 +34,7 @@ namespace FOR_Application
             timer.Start();
             nZ = new noviZahtjev(this);
             nZ.pregledajNoveZahtjeve();
-
+            this.Refresh();
         }
 
         /// <summary>
@@ -106,9 +106,10 @@ namespace FOR_Application
         {
             if (dataGridView1.RowCount > 0)
             {
-                int narudzbaID = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
-                this.artikliTableAdapter.FillBy(this.pi2013FastOrderdbDataSet.Artikli, narudzbaID);
+                int narID = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+                this.stavke_narudzbeTableAdapter.FillByIDnar(this.pi2013FastOrderdbDataSet.Stavke_narudzbe, narID);
             }
+            this.Refresh();
         }
 
         private void izradiRačunToolStripMenuItem_Click(object sender, EventArgs e)
@@ -116,5 +117,7 @@ namespace FOR_Application
             frmRacun racun = new frmRacun();
             racun.Show();
         }
+        
+        
     }
 }
