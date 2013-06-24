@@ -45,6 +45,7 @@
             // 
             // txtNazivArtikla
             // 
+            this.txtNazivArtikla.ForeColor = System.Drawing.Color.Black;
             this.txtNazivArtikla.Location = new System.Drawing.Point(138, 18);
             this.txtNazivArtikla.Name = "txtNazivArtikla";
             this.txtNazivArtikla.Size = new System.Drawing.Size(146, 20);
@@ -52,6 +53,7 @@
             // 
             // txtJedinicnaCijena
             // 
+            this.txtJedinicnaCijena.ForeColor = System.Drawing.Color.Black;
             this.txtJedinicnaCijena.Location = new System.Drawing.Point(138, 46);
             this.txtJedinicnaCijena.Name = "txtJedinicnaCijena";
             this.txtJedinicnaCijena.Size = new System.Drawing.Size(146, 20);
@@ -59,6 +61,7 @@
             // 
             // txtOpisArtikla
             // 
+            this.txtOpisArtikla.ForeColor = System.Drawing.Color.Black;
             this.txtOpisArtikla.Location = new System.Drawing.Point(138, 72);
             this.txtOpisArtikla.Name = "txtOpisArtikla";
             this.txtOpisArtikla.Size = new System.Drawing.Size(38, 20);
@@ -66,6 +69,7 @@
             // 
             // txtJedinicaMjere
             // 
+            this.txtJedinicaMjere.ForeColor = System.Drawing.Color.Black;
             this.txtJedinicaMjere.Location = new System.Drawing.Point(138, 133);
             this.txtJedinicaMjere.Name = "txtJedinicaMjere";
             this.txtJedinicaMjere.Size = new System.Drawing.Size(146, 20);
@@ -74,7 +78,8 @@
             // btnDodajArtikl
             // 
             this.btnDodajArtikl.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnDodajArtikl.Location = new System.Drawing.Point(313, 113);
+            this.btnDodajArtikl.ForeColor = System.Drawing.Color.Maroon;
+            this.btnDodajArtikl.Location = new System.Drawing.Point(311, 113);
             this.btnDodajArtikl.Name = "btnDodajArtikl";
             this.btnDodajArtikl.Size = new System.Drawing.Size(136, 40);
             this.btnDodajArtikl.TabIndex = 4;
@@ -86,6 +91,7 @@
             // 
             this.lblNazivArtikla.AutoSize = true;
             this.lblNazivArtikla.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblNazivArtikla.ForeColor = System.Drawing.Color.White;
             this.lblNazivArtikla.Location = new System.Drawing.Point(50, 18);
             this.lblNazivArtikla.Name = "lblNazivArtikla";
             this.lblNazivArtikla.Size = new System.Drawing.Size(82, 17);
@@ -96,6 +102,7 @@
             // 
             this.lblJedinicnaCijena.AutoSize = true;
             this.lblJedinicnaCijena.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblJedinicnaCijena.ForeColor = System.Drawing.Color.White;
             this.lblJedinicnaCijena.Location = new System.Drawing.Point(47, 49);
             this.lblJedinicnaCijena.Name = "lblJedinicnaCijena";
             this.lblJedinicnaCijena.Size = new System.Drawing.Size(85, 17);
@@ -106,6 +113,7 @@
             // 
             this.lblOpisArtikla.AutoSize = true;
             this.lblOpisArtikla.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblOpisArtikla.ForeColor = System.Drawing.Color.White;
             this.lblOpisArtikla.Location = new System.Drawing.Point(6, 72);
             this.lblOpisArtikla.Name = "lblOpisArtikla";
             this.lblOpisArtikla.Size = new System.Drawing.Size(126, 51);
@@ -117,6 +125,7 @@
             // 
             this.lblJedinicaMjere.AutoSize = true;
             this.lblJedinicaMjere.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblJedinicaMjere.ForeColor = System.Drawing.Color.White;
             this.lblJedinicaMjere.Location = new System.Drawing.Point(38, 133);
             this.lblJedinicaMjere.Name = "lblJedinicaMjere";
             this.lblJedinicaMjere.Size = new System.Drawing.Size(94, 17);
@@ -126,7 +135,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 229);
+            this.dataGridView1.Location = new System.Drawing.Point(9, 215);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(467, 267);
             this.dataGridView1.TabIndex = 9;
@@ -135,7 +144,8 @@
             // 
             this.lblpopis.AutoSize = true;
             this.lblpopis.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblpopis.Location = new System.Drawing.Point(205, 197);
+            this.lblpopis.ForeColor = System.Drawing.Color.White;
+            this.lblpopis.Location = new System.Drawing.Point(203, 185);
             this.lblpopis.Name = "lblpopis";
             this.lblpopis.Size = new System.Drawing.Size(81, 17);
             this.lblpopis.TabIndex = 10;
@@ -145,7 +155,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(486, 508);
+            this.BackColor = System.Drawing.Color.Maroon;
+            this.ClientSize = new System.Drawing.Size(486, 492);
             this.Controls.Add(this.lblpopis);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lblJedinicaMjere);
@@ -157,6 +168,7 @@
             this.Controls.Add(this.txtOpisArtikla);
             this.Controls.Add(this.txtJedinicnaCijena);
             this.Controls.Add(this.txtNazivArtikla);
+            this.ForeColor = System.Drawing.Color.White;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmModifikacijaArtikala";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

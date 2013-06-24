@@ -91,6 +91,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>pi2013FastOrderdbDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="PovratnaInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PovratnaInfo.Designer.cs">
+      <DependentUpon>PovratnaInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pregled narudzbi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModifikacijaArtikala.resx">
       <DependentUpon>ModifikacijaArtikala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PovratnaInfo.resx">
+      <DependentUpon>PovratnaInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pregled narudzbi.resx">
       <DependentUpon>Pregled narudzbi.cs</DependentUpon>

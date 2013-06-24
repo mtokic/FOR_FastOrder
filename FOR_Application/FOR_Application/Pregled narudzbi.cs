@@ -117,6 +117,12 @@ namespace FOR_Application
             frmRacun racun = new frmRacun();
             racun.Show();
         }
+
+        private void prikazToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPovratneInfo prikaziInfo = new frmPovratneInfo();
+            prikaziInfo.Show();
+        }
         
         
     }

@@ -39,6 +39,7 @@
             // btnLogin
             // 
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnLogin.ForeColor = System.Drawing.Color.Maroon;
             this.btnLogin.Location = new System.Drawing.Point(117, 101);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(147, 37);
@@ -88,12 +89,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Maroon;
             this.ClientSize = new System.Drawing.Size(283, 163);
             this.Controls.Add(this.txtLozinka);
             this.Controls.Add(this.txtKorisnicko_ime);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLogin);
+            this.ForeColor = System.Drawing.Color.White;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPrijava";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
