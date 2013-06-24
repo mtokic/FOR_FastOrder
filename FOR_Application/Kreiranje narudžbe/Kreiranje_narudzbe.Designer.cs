@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmKreiranjeNarudzbeGlavna));
             this.msIzbornikHelp = new System.Windows.Forms.MenuStrip();
+            this.izlazToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msPomoc = new System.Windows.Forms.ToolStripMenuItem();
             this.msUputeZaKoristenje = new System.Windows.Forms.ToolStripMenuItem();
             this.englishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,7 +56,6 @@
             this.vrijeme = new System.Windows.Forms.DateTimePicker();
             this.datum = new System.Windows.Forms.DateTimePicker();
             this.lblZaposlenik = new System.Windows.Forms.Label();
-            this.izlazToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msIzbornikHelp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNaruceneStavke)).BeginInit();
@@ -71,6 +71,13 @@
             this.msIzbornikHelp.Size = new System.Drawing.Size(784, 24);
             this.msIzbornikHelp.TabIndex = 0;
             this.msIzbornikHelp.Text = "menuStrip1";
+            // 
+            // izlazToolStripMenuItem
+            // 
+            this.izlazToolStripMenuItem.Name = "izlazToolStripMenuItem";
+            this.izlazToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.izlazToolStripMenuItem.Text = "Izlaz";
+            this.izlazToolStripMenuItem.Click += new System.EventHandler(this.izlazToolStripMenuItem_Click);
             // 
             // msPomoc
             // 
@@ -92,13 +99,13 @@
             // englishToolStripMenuItem
             // 
             this.englishToolStripMenuItem.Name = "englishToolStripMenuItem";
-            this.englishToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.englishToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.englishToolStripMenuItem.Text = "English";
             // 
             // croatianToolStripMenuItem
             // 
             this.croatianToolStripMenuItem.Name = "croatianToolStripMenuItem";
-            this.croatianToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.croatianToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.croatianToolStripMenuItem.Text = "Croatian";
             this.croatianToolStripMenuItem.Click += new System.EventHandler(this.croatianToolStripMenuItem_Click);
             // 
@@ -213,11 +220,14 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(693, 508);
+            this.label2.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(672, 497);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(74, 33);
             this.label2.TabIndex = 11;
-            this.label2.Text = "label2";
+            this.label2.Text = "Cijena";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnObrisiStavke
             // 
@@ -305,13 +315,6 @@
             this.lblZaposlenik.Name = "lblZaposlenik";
             this.lblZaposlenik.Size = new System.Drawing.Size(0, 17);
             this.lblZaposlenik.TabIndex = 28;
-            // 
-            // izlazToolStripMenuItem
-            // 
-            this.izlazToolStripMenuItem.Name = "izlazToolStripMenuItem";
-            this.izlazToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
-            this.izlazToolStripMenuItem.Text = "Izlaz";
-            this.izlazToolStripMenuItem.Click += new System.EventHandler(this.izlazToolStripMenuItem_Click);
             // 
             // frmKreiranjeNarudzbeGlavna
             // 

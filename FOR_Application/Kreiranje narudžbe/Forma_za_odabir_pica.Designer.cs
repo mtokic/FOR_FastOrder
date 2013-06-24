@@ -174,12 +174,12 @@
             this.tableAdapterManager.ArtikliTableAdapter = this.artikliTableAdapter;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.Evidencija_o_zaposlenimaTableAdapter = null;
-            this.tableAdapterManager.JelovnikTableAdapter = null;
+            
             this.tableAdapterManager.NarudzbaTableAdapter = null;
             this.tableAdapterManager.Popis_stolovaTableAdapter = null;
             this.tableAdapterManager.Povratna_informacijaTableAdapter = null;
             this.tableAdapterManager.Racun_za_gostaTableAdapter = null;
-            this.tableAdapterManager.Stavke_jelovnikaTableAdapter = null;
+            
             this.tableAdapterManager.Stavke_narudzbeTableAdapter = null;
             this.tableAdapterManager.Stavke_racunaTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Kreiranje_narudžbe.pi2013FastOrderdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
