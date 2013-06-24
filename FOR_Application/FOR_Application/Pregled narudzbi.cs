@@ -101,5 +101,14 @@ namespace FOR_Application
             frmEvidencijaStolova evidencijastolova = new frmEvidencijaStolova();
             evidencijastolova.Show();
         }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridView1.RowCount > 0)
+            {
+                int narudzbaID = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+                this.artikliTableAdapter.FillBy(this.pi2013FastOrderdbDataSet.Artikli, narudzbaID);
+            }
+        }
     }
 }
