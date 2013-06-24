@@ -70,6 +70,12 @@
     <Compile Include="Evidencija zaposlenih.Designer.cs">
       <DependentUpon>Evidencija zaposlenih.cs</DependentUpon>
     </Compile>
+    <Compile Include="Evidencija_Stolova.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Evidencija_Stolova.Designer.cs">
+      <DependentUpon>Evidencija_Stolova.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModifikacijaArtikala.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,9 +112,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Stol.cs" />
     <Compile Include="Zaposlenik.cs" />
     <EmbeddedResource Include="Evidencija zaposlenih.resx">
       <DependentUpon>Evidencija zaposlenih.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Evidencija_Stolova.resx">
+      <DependentUpon>Evidencija_Stolova.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModifikacijaArtikala.resx">
       <DependentUpon>ModifikacijaArtikala.cs</DependentUpon>

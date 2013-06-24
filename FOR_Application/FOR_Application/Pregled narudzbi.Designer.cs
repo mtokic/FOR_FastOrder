@@ -59,6 +59,8 @@
             this.unosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.artikliToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.unosToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.stoloviToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.unosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -253,7 +255,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.izbornikToolStripMenuItem,
             this.evidencijaZaposlenihToolStripMenuItem,
-            this.artikliToolStripMenuItem});
+            this.artikliToolStripMenuItem,
+            this.stoloviToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(917, 24);
@@ -271,7 +274,7 @@
             // izlazToolStripMenuItem
             // 
             this.izlazToolStripMenuItem.Name = "izlazToolStripMenuItem";
-            this.izlazToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.izlazToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
             this.izlazToolStripMenuItem.Text = "Izlaz";
             this.izlazToolStripMenuItem.Click += new System.EventHandler(this.izlazToolStripMenuItem_Click);
             // 
@@ -280,13 +283,13 @@
             this.evidencijaZaposlenihToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.unosToolStripMenuItem1});
             this.evidencijaZaposlenihToolStripMenuItem.Name = "evidencijaZaposlenihToolStripMenuItem";
-            this.evidencijaZaposlenihToolStripMenuItem.Size = new System.Drawing.Size(129, 20);
+            this.evidencijaZaposlenihToolStripMenuItem.Size = new System.Drawing.Size(131, 20);
             this.evidencijaZaposlenihToolStripMenuItem.Text = "Evidencija zaposlenih";
             // 
             // unosToolStripMenuItem1
             // 
             this.unosToolStripMenuItem1.Name = "unosToolStripMenuItem1";
-            this.unosToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.unosToolStripMenuItem1.Size = new System.Drawing.Size(101, 22);
             this.unosToolStripMenuItem1.Text = "Unos";
             this.unosToolStripMenuItem1.Click += new System.EventHandler(this.unosToolStripMenuItem1_Click);
             // 
@@ -295,15 +298,30 @@
             this.artikliToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.unosToolStripMenuItem2});
             this.artikliToolStripMenuItem.Name = "artikliToolStripMenuItem";
-            this.artikliToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.artikliToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.artikliToolStripMenuItem.Text = "Artikli";
             // 
             // unosToolStripMenuItem2
             // 
             this.unosToolStripMenuItem2.Name = "unosToolStripMenuItem2";
-            this.unosToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.unosToolStripMenuItem2.Size = new System.Drawing.Size(101, 22);
             this.unosToolStripMenuItem2.Text = "Unos";
             this.unosToolStripMenuItem2.Click += new System.EventHandler(this.unosToolStripMenuItem2_Click);
+            // 
+            // stoloviToolStripMenuItem
+            // 
+            this.stoloviToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.unosToolStripMenuItem});
+            this.stoloviToolStripMenuItem.Name = "stoloviToolStripMenuItem";
+            this.stoloviToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.stoloviToolStripMenuItem.Text = "Stolovi";
+            // 
+            // unosToolStripMenuItem
+            // 
+            this.unosToolStripMenuItem.Name = "unosToolStripMenuItem";
+            this.unosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.unosToolStripMenuItem.Text = "Unos";
+            this.unosToolStripMenuItem.Click += new System.EventHandler(this.unosToolStripMenuItem_Click);
             // 
             // frmPregledNarudzbi
             // 
@@ -352,7 +370,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn iDnarudzbeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn datumDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn vrijemeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDstolaDataGridViewTextBoxColumn;
+
         private System.Windows.Forms.DataGridViewTextBoxColumn zahtjevinarudzbeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fKIDstolaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fKIDzaposlenikaDataGridViewTextBoxColumn;
@@ -366,5 +384,7 @@
         private System.Windows.Forms.ToolStripMenuItem unosToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem artikliToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem unosToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem stoloviToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem unosToolStripMenuItem;
     }
 }

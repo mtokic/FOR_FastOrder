@@ -33,6 +33,16 @@ namespace FOR_Application
             zaposlenik.Adresa = txtAdresa.Text;
             zaposlenik.DodajZaposlenika();
 
+            this.evidencija_o_zaposlenimaTableAdapter.Fill(this.pi2013FastOrderdbDataSet.Evidencija_o_zaposlenima);
+
+
+        }
+
+        private void frmEvidencija_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'pi2013FastOrderdbDataSet.Evidencija_o_zaposlenima' table. You can move, or remove it, as needed.
+            this.evidencija_o_zaposlenimaTableAdapter.Fill(this.pi2013FastOrderdbDataSet.Evidencija_o_zaposlenima);
+
         }
 
 

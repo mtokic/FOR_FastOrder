@@ -95,5 +95,11 @@ namespace FOR_Application
         {
             this.Close();
         }
+
+        private void unosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEvidencijaStolova evidencijastolova = new frmEvidencijaStolova();
+            evidencijastolova.Show();
+        }
     }
 }

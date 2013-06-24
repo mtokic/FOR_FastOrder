@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEvidencija));
             this.txtIme = new System.Windows.Forms.TextBox();
             this.txtPrezime = new System.Windows.Forms.TextBox();
@@ -39,7 +40,18 @@
             this.txtAdresa = new System.Windows.Forms.TextBox();
             this.btnDodajZaposlenika = new System.Windows.Forms.Button();
             this.dgvEvidencija = new System.Windows.Forms.DataGridView();
+            this.pi2013FastOrderdbDataSet = new FOR_Application.pi2013FastOrderdbDataSet();
+            this.evidencija_o_zaposlenimaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.evidencija_o_zaposlenimaTableAdapter = new FOR_Application.pi2013FastOrderdbDataSetTableAdapters.Evidencija_o_zaposlenimaTableAdapter();
+            this.tableAdapterManager = new FOR_Application.pi2013FastOrderdbDataSetTableAdapters.TableAdapterManager();
+            this.iDzaposlenikaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.radnomjestoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.imeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prezimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adresaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEvidencija)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pi2013FastOrderdbDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.evidencija_o_zaposlenimaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // txtIme
@@ -123,11 +135,77 @@
             // 
             // dgvEvidencija
             // 
+            this.dgvEvidencija.AutoGenerateColumns = false;
             this.dgvEvidencija.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEvidencija.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDzaposlenikaDataGridViewTextBoxColumn,
+            this.radnomjestoDataGridViewTextBoxColumn,
+            this.imeDataGridViewTextBoxColumn,
+            this.prezimeDataGridViewTextBoxColumn,
+            this.adresaDataGridViewTextBoxColumn});
+            this.dgvEvidencija.DataSource = this.evidencija_o_zaposlenimaBindingSource;
             this.dgvEvidencija.Location = new System.Drawing.Point(12, 141);
             this.dgvEvidencija.Name = "dgvEvidencija";
             this.dgvEvidencija.Size = new System.Drawing.Size(418, 249);
             this.dgvEvidencija.TabIndex = 17;
+            // 
+            // pi2013FastOrderdbDataSet
+            // 
+            this.pi2013FastOrderdbDataSet.DataSetName = "pi2013FastOrderdbDataSet";
+            this.pi2013FastOrderdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // evidencija_o_zaposlenimaBindingSource
+            // 
+            this.evidencija_o_zaposlenimaBindingSource.DataMember = "Evidencija o zaposlenima";
+            this.evidencija_o_zaposlenimaBindingSource.DataSource = this.pi2013FastOrderdbDataSet;
+            // 
+            // evidencija_o_zaposlenimaTableAdapter
+            // 
+            this.evidencija_o_zaposlenimaTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.ArtikliTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.Evidencija_o_zaposlenimaTableAdapter = this.evidencija_o_zaposlenimaTableAdapter;
+            this.tableAdapterManager.NarudzbaTableAdapter = null;
+            this.tableAdapterManager.Popis_stolovaTableAdapter = null;
+            this.tableAdapterManager.Povratna_informacijaTableAdapter = null;
+            this.tableAdapterManager.Racun_za_gostaTableAdapter = null;
+            this.tableAdapterManager.Stavke_narudzbeTableAdapter = null;
+            this.tableAdapterManager.Stavke_racunaTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = FOR_Application.pi2013FastOrderdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // iDzaposlenikaDataGridViewTextBoxColumn
+            // 
+            this.iDzaposlenikaDataGridViewTextBoxColumn.DataPropertyName = "ID_zaposlenika";
+            this.iDzaposlenikaDataGridViewTextBoxColumn.HeaderText = "ID_zaposlenika";
+            this.iDzaposlenikaDataGridViewTextBoxColumn.Name = "iDzaposlenikaDataGridViewTextBoxColumn";
+            this.iDzaposlenikaDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // radnomjestoDataGridViewTextBoxColumn
+            // 
+            this.radnomjestoDataGridViewTextBoxColumn.DataPropertyName = "Radno_mjesto";
+            this.radnomjestoDataGridViewTextBoxColumn.HeaderText = "Radno_mjesto";
+            this.radnomjestoDataGridViewTextBoxColumn.Name = "radnomjestoDataGridViewTextBoxColumn";
+            // 
+            // imeDataGridViewTextBoxColumn
+            // 
+            this.imeDataGridViewTextBoxColumn.DataPropertyName = "Ime";
+            this.imeDataGridViewTextBoxColumn.HeaderText = "Ime";
+            this.imeDataGridViewTextBoxColumn.Name = "imeDataGridViewTextBoxColumn";
+            // 
+            // prezimeDataGridViewTextBoxColumn
+            // 
+            this.prezimeDataGridViewTextBoxColumn.DataPropertyName = "Prezime";
+            this.prezimeDataGridViewTextBoxColumn.HeaderText = "Prezime";
+            this.prezimeDataGridViewTextBoxColumn.Name = "prezimeDataGridViewTextBoxColumn";
+            // 
+            // adresaDataGridViewTextBoxColumn
+            // 
+            this.adresaDataGridViewTextBoxColumn.DataPropertyName = "Adresa";
+            this.adresaDataGridViewTextBoxColumn.HeaderText = "Adresa";
+            this.adresaDataGridViewTextBoxColumn.Name = "adresaDataGridViewTextBoxColumn";
             // 
             // frmEvidencija
             // 
@@ -148,7 +226,10 @@
             this.Name = "frmEvidencija";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Evidencija zaposlenih";
+            this.Load += new System.EventHandler(this.frmEvidencija_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEvidencija)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pi2013FastOrderdbDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.evidencija_o_zaposlenimaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,5 +247,14 @@
         private System.Windows.Forms.TextBox txtAdresa;
         private System.Windows.Forms.Button btnDodajZaposlenika;
         private System.Windows.Forms.DataGridView dgvEvidencija;
+        private pi2013FastOrderdbDataSet pi2013FastOrderdbDataSet;
+        private System.Windows.Forms.BindingSource evidencija_o_zaposlenimaBindingSource;
+        private pi2013FastOrderdbDataSetTableAdapters.Evidencija_o_zaposlenimaTableAdapter evidencija_o_zaposlenimaTableAdapter;
+        private pi2013FastOrderdbDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDzaposlenikaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn radnomjestoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn imeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prezimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn adresaDataGridViewTextBoxColumn;
     }
 }
