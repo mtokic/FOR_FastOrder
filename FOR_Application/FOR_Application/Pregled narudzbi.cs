@@ -110,5 +110,11 @@ namespace FOR_Application
                 this.artikliTableAdapter.FillBy(this.pi2013FastOrderdbDataSet.Artikli, narudzbaID);
             }
         }
+
+        private void izradiRačunToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRacun racun = new frmRacun();
+            racun.Show();
+        }
     }
 }

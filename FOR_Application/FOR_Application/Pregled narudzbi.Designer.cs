@@ -42,6 +42,7 @@
             this.unosToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.stoloviToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.unosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Column1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.iDnarudzbeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vrijemeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,17 +52,18 @@
             this.iDStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.narudzbaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pi2013FastOrderdbDataSet = new FOR_Application.pi2013FastOrderdbDataSet();
-            this.stavkeNarudzbeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.artikliBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.narudzbaTableAdapter = new FOR_Application.pi2013FastOrderdbDataSetTableAdapters.NarudzbaTableAdapter();
-            this.stavke_narudzbeTableAdapter = new FOR_Application.pi2013FastOrderdbDataSetTableAdapters.Stavke_narudzbeTableAdapter();
-            this.artikliTableAdapter = new FOR_Application.pi2013FastOrderdbDataSetTableAdapters.ArtikliTableAdapter();
             this.iDartiklaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.jedinicnacijenaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.opisartiklaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.jedinicamjereDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.stavkeNarudzbeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.artikliBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.narudzbaTableAdapter = new FOR_Application.pi2013FastOrderdbDataSetTableAdapters.NarudzbaTableAdapter();
+            this.stavke_narudzbeTableAdapter = new FOR_Application.pi2013FastOrderdbDataSetTableAdapters.Stavke_narudzbeTableAdapter();
+            this.artikliTableAdapter = new FOR_Application.pi2013FastOrderdbDataSetTableAdapters.ArtikliTableAdapter();
+            this.raToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.izradiRačunToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -149,7 +151,8 @@
             this.izbornikToolStripMenuItem,
             this.evidencijaZaposlenihToolStripMenuItem,
             this.artikliToolStripMenuItem,
-            this.stoloviToolStripMenuItem});
+            this.stoloviToolStripMenuItem,
+            this.raToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(917, 24);
@@ -212,9 +215,18 @@
             // unosToolStripMenuItem
             // 
             this.unosToolStripMenuItem.Name = "unosToolStripMenuItem";
-            this.unosToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
+            this.unosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.unosToolStripMenuItem.Text = "Unos";
             this.unosToolStripMenuItem.Click += new System.EventHandler(this.unosToolStripMenuItem_Click);
+            // 
+            // Column1
+            // 
+            this.Column1.DataSource = this.stavkeNarudzbeBindingSource;
+            this.Column1.DisplayMember = "Kolicina";
+            this.Column1.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.Column1.HeaderText = "Količina";
+            this.Column1.Name = "Column1";
+            this.Column1.ValueMember = "FK_ID_narudzbe";
             // 
             // iDnarudzbeDataGridViewTextBoxColumn
             // 
@@ -272,28 +284,6 @@
             this.pi2013FastOrderdbDataSet.DataSetName = "pi2013FastOrderdbDataSet";
             this.pi2013FastOrderdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // stavkeNarudzbeBindingSource
-            // 
-            this.stavkeNarudzbeBindingSource.DataMember = "Stavke narudzbe";
-            this.stavkeNarudzbeBindingSource.DataSource = this.pi2013FastOrderdbDataSet;
-            // 
-            // artikliBindingSource
-            // 
-            this.artikliBindingSource.DataMember = "Artikli";
-            this.artikliBindingSource.DataSource = this.pi2013FastOrderdbDataSet;
-            // 
-            // narudzbaTableAdapter
-            // 
-            this.narudzbaTableAdapter.ClearBeforeFill = true;
-            // 
-            // stavke_narudzbeTableAdapter
-            // 
-            this.stavke_narudzbeTableAdapter.ClearBeforeFill = true;
-            // 
-            // artikliTableAdapter
-            // 
-            this.artikliTableAdapter.ClearBeforeFill = true;
-            // 
             // iDartiklaDataGridViewTextBoxColumn
             // 
             this.iDartiklaDataGridViewTextBoxColumn.DataPropertyName = "ID_artikla";
@@ -326,14 +316,42 @@
             this.jedinicamjereDataGridViewTextBoxColumn.HeaderText = "Jedinica mjere";
             this.jedinicamjereDataGridViewTextBoxColumn.Name = "jedinicamjereDataGridViewTextBoxColumn";
             // 
-            // Column1
+            // stavkeNarudzbeBindingSource
             // 
-            this.Column1.DataSource = this.stavkeNarudzbeBindingSource;
-            this.Column1.DisplayMember = "Kolicina";
-            this.Column1.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.Column1.HeaderText = "Količina";
-            this.Column1.Name = "Column1";
-            this.Column1.ValueMember = "FK_ID_narudzbe";
+            this.stavkeNarudzbeBindingSource.DataMember = "Stavke narudzbe";
+            this.stavkeNarudzbeBindingSource.DataSource = this.pi2013FastOrderdbDataSet;
+            // 
+            // artikliBindingSource
+            // 
+            this.artikliBindingSource.DataMember = "Artikli";
+            this.artikliBindingSource.DataSource = this.pi2013FastOrderdbDataSet;
+            // 
+            // narudzbaTableAdapter
+            // 
+            this.narudzbaTableAdapter.ClearBeforeFill = true;
+            // 
+            // stavke_narudzbeTableAdapter
+            // 
+            this.stavke_narudzbeTableAdapter.ClearBeforeFill = true;
+            // 
+            // artikliTableAdapter
+            // 
+            this.artikliTableAdapter.ClearBeforeFill = true;
+            // 
+            // raToolStripMenuItem
+            // 
+            this.raToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.izradiRačunToolStripMenuItem});
+            this.raToolStripMenuItem.Name = "raToolStripMenuItem";
+            this.raToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.raToolStripMenuItem.Text = "Račun";
+            // 
+            // izradiRačunToolStripMenuItem
+            // 
+            this.izradiRačunToolStripMenuItem.Name = "izradiRačunToolStripMenuItem";
+            this.izradiRačunToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.izradiRačunToolStripMenuItem.Text = "Izradi račun";
+            this.izradiRačunToolStripMenuItem.Click += new System.EventHandler(this.izradiRačunToolStripMenuItem_Click);
             // 
             // frmPregledNarudzbi
             // 
@@ -399,5 +417,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn opisartiklaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn jedinicamjereDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn Column1;
+        private System.Windows.Forms.ToolStripMenuItem raToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem izradiRačunToolStripMenuItem;
     }
 }
