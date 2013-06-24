@@ -18,8 +18,14 @@ namespace FOR_Application
         {
             InitializeComponent();
             artikli = new Artikli();
+            this.txtJedinicaMjere.Text = "";
+            this.txtJedinicnaCijena.Text = "";
+            this.txtNazivArtikla.Text = "";
+            this.txtOpisArtikla.Text = "";
+
            
         }
+        
 
         private void btnDodajArtikl_Click(object sender, EventArgs e)
         {

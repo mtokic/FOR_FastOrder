@@ -38,9 +38,10 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(182, 97);
+            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnLogin.Location = new System.Drawing.Point(117, 101);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(96, 37);
+            this.btnLogin.Size = new System.Drawing.Size(147, 37);
             this.btnLogin.TabIndex = 0;
             this.btnLogin.Text = "Prijavi se";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -49,32 +50,37 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 26);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Location = new System.Drawing.Point(15, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 13);
+            this.label1.Size = new System.Drawing.Size(96, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "Korisničko ime:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 59);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.Location = new System.Drawing.Point(57, 59);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 13);
+            this.label2.Size = new System.Drawing.Size(54, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "Lozinka:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtKorisnicko_ime
             // 
-            this.txtKorisnicko_ime.Location = new System.Drawing.Point(131, 23);
+            this.txtKorisnicko_ime.Location = new System.Drawing.Point(117, 26);
             this.txtKorisnicko_ime.Name = "txtKorisnicko_ime";
             this.txtKorisnicko_ime.Size = new System.Drawing.Size(147, 20);
             this.txtKorisnicko_ime.TabIndex = 3;
             // 
             // txtLozinka
             // 
-            this.txtLozinka.Location = new System.Drawing.Point(131, 56);
+            this.txtLozinka.Location = new System.Drawing.Point(117, 59);
             this.txtLozinka.Name = "txtLozinka";
+            this.txtLozinka.PasswordChar = '*';
             this.txtLozinka.Size = new System.Drawing.Size(147, 20);
             this.txtLozinka.TabIndex = 4;
             // 
@@ -82,7 +88,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(304, 150);
+            this.ClientSize = new System.Drawing.Size(283, 163);
             this.Controls.Add(this.txtLozinka);
             this.Controls.Add(this.txtKorisnicko_ime);
             this.Controls.Add(this.label2);

@@ -44,74 +44,78 @@
             // 
             // txtIme
             // 
-            this.txtIme.Location = new System.Drawing.Point(79, 9);
+            this.txtIme.Location = new System.Drawing.Point(105, 12);
             this.txtIme.Name = "txtIme";
-            this.txtIme.Size = new System.Drawing.Size(100, 20);
+            this.txtIme.Size = new System.Drawing.Size(141, 20);
             this.txtIme.TabIndex = 1;
             // 
             // txtPrezime
             // 
-            this.txtPrezime.Location = new System.Drawing.Point(79, 35);
+            this.txtPrezime.Location = new System.Drawing.Point(105, 41);
             this.txtPrezime.Name = "txtPrezime";
-            this.txtPrezime.Size = new System.Drawing.Size(100, 20);
+            this.txtPrezime.Size = new System.Drawing.Size(141, 20);
             this.txtPrezime.TabIndex = 2;
             // 
             // txtRadnoMjesto
             // 
-            this.txtRadnoMjesto.Location = new System.Drawing.Point(79, 64);
+            this.txtRadnoMjesto.Location = new System.Drawing.Point(105, 70);
             this.txtRadnoMjesto.Name = "txtRadnoMjesto";
-            this.txtRadnoMjesto.Size = new System.Drawing.Size(100, 20);
+            this.txtRadnoMjesto.Size = new System.Drawing.Size(141, 20);
             this.txtRadnoMjesto.TabIndex = 3;
             // 
             // lblAdresa
             // 
             this.lblAdresa.AutoSize = true;
-            this.lblAdresa.Location = new System.Drawing.Point(30, 93);
+            this.lblAdresa.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblAdresa.Location = new System.Drawing.Point(42, 93);
             this.lblAdresa.Name = "lblAdresa";
-            this.lblAdresa.Size = new System.Drawing.Size(43, 13);
+            this.lblAdresa.Size = new System.Drawing.Size(52, 17);
             this.lblAdresa.TabIndex = 14;
             this.lblAdresa.Text = "Adresa:";
             // 
             // lblRadnoMjesto
             // 
             this.lblRadnoMjesto.AutoSize = true;
-            this.lblRadnoMjesto.Location = new System.Drawing.Point(-2, 67);
+            this.lblRadnoMjesto.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblRadnoMjesto.Location = new System.Drawing.Point(7, 67);
             this.lblRadnoMjesto.Name = "lblRadnoMjesto";
-            this.lblRadnoMjesto.Size = new System.Drawing.Size(75, 13);
+            this.lblRadnoMjesto.Size = new System.Drawing.Size(92, 17);
             this.lblRadnoMjesto.TabIndex = 13;
             this.lblRadnoMjesto.Text = "Radno mjesto:";
             // 
             // lblPrezime
             // 
             this.lblPrezime.AutoSize = true;
-            this.lblPrezime.Location = new System.Drawing.Point(26, 38);
+            this.lblPrezime.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblPrezime.Location = new System.Drawing.Point(42, 38);
             this.lblPrezime.Name = "lblPrezime";
-            this.lblPrezime.Size = new System.Drawing.Size(47, 13);
+            this.lblPrezime.Size = new System.Drawing.Size(57, 17);
             this.lblPrezime.TabIndex = 12;
             this.lblPrezime.Text = "Prezime:";
             // 
             // lblIme
             // 
             this.lblIme.AutoSize = true;
-            this.lblIme.Location = new System.Drawing.Point(46, 12);
+            this.lblIme.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblIme.Location = new System.Drawing.Point(67, 12);
             this.lblIme.Name = "lblIme";
-            this.lblIme.Size = new System.Drawing.Size(27, 13);
+            this.lblIme.Size = new System.Drawing.Size(32, 17);
             this.lblIme.TabIndex = 11;
             this.lblIme.Text = "Ime:";
             // 
             // txtAdresa
             // 
-            this.txtAdresa.Location = new System.Drawing.Point(79, 90);
+            this.txtAdresa.Location = new System.Drawing.Point(105, 96);
             this.txtAdresa.Name = "txtAdresa";
-            this.txtAdresa.Size = new System.Drawing.Size(100, 20);
+            this.txtAdresa.Size = new System.Drawing.Size(172, 20);
             this.txtAdresa.TabIndex = 15;
             // 
             // btnDodajZaposlenika
             // 
             this.btnDodajZaposlenika.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnDodajZaposlenika.Location = new System.Drawing.Point(215, 32);
+            this.btnDodajZaposlenika.Location = new System.Drawing.Point(294, 15);
             this.btnDodajZaposlenika.Name = "btnDodajZaposlenika";
-            this.btnDodajZaposlenika.Size = new System.Drawing.Size(135, 48);
+            this.btnDodajZaposlenika.Size = new System.Drawing.Size(136, 46);
             this.btnDodajZaposlenika.TabIndex = 16;
             this.btnDodajZaposlenika.Text = "Dodaj zaposlenika";
             this.btnDodajZaposlenika.UseVisualStyleBackColor = true;

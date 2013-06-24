@@ -18,6 +18,10 @@ namespace FOR_Application
         {
             InitializeComponent();
             zaposlenik = new Zaposlenik();
+            this.txtAdresa.Text = "";
+            this.txtIme.Text = "";
+            this.txtPrezime.Text = "";
+            this.txtRadnoMjesto.Text = "";
 
         }
 
