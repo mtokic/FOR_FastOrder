@@ -6,6 +6,9 @@
 }
 
 namespace Kreiranje_narudžbe.pi2013FastOrderdbDataSetTableAdapters {
+    partial class NarudzbaTableAdapter
+    {
+    }
     
     
     public partial class ArtikliTableAdapter {

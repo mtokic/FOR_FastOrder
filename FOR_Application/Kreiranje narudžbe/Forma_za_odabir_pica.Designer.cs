@@ -47,12 +47,13 @@
             this.stavke_narudzbeTableAdapter = new Kreiranje_narudžbe.pi2013FastOrderdbDataSetTableAdapters.Stavke_narudzbeTableAdapter();
             this.btnDodajPice = new System.Windows.Forms.Button();
             this.dgvNarucenaPica = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fKStavkeNarudzbeArtikliBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.btnObrisiPice = new System.Windows.Forms.Button();
+            this.ID_artikla = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaPica)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.artikliBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pi2013FastOrderdbDataSet)).BeginInit();
@@ -80,7 +81,7 @@
             this.dgvListaPica.Name = "dgvListaPica";
             this.dgvListaPica.ReadOnly = true;
             this.dgvListaPica.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListaPica.Size = new System.Drawing.Size(298, 428);
+            this.dgvListaPica.Size = new System.Drawing.Size(298, 442);
             this.dgvListaPica.TabIndex = 0;
             // 
             // iDartiklaDataGridViewTextBoxColumn
@@ -146,7 +147,7 @@
             // 
             this.btnSpremiOdabirPica.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSpremiOdabirPica.Font = new System.Drawing.Font("Segoe Script", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnSpremiOdabirPica.Location = new System.Drawing.Point(503, 496);
+            this.btnSpremiOdabirPica.Location = new System.Drawing.Point(517, 506);
             this.btnSpremiOdabirPica.Name = "btnSpremiOdabirPica";
             this.btnSpremiOdabirPica.Size = new System.Drawing.Size(207, 43);
             this.btnSpremiOdabirPica.TabIndex = 6;
@@ -174,12 +175,10 @@
             this.tableAdapterManager.ArtikliTableAdapter = this.artikliTableAdapter;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.Evidencija_o_zaposlenimaTableAdapter = null;
-            
             this.tableAdapterManager.NarudzbaTableAdapter = null;
             this.tableAdapterManager.Popis_stolovaTableAdapter = null;
             this.tableAdapterManager.Povratna_informacijaTableAdapter = null;
             this.tableAdapterManager.Racun_za_gostaTableAdapter = null;
-            
             this.tableAdapterManager.Stavke_narudzbeTableAdapter = null;
             this.tableAdapterManager.Stavke_racunaTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Kreiranje_narudžbe.pi2013FastOrderdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
@@ -208,29 +207,15 @@
             // 
             this.dgvNarucenaPica.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNarucenaPica.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID_artikla,
             this.Column1,
             this.Column2,
             this.Column3});
             this.dgvNarucenaPica.Location = new System.Drawing.Point(447, 53);
             this.dgvNarucenaPica.Name = "dgvNarucenaPica";
             this.dgvNarucenaPica.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvNarucenaPica.Size = new System.Drawing.Size(313, 428);
+            this.dgvNarucenaPica.Size = new System.Drawing.Size(325, 442);
             this.dgvNarucenaPica.TabIndex = 10;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Naziv";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Cijena";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = " Količina";
-            this.Column3.Name = "Column3";
             // 
             // fKStavkeNarudzbeArtikliBindingSource1
             // 
@@ -259,6 +244,31 @@
             this.btnObrisiPice.Text = "Obriši piće <-";
             this.btnObrisiPice.UseVisualStyleBackColor = true;
             this.btnObrisiPice.Click += new System.EventHandler(this.btnObrisiPice_Click);
+            // 
+            // ID_artikla
+            // 
+            this.ID_artikla.HeaderText = "ID";
+            this.ID_artikla.Name = "ID_artikla";
+            this.ID_artikla.Visible = false;
+            this.ID_artikla.Width = 40;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Naziv";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 140;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Cijena";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 70;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = " Količina";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 90;
             // 
             // frmOdabirPica
             // 
@@ -313,10 +323,11 @@
         private System.Windows.Forms.Button btnDodajPice;
         private System.Windows.Forms.DataGridView dgvNarucenaPica;
         private System.Windows.Forms.BindingSource fKStavkeNarudzbeArtikliBindingSource1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnObrisiPice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_artikla;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnObrisiPice;
     }
 }

@@ -32,11 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOdabirJela));
             this.btnSpremiOdabirJela = new System.Windows.Forms.Button();
             this.dgvListaJela = new System.Windows.Forms.DataGridView();
-            this.iDartiklaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jedinicnacijenaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.opisartiklaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jedinicamjereDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.artikliBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pi2013FastOrderdbDataSet = new Kreiranje_narudžbe.pi2013FastOrderdbDataSet();
             this.lblOdabranaJela = new System.Windows.Forms.Label();
@@ -44,12 +39,18 @@
             this.artikliTableAdapter = new Kreiranje_narudžbe.pi2013FastOrderdbDataSetTableAdapters.ArtikliTableAdapter();
             this.tableAdapterManager = new Kreiranje_narudžbe.pi2013FastOrderdbDataSetTableAdapters.TableAdapterManager();
             this.dgvNarucenaJela = new System.Windows.Forms.DataGridView();
-            this.naziv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cijena = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kolicina = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDodajJelo = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnObrisiJelo = new System.Windows.Forms.Button();
+            this.ID_artikla = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.naziv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cijena = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kolicina = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDartiklaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jedinicnacijenaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.opisartiklaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jedinicamjereDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaJela)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.artikliBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pi2013FastOrderdbDataSet)).BeginInit();
@@ -61,7 +62,7 @@
             // 
             this.btnSpremiOdabirJela.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSpremiOdabirJela.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSpremiOdabirJela.Location = new System.Drawing.Point(527, 503);
+            this.btnSpremiOdabirJela.Location = new System.Drawing.Point(509, 505);
             this.btnSpremiOdabirJela.Name = "btnSpremiOdabirJela";
             this.btnSpremiOdabirJela.Size = new System.Drawing.Size(213, 44);
             this.btnSpremiOdabirJela.TabIndex = 0;
@@ -90,43 +91,6 @@
             this.dgvListaJela.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvListaJela.Size = new System.Drawing.Size(302, 437);
             this.dgvListaJela.TabIndex = 3;
-            // 
-            // iDartiklaDataGridViewTextBoxColumn
-            // 
-            this.iDartiklaDataGridViewTextBoxColumn.DataPropertyName = "ID_artikla";
-            this.iDartiklaDataGridViewTextBoxColumn.HeaderText = "ID_artikla";
-            this.iDartiklaDataGridViewTextBoxColumn.Name = "iDartiklaDataGridViewTextBoxColumn";
-            this.iDartiklaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDartiklaDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // nazivDataGridViewTextBoxColumn
-            // 
-            this.nazivDataGridViewTextBoxColumn.DataPropertyName = "Naziv";
-            this.nazivDataGridViewTextBoxColumn.HeaderText = "Naziv";
-            this.nazivDataGridViewTextBoxColumn.Name = "nazivDataGridViewTextBoxColumn";
-            this.nazivDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // jedinicnacijenaDataGridViewTextBoxColumn
-            // 
-            this.jedinicnacijenaDataGridViewTextBoxColumn.DataPropertyName = "Jedinicna_cijena";
-            this.jedinicnacijenaDataGridViewTextBoxColumn.HeaderText = "Cijena";
-            this.jedinicnacijenaDataGridViewTextBoxColumn.Name = "jedinicnacijenaDataGridViewTextBoxColumn";
-            this.jedinicnacijenaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // opisartiklaDataGridViewTextBoxColumn
-            // 
-            this.opisartiklaDataGridViewTextBoxColumn.DataPropertyName = "Opis_artikla";
-            this.opisartiklaDataGridViewTextBoxColumn.HeaderText = "Opis_artikla";
-            this.opisartiklaDataGridViewTextBoxColumn.Name = "opisartiklaDataGridViewTextBoxColumn";
-            this.opisartiklaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.opisartiklaDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // jedinicamjereDataGridViewTextBoxColumn
-            // 
-            this.jedinicamjereDataGridViewTextBoxColumn.DataPropertyName = "Jedinica_mjere";
-            this.jedinicamjereDataGridViewTextBoxColumn.HeaderText = " Količina";
-            this.jedinicamjereDataGridViewTextBoxColumn.Name = "jedinicamjereDataGridViewTextBoxColumn";
-            this.jedinicamjereDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // artikliBindingSource
             // 
@@ -172,12 +136,10 @@
             this.tableAdapterManager.ArtikliTableAdapter = this.artikliTableAdapter;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.Evidencija_o_zaposlenimaTableAdapter = null;
-            
             this.tableAdapterManager.NarudzbaTableAdapter = null;
             this.tableAdapterManager.Popis_stolovaTableAdapter = null;
             this.tableAdapterManager.Povratna_informacijaTableAdapter = null;
             this.tableAdapterManager.Racun_za_gostaTableAdapter = null;
-            
             this.tableAdapterManager.Stavke_narudzbeTableAdapter = null;
             this.tableAdapterManager.Stavke_racunaTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Kreiranje_narudžbe.pi2013FastOrderdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
@@ -186,29 +148,15 @@
             // 
             this.dgvNarucenaJela.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNarucenaJela.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID_artikla,
             this.naziv,
             this.cijena,
             this.kolicina});
-            this.dgvNarucenaJela.Location = new System.Drawing.Point(451, 60);
+            this.dgvNarucenaJela.Location = new System.Drawing.Point(452, 60);
             this.dgvNarucenaJela.Name = "dgvNarucenaJela";
             this.dgvNarucenaJela.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvNarucenaJela.Size = new System.Drawing.Size(321, 437);
+            this.dgvNarucenaJela.Size = new System.Drawing.Size(318, 437);
             this.dgvNarucenaJela.TabIndex = 6;
-            // 
-            // naziv
-            // 
-            this.naziv.HeaderText = "Naziv";
-            this.naziv.Name = "naziv";
-            // 
-            // cijena
-            // 
-            this.cijena.HeaderText = "Cijena";
-            this.cijena.Name = "cijena";
-            // 
-            // kolicina
-            // 
-            this.kolicina.HeaderText = " Količina";
-            this.kolicina.Name = "kolicina";
             // 
             // btnDodajJelo
             // 
@@ -245,6 +193,69 @@
             this.btnObrisiJelo.Text = "Obriši jelo <-";
             this.btnObrisiJelo.UseVisualStyleBackColor = true;
             this.btnObrisiJelo.Click += new System.EventHandler(this.btnObrisiJelo_Click);
+            // 
+            // ID_artikla
+            // 
+            this.ID_artikla.HeaderText = "ID";
+            this.ID_artikla.Name = "ID_artikla";
+            this.ID_artikla.Visible = false;
+            this.ID_artikla.Width = 40;
+            // 
+            // naziv
+            // 
+            this.naziv.HeaderText = "Naziv";
+            this.naziv.Name = "naziv";
+            this.naziv.Width = 140;
+            // 
+            // cijena
+            // 
+            this.cijena.HeaderText = "Cijena";
+            this.cijena.Name = "cijena";
+            this.cijena.Width = 70;
+            // 
+            // kolicina
+            // 
+            this.kolicina.HeaderText = " Količina";
+            this.kolicina.Name = "kolicina";
+            this.kolicina.Width = 90;
+            // 
+            // iDartiklaDataGridViewTextBoxColumn
+            // 
+            this.iDartiklaDataGridViewTextBoxColumn.DataPropertyName = "ID_artikla";
+            this.iDartiklaDataGridViewTextBoxColumn.HeaderText = "ID_artikla";
+            this.iDartiklaDataGridViewTextBoxColumn.Name = "iDartiklaDataGridViewTextBoxColumn";
+            this.iDartiklaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDartiklaDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // nazivDataGridViewTextBoxColumn
+            // 
+            this.nazivDataGridViewTextBoxColumn.DataPropertyName = "Naziv";
+            this.nazivDataGridViewTextBoxColumn.HeaderText = "Naziv";
+            this.nazivDataGridViewTextBoxColumn.Name = "nazivDataGridViewTextBoxColumn";
+            this.nazivDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // jedinicnacijenaDataGridViewTextBoxColumn
+            // 
+            this.jedinicnacijenaDataGridViewTextBoxColumn.DataPropertyName = "Jedinicna_cijena";
+            this.jedinicnacijenaDataGridViewTextBoxColumn.HeaderText = "Cijena";
+            this.jedinicnacijenaDataGridViewTextBoxColumn.Name = "jedinicnacijenaDataGridViewTextBoxColumn";
+            this.jedinicnacijenaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.jedinicnacijenaDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // opisartiklaDataGridViewTextBoxColumn
+            // 
+            this.opisartiklaDataGridViewTextBoxColumn.DataPropertyName = "Opis_artikla";
+            this.opisartiklaDataGridViewTextBoxColumn.HeaderText = "Opis_artikla";
+            this.opisartiklaDataGridViewTextBoxColumn.Name = "opisartiklaDataGridViewTextBoxColumn";
+            this.opisartiklaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.opisartiklaDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // jedinicamjereDataGridViewTextBoxColumn
+            // 
+            this.jedinicamjereDataGridViewTextBoxColumn.DataPropertyName = "Jedinica_mjere";
+            this.jedinicamjereDataGridViewTextBoxColumn.HeaderText = " Količina";
+            this.jedinicamjereDataGridViewTextBoxColumn.Name = "jedinicamjereDataGridViewTextBoxColumn";
+            this.jedinicamjereDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // frmOdabirJela
             // 
@@ -288,15 +299,16 @@
         private pi2013FastOrderdbDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DataGridView dgvNarucenaJela;
         private System.Windows.Forms.Button btnDodajJelo;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnObrisiJelo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_artikla;
+        private System.Windows.Forms.DataGridViewTextBoxColumn naziv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cijena;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kolicina;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDartiklaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nazivDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn jedinicnacijenaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn opisartiklaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn jedinicamjereDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn naziv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cijena;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kolicina;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnObrisiJelo;
     }
 }

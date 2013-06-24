@@ -17,7 +17,11 @@ namespace Kreiranje_narudžbe
             InitializeComponent();
             
         }
-
+        /// <summary>
+        /// Otvara se forma za kreiranje narudzbi
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnUlaz_Click(object sender, EventArgs e)
         {
             frmKreiranjeNarudzbeGlavna kreiranje_narudzbe = new frmKreiranjeNarudzbeGlavna();
