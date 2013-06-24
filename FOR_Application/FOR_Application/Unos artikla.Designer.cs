@@ -29,28 +29,28 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUnosArtikla));
             System.Windows.Forms.Label iD_artiklaLabel;
             System.Windows.Forms.Label nazivLabel;
             System.Windows.Forms.Label jedinicna_cijenaLabel;
             System.Windows.Forms.Label jedinica_mjereLabel;
             System.Windows.Forms.Label opis_artiklaLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUnosArtikla));
             this.pi2013FastOrderdbDataSet = new FOR_Application.pi2013FastOrderdbDataSet();
             this.artikliBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.artikliTableAdapter = new FOR_Application.pi2013FastOrderdbDataSetTableAdapters.ArtikliTableAdapter();
             this.tableAdapterManager = new FOR_Application.pi2013FastOrderdbDataSetTableAdapters.TableAdapterManager();
             this.artikliBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.artikliBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.artikliDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,6 +74,51 @@
             this.artikliBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.artikliDataGridView)).BeginInit();
             this.SuspendLayout();
+            // 
+            // iD_artiklaLabel
+            // 
+            iD_artiklaLabel.AutoSize = true;
+            iD_artiklaLabel.Location = new System.Drawing.Point(12, 36);
+            iD_artiklaLabel.Name = "iD_artiklaLabel";
+            iD_artiklaLabel.Size = new System.Drawing.Size(62, 13);
+            iD_artiklaLabel.TabIndex = 2;
+            iD_artiklaLabel.Text = "Šifra artikla:";
+            // 
+            // nazivLabel
+            // 
+            nazivLabel.AutoSize = true;
+            nazivLabel.Location = new System.Drawing.Point(37, 67);
+            nazivLabel.Name = "nazivLabel";
+            nazivLabel.Size = new System.Drawing.Size(37, 13);
+            nazivLabel.TabIndex = 4;
+            nazivLabel.Text = "Naziv:";
+            // 
+            // jedinicna_cijenaLabel
+            // 
+            jedinicna_cijenaLabel.AutoSize = true;
+            jedinicna_cijenaLabel.Location = new System.Drawing.Point(243, 36);
+            jedinicna_cijenaLabel.Name = "jedinicna_cijenaLabel";
+            jedinicna_cijenaLabel.Size = new System.Drawing.Size(86, 13);
+            jedinicna_cijenaLabel.TabIndex = 6;
+            jedinicna_cijenaLabel.Text = "Jedinična cijena:";
+            // 
+            // jedinica_mjereLabel
+            // 
+            jedinica_mjereLabel.AutoSize = true;
+            jedinica_mjereLabel.Location = new System.Drawing.Point(252, 67);
+            jedinica_mjereLabel.Name = "jedinica_mjereLabel";
+            jedinica_mjereLabel.Size = new System.Drawing.Size(77, 13);
+            jedinica_mjereLabel.TabIndex = 8;
+            jedinica_mjereLabel.Text = "Jedinica mjere:";
+            // 
+            // opis_artiklaLabel
+            // 
+            opis_artiklaLabel.AutoSize = true;
+            opis_artiklaLabel.Location = new System.Drawing.Point(12, 98);
+            opis_artiklaLabel.Name = "opis_artiklaLabel";
+            opis_artiklaLabel.Size = new System.Drawing.Size(62, 13);
+            opis_artiklaLabel.TabIndex = 10;
+            opis_artiklaLabel.Text = "Opis artikla:";
             // 
             // pi2013FastOrderdbDataSet
             // 
@@ -134,6 +179,31 @@
             this.artikliBindingNavigator.TabIndex = 0;
             this.artikliBindingNavigator.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(33, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
+            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -166,17 +236,10 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 15);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -184,7 +247,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -193,38 +256,20 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // artikliBindingNavigatorSaveItem
             // 
             this.artikliBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.artikliBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("artikliBindingNavigatorSaveItem.Image")));
             this.artikliBindingNavigatorSaveItem.Name = "artikliBindingNavigatorSaveItem";
-            this.artikliBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.artikliBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.artikliBindingNavigatorSaveItem.Text = "Save Data";
             this.artikliBindingNavigatorSaveItem.Click += new System.EventHandler(this.artikliBindingNavigatorSaveItem_Click);
             // 
@@ -277,15 +322,6 @@
             this.dataGridViewTextBoxColumn5.HeaderText = "Jedinica_mjere";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
-            // iD_artiklaLabel
-            // 
-            iD_artiklaLabel.AutoSize = true;
-            iD_artiklaLabel.Location = new System.Drawing.Point(12, 36);
-            iD_artiklaLabel.Name = "iD_artiklaLabel";
-            iD_artiklaLabel.Size = new System.Drawing.Size(62, 13);
-            iD_artiklaLabel.TabIndex = 2;
-            iD_artiklaLabel.Text = "Šifra artikla:";
-            // 
             // iD_artiklaTextBox
             // 
             this.iD_artiklaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.artikliBindingSource, "ID_artikla", true));
@@ -293,15 +329,6 @@
             this.iD_artiklaTextBox.Name = "iD_artiklaTextBox";
             this.iD_artiklaTextBox.Size = new System.Drawing.Size(100, 20);
             this.iD_artiklaTextBox.TabIndex = 3;
-            // 
-            // nazivLabel
-            // 
-            nazivLabel.AutoSize = true;
-            nazivLabel.Location = new System.Drawing.Point(37, 67);
-            nazivLabel.Name = "nazivLabel";
-            nazivLabel.Size = new System.Drawing.Size(37, 13);
-            nazivLabel.TabIndex = 4;
-            nazivLabel.Text = "Naziv:";
             // 
             // nazivTextBox
             // 
@@ -311,15 +338,6 @@
             this.nazivTextBox.Size = new System.Drawing.Size(100, 20);
             this.nazivTextBox.TabIndex = 5;
             // 
-            // jedinicna_cijenaLabel
-            // 
-            jedinicna_cijenaLabel.AutoSize = true;
-            jedinicna_cijenaLabel.Location = new System.Drawing.Point(243, 36);
-            jedinicna_cijenaLabel.Name = "jedinicna_cijenaLabel";
-            jedinicna_cijenaLabel.Size = new System.Drawing.Size(86, 13);
-            jedinicna_cijenaLabel.TabIndex = 6;
-            jedinicna_cijenaLabel.Text = "Jedinična cijena:";
-            // 
             // jedinicna_cijenaTextBox
             // 
             this.jedinicna_cijenaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.artikliBindingSource, "Jedinicna_cijena", true));
@@ -328,15 +346,6 @@
             this.jedinicna_cijenaTextBox.Size = new System.Drawing.Size(100, 20);
             this.jedinicna_cijenaTextBox.TabIndex = 7;
             // 
-            // jedinica_mjereLabel
-            // 
-            jedinica_mjereLabel.AutoSize = true;
-            jedinica_mjereLabel.Location = new System.Drawing.Point(252, 67);
-            jedinica_mjereLabel.Name = "jedinica_mjereLabel";
-            jedinica_mjereLabel.Size = new System.Drawing.Size(77, 13);
-            jedinica_mjereLabel.TabIndex = 8;
-            jedinica_mjereLabel.Text = "Jedinica mjere:";
-            // 
             // jedinica_mjereTextBox
             // 
             this.jedinica_mjereTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.artikliBindingSource, "Jedinica_mjere", true));
@@ -344,15 +353,6 @@
             this.jedinica_mjereTextBox.Name = "jedinica_mjereTextBox";
             this.jedinica_mjereTextBox.Size = new System.Drawing.Size(100, 20);
             this.jedinica_mjereTextBox.TabIndex = 9;
-            // 
-            // opis_artiklaLabel
-            // 
-            opis_artiklaLabel.AutoSize = true;
-            opis_artiklaLabel.Location = new System.Drawing.Point(12, 98);
-            opis_artiklaLabel.Name = "opis_artiklaLabel";
-            opis_artiklaLabel.Size = new System.Drawing.Size(62, 13);
-            opis_artiklaLabel.TabIndex = 10;
-            opis_artiklaLabel.Text = "Opis artikla:";
             // 
             // opis_artiklaTextBox
             // 
@@ -380,6 +380,7 @@
             this.Controls.Add(this.artikliDataGridView);
             this.Controls.Add(this.artikliBindingNavigator);
             this.Name = "frmUnosArtikla";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Unos_artikla";
             this.Load += new System.EventHandler(this.frmUnosArtikla_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pi2013FastOrderdbDataSet)).EndInit();

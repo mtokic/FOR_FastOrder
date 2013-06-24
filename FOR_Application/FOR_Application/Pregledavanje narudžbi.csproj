@@ -63,6 +63,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Evidencija zaposlenih.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Evidencija zaposlenih.Designer.cs">
+      <DependentUpon>Evidencija zaposlenih.cs</DependentUpon>
+    </Compile>
     <Compile Include="noviZahtjev.cs" />
     <Compile Include="pi2013FastOrderdbDataSet.cs">
       <DependentUpon>pi2013FastOrderdbDataSet.xsd</DependentUpon>
@@ -99,6 +105,10 @@
     <Compile Include="Unos artikla.Designer.cs">
       <DependentUpon>Unos artikla.cs</DependentUpon>
     </Compile>
+    <Compile Include="Zaposlenik.cs" />
+    <EmbeddedResource Include="Evidencija zaposlenih.resx">
+      <DependentUpon>Evidencija zaposlenih.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pregled narudzbi.resx">
       <DependentUpon>Pregled narudzbi.cs</DependentUpon>
     </EmbeddedResource>
