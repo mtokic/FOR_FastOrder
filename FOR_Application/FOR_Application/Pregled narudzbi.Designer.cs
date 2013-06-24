@@ -94,6 +94,8 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -107,6 +109,7 @@
             this.dataGridView1.DataSource = this.narudzbaBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(906, 233);
             this.dataGridView1.TabIndex = 0;
             // 
@@ -115,6 +118,7 @@
             this.iDnarudzbeDataGridViewTextBoxColumn.DataPropertyName = "ID_narudzbe";
             this.iDnarudzbeDataGridViewTextBoxColumn.HeaderText = "Šifra narudžbe";
             this.iDnarudzbeDataGridViewTextBoxColumn.Name = "iDnarudzbeDataGridViewTextBoxColumn";
+            this.iDnarudzbeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // datumDataGridViewTextBoxColumn
             // 
@@ -167,6 +171,8 @@
             // 
             // dataGridView2
             // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.AutoGenerateColumns = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -178,6 +184,7 @@
             this.dataGridView2.DataSource = this.stavkeNarudzbeBindingSource;
             this.dataGridView2.Location = new System.Drawing.Point(3, 3);
             this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(676, 150);
             this.dataGridView2.TabIndex = 1;
             // 
@@ -319,7 +326,7 @@
             // unosToolStripMenuItem
             // 
             this.unosToolStripMenuItem.Name = "unosToolStripMenuItem";
-            this.unosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.unosToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
             this.unosToolStripMenuItem.Text = "Unos";
             this.unosToolStripMenuItem.Click += new System.EventHandler(this.unosToolStripMenuItem_Click);
             // 
