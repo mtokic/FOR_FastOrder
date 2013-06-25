@@ -29,7 +29,10 @@ namespace FOR_Application
         {
 
             frmUnosZaposlenika unoszaposlenih = new frmUnosZaposlenika();
+
             unoszaposlenih.Show();
+
+
 
         }
 
@@ -46,6 +49,16 @@ namespace FOR_Application
             this.Validate();
             this.evidencija_o_zaposlenimaBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.pi2013FastOrderdbDataSet);
+        }
+
+        private void btnModifikacijaZaposlenika_Click(object sender, EventArgs e)
+        {
+
+            bazaRad.Instance.Query("update [Evidencija o zaposlenima] set Radno_mjesto='"+this.txtRadnoMjesto.Text+"',  Ime='"+this.txtIme.Text+"',  Prezime='"+this.txtPrezime.Text+"',  Adresa='"+this.txtAdresa.Text+"' where ID_zaposlenika = " + Convert.ToInt32(this.dgvEvidencija.SelectedRows[0].Index) + ";");
+            this.Validate();
+            this.evidencija_o_zaposlenimaBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.pi2013FastOrderdbDataSet);
+
         }
 
       

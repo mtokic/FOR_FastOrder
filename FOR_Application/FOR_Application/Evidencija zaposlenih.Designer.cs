@@ -245,6 +245,7 @@
             this.btnModifikacijaZaposlenika.TabIndex = 23;
             this.btnModifikacijaZaposlenika.Text = "Modificiraj zaposlenika";
             this.btnModifikacijaZaposlenika.UseVisualStyleBackColor = true;
+            this.btnModifikacijaZaposlenika.Click += new System.EventHandler(this.btnModifikacijaZaposlenika_Click);
             // 
             // frmEvidencija
             // 

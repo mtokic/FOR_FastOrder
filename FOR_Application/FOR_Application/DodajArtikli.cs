@@ -34,7 +34,7 @@ namespace FOR_Application
             artikli.Opis_artikla = txtOpisArtikla.Text;
 
             artikli.DodajArtikl();
-            //this.artikliTableAdapter.Fill(this.pi2013FastOrderdbDataSet.Artikli);
+            
 
 
             this.txtJedinicaMjere.Text = "";
@@ -42,9 +42,13 @@ namespace FOR_Application
             this.txtNazivArtikla.Text = "";
             this.txtOpisArtikla.Text = "";
 
+            this.artikliTableAdapter.Fill(this.pi2013FastOrderdbDataSet.Artikli);
+
             this.Validate();
             this.artikliBindingSource.EndEdit();
-            this.artikliTableAdapter.Update(this.pi2013FastOrderdbDataSet);
+            this.artikliTableAdapter.Update(this.pi2013FastOrderdbDataSet.Artikli);
+
+            
 
         
         }

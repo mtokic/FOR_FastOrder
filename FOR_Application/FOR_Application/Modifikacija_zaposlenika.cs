@@ -26,9 +26,7 @@ namespace FOR_Application
             this.txtPrezime.Text = "";
             this.txtRadnoMjesto.Text = "";
 
-            this.Validate();
-            this.evidencijaOZaposlenimaBindingSource.EndEdit();
-            this.evidencija_o_zaposlenimaTableAdapter.Update(this.pi2013FastOrderdbDataSet);
+
 
         }
 
@@ -54,11 +52,8 @@ namespace FOR_Application
             this.txtPrezime.Text = "";
             this.txtRadnoMjesto.Text = "";
 
+            this.evidencija_o_zaposlenimaTableAdapter.Fill(this.pi2013FastOrderdbDataSet.Evidencija_o_zaposlenima);
 
-            
-            this.Validate();
-            this.evidencijaOZaposlenimaBindingSource.EndEdit();
-            this.evidencija_o_zaposlenimaTableAdapter.Update(this.pi2013FastOrderdbDataSet);
 
         
         }

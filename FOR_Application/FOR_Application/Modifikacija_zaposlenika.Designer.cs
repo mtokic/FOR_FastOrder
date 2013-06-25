@@ -35,15 +35,15 @@
             System.Windows.Forms.Label radno_mjestoLabel;
             this.btnIzadi = new System.Windows.Forms.Button();
             this.btnDodaj = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.pi2013FastOrderdbDataSet = new FOR_Application.pi2013FastOrderdbDataSet();
-            this.evidencijaOZaposlenimaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.evidencija_o_zaposlenimaTableAdapter = new FOR_Application.pi2013FastOrderdbDataSetTableAdapters.Evidencija_o_zaposlenimaTableAdapter();
+            this.dgvUnosZaposlenika = new System.Windows.Forms.DataGridView();
             this.iDzaposlenikaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.radnomjestoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prezimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adresaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.evidencijaOZaposlenimaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pi2013FastOrderdbDataSet = new FOR_Application.pi2013FastOrderdbDataSet();
+            this.evidencija_o_zaposlenimaTableAdapter = new FOR_Application.pi2013FastOrderdbDataSetTableAdapters.Evidencija_o_zaposlenimaTableAdapter();
             this.txtAdresa = new System.Windows.Forms.TextBox();
             this.txtPrezime = new System.Windows.Forms.TextBox();
             this.txtIme = new System.Windows.Forms.TextBox();
@@ -52,10 +52,50 @@
             prezimeLabel = new System.Windows.Forms.Label();
             imeLabel = new System.Windows.Forms.Label();
             radno_mjestoLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pi2013FastOrderdbDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUnosZaposlenika)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.evidencijaOZaposlenimaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pi2013FastOrderdbDataSet)).BeginInit();
             this.SuspendLayout();
+            // 
+            // adresaLabel
+            // 
+            adresaLabel.AutoSize = true;
+            adresaLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            adresaLabel.Location = new System.Drawing.Point(33, 121);
+            adresaLabel.Name = "adresaLabel";
+            adresaLabel.Size = new System.Drawing.Size(43, 13);
+            adresaLabel.TabIndex = 27;
+            adresaLabel.Text = "Adresa:";
+            // 
+            // prezimeLabel
+            // 
+            prezimeLabel.AutoSize = true;
+            prezimeLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            prezimeLabel.Location = new System.Drawing.Point(29, 95);
+            prezimeLabel.Name = "prezimeLabel";
+            prezimeLabel.Size = new System.Drawing.Size(47, 13);
+            prezimeLabel.TabIndex = 25;
+            prezimeLabel.Text = "Prezime:";
+            // 
+            // imeLabel
+            // 
+            imeLabel.AutoSize = true;
+            imeLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            imeLabel.Location = new System.Drawing.Point(49, 59);
+            imeLabel.Name = "imeLabel";
+            imeLabel.Size = new System.Drawing.Size(27, 13);
+            imeLabel.TabIndex = 23;
+            imeLabel.Text = "Ime:";
+            // 
+            // radno_mjestoLabel
+            // 
+            radno_mjestoLabel.AutoSize = true;
+            radno_mjestoLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            radno_mjestoLabel.Location = new System.Drawing.Point(1, 33);
+            radno_mjestoLabel.Name = "radno_mjestoLabel";
+            radno_mjestoLabel.Size = new System.Drawing.Size(75, 13);
+            radno_mjestoLabel.TabIndex = 22;
+            radno_mjestoLabel.Text = "Radno mjesto:";
             // 
             // btnIzadi
             // 
@@ -77,35 +117,21 @@
             this.btnDodaj.UseVisualStyleBackColor = true;
             this.btnDodaj.Click += new System.EventHandler(this.btnDodaj_Click);
             // 
-            // dataGridView1
+            // dgvUnosZaposlenika
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvUnosZaposlenika.AutoGenerateColumns = false;
+            this.dgvUnosZaposlenika.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUnosZaposlenika.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDzaposlenikaDataGridViewTextBoxColumn,
             this.radnomjestoDataGridViewTextBoxColumn,
             this.imeDataGridViewTextBoxColumn,
             this.prezimeDataGridViewTextBoxColumn,
             this.adresaDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.evidencijaOZaposlenimaBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(32, 180);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(445, 289);
-            this.dataGridView1.TabIndex = 2;
-            // 
-            // pi2013FastOrderdbDataSet
-            // 
-            this.pi2013FastOrderdbDataSet.DataSetName = "pi2013FastOrderdbDataSet";
-            this.pi2013FastOrderdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // evidencijaOZaposlenimaBindingSource
-            // 
-            this.evidencijaOZaposlenimaBindingSource.DataMember = "Evidencija o zaposlenima";
-            this.evidencijaOZaposlenimaBindingSource.DataSource = this.pi2013FastOrderdbDataSet;
-            // 
-            // evidencija_o_zaposlenimaTableAdapter
-            // 
-            this.evidencija_o_zaposlenimaTableAdapter.ClearBeforeFill = true;
+            this.dgvUnosZaposlenika.DataSource = this.evidencijaOZaposlenimaBindingSource;
+            this.dgvUnosZaposlenika.Location = new System.Drawing.Point(32, 180);
+            this.dgvUnosZaposlenika.Name = "dgvUnosZaposlenika";
+            this.dgvUnosZaposlenika.Size = new System.Drawing.Size(445, 289);
+            this.dgvUnosZaposlenika.TabIndex = 2;
             // 
             // iDzaposlenikaDataGridViewTextBoxColumn
             // 
@@ -139,15 +165,19 @@
             this.adresaDataGridViewTextBoxColumn.HeaderText = "Adresa";
             this.adresaDataGridViewTextBoxColumn.Name = "adresaDataGridViewTextBoxColumn";
             // 
-            // adresaLabel
+            // evidencijaOZaposlenimaBindingSource
             // 
-            adresaLabel.AutoSize = true;
-            adresaLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            adresaLabel.Location = new System.Drawing.Point(33, 121);
-            adresaLabel.Name = "adresaLabel";
-            adresaLabel.Size = new System.Drawing.Size(43, 13);
-            adresaLabel.TabIndex = 27;
-            adresaLabel.Text = "Adresa:";
+            this.evidencijaOZaposlenimaBindingSource.DataMember = "Evidencija o zaposlenima";
+            this.evidencijaOZaposlenimaBindingSource.DataSource = this.pi2013FastOrderdbDataSet;
+            // 
+            // pi2013FastOrderdbDataSet
+            // 
+            this.pi2013FastOrderdbDataSet.DataSetName = "pi2013FastOrderdbDataSet";
+            this.pi2013FastOrderdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // evidencija_o_zaposlenimaTableAdapter
+            // 
+            this.evidencija_o_zaposlenimaTableAdapter.ClearBeforeFill = true;
             // 
             // txtAdresa
             // 
@@ -156,16 +186,6 @@
             this.txtAdresa.Size = new System.Drawing.Size(122, 20);
             this.txtAdresa.TabIndex = 29;
             // 
-            // prezimeLabel
-            // 
-            prezimeLabel.AutoSize = true;
-            prezimeLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            prezimeLabel.Location = new System.Drawing.Point(29, 95);
-            prezimeLabel.Name = "prezimeLabel";
-            prezimeLabel.Size = new System.Drawing.Size(47, 13);
-            prezimeLabel.TabIndex = 25;
-            prezimeLabel.Text = "Prezime:";
-            // 
             // txtPrezime
             // 
             this.txtPrezime.Location = new System.Drawing.Point(82, 88);
@@ -173,32 +193,12 @@
             this.txtPrezime.Size = new System.Drawing.Size(122, 20);
             this.txtPrezime.TabIndex = 28;
             // 
-            // imeLabel
-            // 
-            imeLabel.AutoSize = true;
-            imeLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            imeLabel.Location = new System.Drawing.Point(49, 59);
-            imeLabel.Name = "imeLabel";
-            imeLabel.Size = new System.Drawing.Size(27, 13);
-            imeLabel.TabIndex = 23;
-            imeLabel.Text = "Ime:";
-            // 
             // txtIme
             // 
             this.txtIme.Location = new System.Drawing.Point(82, 56);
             this.txtIme.Name = "txtIme";
             this.txtIme.Size = new System.Drawing.Size(100, 20);
             this.txtIme.TabIndex = 26;
-            // 
-            // radno_mjestoLabel
-            // 
-            radno_mjestoLabel.AutoSize = true;
-            radno_mjestoLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            radno_mjestoLabel.Location = new System.Drawing.Point(1, 33);
-            radno_mjestoLabel.Name = "radno_mjestoLabel";
-            radno_mjestoLabel.Size = new System.Drawing.Size(75, 13);
-            radno_mjestoLabel.TabIndex = 22;
-            radno_mjestoLabel.Text = "Radno mjesto:";
             // 
             // txtRadnoMjesto
             // 
@@ -221,15 +221,15 @@
             this.Controls.Add(this.txtIme);
             this.Controls.Add(radno_mjestoLabel);
             this.Controls.Add(this.txtRadnoMjesto);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvUnosZaposlenika);
             this.Controls.Add(this.btnDodaj);
             this.Controls.Add(this.btnIzadi);
             this.Name = "frmUnosZaposlenika";
             this.Text = "Unos zaposlenika";
             this.Load += new System.EventHandler(this.frmUnosZaposlenika_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pi2013FastOrderdbDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUnosZaposlenika)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.evidencijaOZaposlenimaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pi2013FastOrderdbDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -239,7 +239,7 @@
 
         private System.Windows.Forms.Button btnIzadi;
         private System.Windows.Forms.Button btnDodaj;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvUnosZaposlenika;
         private pi2013FastOrderdbDataSet pi2013FastOrderdbDataSet;
         private System.Windows.Forms.BindingSource evidencijaOZaposlenimaBindingSource;
         private pi2013FastOrderdbDataSetTableAdapters.Evidencija_o_zaposlenimaTableAdapter evidencija_o_zaposlenimaTableAdapter;
