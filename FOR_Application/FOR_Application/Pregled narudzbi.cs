@@ -26,7 +26,7 @@ namespace FOR_Application
             InitializeComponent();
 
             timer.Tick += new EventHandler(timer_Tick); // svaki put kad timer ticka poziva se event timer_Tick
-            timer.Interval = (3000) * (1);              // ticka svaku sekundu
+            timer.Interval = (5000) * (1);              // ticka milisekunde
             timer.Enabled = true;                       // omoguci timer
             timer.Start();
             nZ = new noviZahtjev(this);
@@ -44,8 +44,9 @@ namespace FOR_Application
             if (nZ.pregledajNoveZahtjeve() != 0)
             {
 
-                MessageBox.Show("Imate nove narudzbe!");
                 nZ.updateNoviZahtjevi();
+                MessageBox.Show("Imate nove narudzbe!");
+               
 
                 //ponovo refreshamo listu narudbe posto smo dobili informaciju da je pristigla nova
                 // TODO: This line of code loads data into the 'pi2013FastOrderdbDataSet.Artikli' table. You can move, or remove it, as needed.
