@@ -41,7 +41,12 @@
             this.narudzbaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pi2013FastOrderdbDataSet = new FOR_Application.pi2013FastOrderdbDataSet();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.fKIDnarudzbeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.artikliBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.FK_ID_artikla = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fKIDartiklaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.artikliBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.kolicinaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stavkeNarudzbeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.lstStatus = new System.Windows.Forms.ListBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -63,11 +68,6 @@
             this.stavke_narudzbeTableAdapter = new FOR_Application.pi2013FastOrderdbDataSetTableAdapters.Stavke_narudzbeTableAdapter();
             this.artikliTableAdapter = new FOR_Application.pi2013FastOrderdbDataSetTableAdapters.ArtikliTableAdapter();
             this.fKStavkeNarudzbeArtikliBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.artikliBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.fKIDnarudzbeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.FK_ID_artikla = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fKIDartiklaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.kolicinaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -76,13 +76,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.narudzbaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pi2013FastOrderdbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.artikliBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.artikliBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stavkeNarudzbeBindingSource1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.stavkeNarudzbeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.artikliBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKStavkeNarudzbeArtikliBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.artikliBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -201,10 +201,58 @@
             this.dataGridView2.Size = new System.Drawing.Size(419, 150);
             this.dataGridView2.TabIndex = 1;
             // 
+            // fKIDnarudzbeDataGridViewTextBoxColumn
+            // 
+            this.fKIDnarudzbeDataGridViewTextBoxColumn.DataPropertyName = "FK_ID_narudzbe";
+            this.fKIDnarudzbeDataGridViewTextBoxColumn.DataSource = this.artikliBindingSource2;
+            this.fKIDnarudzbeDataGridViewTextBoxColumn.DisplayMember = "ID_artikla";
+            this.fKIDnarudzbeDataGridViewTextBoxColumn.HeaderText = "ID narudžbe";
+            this.fKIDnarudzbeDataGridViewTextBoxColumn.Name = "fKIDnarudzbeDataGridViewTextBoxColumn";
+            this.fKIDnarudzbeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.fKIDnarudzbeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.fKIDnarudzbeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.fKIDnarudzbeDataGridViewTextBoxColumn.ValueMember = "ID_artikla";
+            this.fKIDnarudzbeDataGridViewTextBoxColumn.Visible = false;
+            this.fKIDnarudzbeDataGridViewTextBoxColumn.Width = 40;
+            // 
+            // artikliBindingSource2
+            // 
+            this.artikliBindingSource2.DataMember = "Artikli";
+            this.artikliBindingSource2.DataSource = this.pi2013FastOrderdbDataSet;
+            // 
+            // FK_ID_artikla
+            // 
+            this.FK_ID_artikla.DataPropertyName = "FK_ID_artikla";
+            this.FK_ID_artikla.HeaderText = "ID artikla";
+            this.FK_ID_artikla.Name = "FK_ID_artikla";
+            this.FK_ID_artikla.ReadOnly = true;
+            // 
+            // fKIDartiklaDataGridViewTextBoxColumn
+            // 
+            this.fKIDartiklaDataGridViewTextBoxColumn.DataPropertyName = "FK_ID_artikla";
+            this.fKIDartiklaDataGridViewTextBoxColumn.DataSource = this.artikliBindingSource1;
+            this.fKIDartiklaDataGridViewTextBoxColumn.DisplayMember = "Naziv";
+            this.fKIDartiklaDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.fKIDartiklaDataGridViewTextBoxColumn.HeaderText = "Naziv";
+            this.fKIDartiklaDataGridViewTextBoxColumn.Name = "fKIDartiklaDataGridViewTextBoxColumn";
+            this.fKIDartiklaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.fKIDartiklaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.fKIDartiklaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.fKIDartiklaDataGridViewTextBoxColumn.ValueMember = "ID_artikla";
+            this.fKIDartiklaDataGridViewTextBoxColumn.Width = 125;
+            // 
             // artikliBindingSource1
             // 
             this.artikliBindingSource1.DataMember = "Artikli";
             this.artikliBindingSource1.DataSource = this.pi2013FastOrderdbDataSet;
+            // 
+            // kolicinaDataGridViewTextBoxColumn
+            // 
+            this.kolicinaDataGridViewTextBoxColumn.DataPropertyName = "Kolicina";
+            this.kolicinaDataGridViewTextBoxColumn.HeaderText = "Naručena količina";
+            this.kolicinaDataGridViewTextBoxColumn.Name = "kolicinaDataGridViewTextBoxColumn";
+            this.kolicinaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.kolicinaDataGridViewTextBoxColumn.Width = 150;
             // 
             // stavkeNarudzbeBindingSource1
             // 
@@ -351,54 +399,6 @@
             this.fKStavkeNarudzbeArtikliBindingSource.DataMember = "FK_Stavke narudzbe_Artikli";
             this.fKStavkeNarudzbeArtikliBindingSource.DataSource = this.artikliBindingSource;
             // 
-            // artikliBindingSource2
-            // 
-            this.artikliBindingSource2.DataMember = "Artikli";
-            this.artikliBindingSource2.DataSource = this.pi2013FastOrderdbDataSet;
-            // 
-            // fKIDnarudzbeDataGridViewTextBoxColumn
-            // 
-            this.fKIDnarudzbeDataGridViewTextBoxColumn.DataPropertyName = "FK_ID_narudzbe";
-            this.fKIDnarudzbeDataGridViewTextBoxColumn.DataSource = this.artikliBindingSource2;
-            this.fKIDnarudzbeDataGridViewTextBoxColumn.DisplayMember = "ID_artikla";
-            this.fKIDnarudzbeDataGridViewTextBoxColumn.HeaderText = "ID narudžbe";
-            this.fKIDnarudzbeDataGridViewTextBoxColumn.Name = "fKIDnarudzbeDataGridViewTextBoxColumn";
-            this.fKIDnarudzbeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fKIDnarudzbeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.fKIDnarudzbeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.fKIDnarudzbeDataGridViewTextBoxColumn.ValueMember = "ID_artikla";
-            this.fKIDnarudzbeDataGridViewTextBoxColumn.Visible = false;
-            this.fKIDnarudzbeDataGridViewTextBoxColumn.Width = 40;
-            // 
-            // FK_ID_artikla
-            // 
-            this.FK_ID_artikla.DataPropertyName = "FK_ID_artikla";
-            this.FK_ID_artikla.HeaderText = "ID artikla";
-            this.FK_ID_artikla.Name = "FK_ID_artikla";
-            this.FK_ID_artikla.ReadOnly = true;
-            // 
-            // fKIDartiklaDataGridViewTextBoxColumn
-            // 
-            this.fKIDartiklaDataGridViewTextBoxColumn.DataPropertyName = "FK_ID_artikla";
-            this.fKIDartiklaDataGridViewTextBoxColumn.DataSource = this.artikliBindingSource1;
-            this.fKIDartiklaDataGridViewTextBoxColumn.DisplayMember = "Naziv";
-            this.fKIDartiklaDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.fKIDartiklaDataGridViewTextBoxColumn.HeaderText = "Naziv";
-            this.fKIDartiklaDataGridViewTextBoxColumn.Name = "fKIDartiklaDataGridViewTextBoxColumn";
-            this.fKIDartiklaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fKIDartiklaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.fKIDartiklaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.fKIDartiklaDataGridViewTextBoxColumn.ValueMember = "ID_artikla";
-            this.fKIDartiklaDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // kolicinaDataGridViewTextBoxColumn
-            // 
-            this.kolicinaDataGridViewTextBoxColumn.DataPropertyName = "Kolicina";
-            this.kolicinaDataGridViewTextBoxColumn.HeaderText = "Naručena količina";
-            this.kolicinaDataGridViewTextBoxColumn.Name = "kolicinaDataGridViewTextBoxColumn";
-            this.kolicinaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.kolicinaDataGridViewTextBoxColumn.Width = 150;
-            // 
             // frmPregledNarudzbi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -419,6 +419,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.narudzbaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pi2013FastOrderdbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.artikliBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.artikliBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stavkeNarudzbeBindingSource1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
@@ -426,7 +427,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.stavkeNarudzbeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.artikliBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKStavkeNarudzbeArtikliBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.artikliBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

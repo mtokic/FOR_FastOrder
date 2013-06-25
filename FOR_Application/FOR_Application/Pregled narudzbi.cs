@@ -17,8 +17,7 @@ namespace FOR_Application
         private Timer timer = new Timer();
         private string loggedUser = "";
         noviZahtjev nZ;
-        
-
+        public static int narID;
         /// <summary>
         /// kreiramo metodu(dretvu) koja ce pratiti status novopristiglih narudzbi
         /// </summary>
@@ -106,7 +105,7 @@ namespace FOR_Application
         {
             if (dataGridView1.RowCount > 0)
             {
-                int narID = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+                narID = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
                 this.stavke_narudzbeTableAdapter.FillByIDnar(this.pi2013FastOrderdbDataSet.Stavke_narudzbe, narID);
             }
             this.Refresh();
