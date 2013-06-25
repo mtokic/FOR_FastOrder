@@ -45,7 +45,7 @@ namespace FOR_Application
             {
 
                 MessageBox.Show("Imate nove narudzbe!");
-                nZ.updateNoviZahthevi();
+                nZ.updateNoviZahtjevi();
 
                 //ponovo refreshamo listu narudbe posto smo dobili informaciju da je pristigla nova
                 // TODO: This line of code loads data into the 'pi2013FastOrderdbDataSet.Artikli' table. You can move, or remove it, as needed.
@@ -61,7 +61,7 @@ namespace FOR_Application
 
         private void frmPregledNarudzbi_Load(object sender, EventArgs e)
         {
-            ///punimo table adapter s onim artiklima koji su naruceni od gosta
+            ///punimo datasetove s onim artiklima koji su naruceni od gosta
             // TODO: This line of code loads data into the 'pi2013FastOrderdbDataSet.Artikli' table. You can move, or remove it, as needed.
             this.artikliTableAdapter.Fill(this.pi2013FastOrderdbDataSet.Artikli);
             // TODO: This line of code loads data into the 'pi2013FastOrderdbDataSet.Stavke_narudzbe' table. You can move, or remove it, as needed.
