@@ -46,7 +46,7 @@ namespace FOR_Application
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dataGridView1.Rows.RemoveAt(dataGridView1.CurrentRow.Index);
+            dgvListaArtikala.Rows.RemoveAt(dgvListaArtikala.CurrentRow.Index);
             this.Validate();
             this.artikliBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.pi2013FastOrderdbDataSet);
