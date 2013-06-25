@@ -39,10 +39,10 @@ namespace FOR_Application
 
         private void btnObrisiStol_Click(object sender, EventArgs e)
         {
-            if (this.dgvListaStolova.SelectedRows.Count > 0)
-            {
-                dgvListaStolova.Rows.RemoveAt(this.dgvListaStolova.SelectedRows[0].Index);
-            }
+            dgvListaStolova.Rows.RemoveAt(dgvListaStolova.CurrentRow.Index);
+            this.Validate();
+            this.popis_stolovaBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.pi2013FastOrderdbDataSet);
         }
 
 

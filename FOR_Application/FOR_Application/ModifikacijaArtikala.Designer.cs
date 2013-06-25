@@ -28,58 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Label opis_artiklaLabel;
+            System.Windows.Forms.Label jedinicna_cijenaLabel;
+            System.Windows.Forms.Label nazivLabel;
+            System.Windows.Forms.Label jedinica_mjereLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmModifikacijaArtikala));
-            this.txtNazivArtikla = new System.Windows.Forms.TextBox();
-            this.txtJedinicnaCijena = new System.Windows.Forms.TextBox();
-            this.txtOpisArtikla = new System.Windows.Forms.TextBox();
-            this.txtJedinicaMjere = new System.Windows.Forms.TextBox();
             this.btnDodajArtikl = new System.Windows.Forms.Button();
-            this.lblNazivArtikla = new System.Windows.Forms.Label();
-            this.lblJedinicnaCijena = new System.Windows.Forms.Label();
-            this.lblOpisArtikla = new System.Windows.Forms.Label();
-            this.lblJedinicaMjere = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblpopis = new System.Windows.Forms.Label();
+            this.pi2013FastOrderdbDataSet = new FOR_Application.pi2013FastOrderdbDataSet();
+            this.artikliBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.artikliTableAdapter = new FOR_Application.pi2013FastOrderdbDataSetTableAdapters.ArtikliTableAdapter();
+            this.iDartiklaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jedinicnacijenaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.opisartiklaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jedinicamjereDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableAdapterManager = new FOR_Application.pi2013FastOrderdbDataSetTableAdapters.TableAdapterManager();
+            this.txtOpisArtikla = new System.Windows.Forms.TextBox();
+            this.txtJedinicnaCijena = new System.Windows.Forms.TextBox();
+            this.txtNazivArtikla = new System.Windows.Forms.TextBox();
+            this.txtJedinicaMjere = new System.Windows.Forms.TextBox();
+            this.btnObrisiArtikl = new System.Windows.Forms.Button();
+            opis_artiklaLabel = new System.Windows.Forms.Label();
+            jedinicna_cijenaLabel = new System.Windows.Forms.Label();
+            nazivLabel = new System.Windows.Forms.Label();
+            jedinica_mjereLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pi2013FastOrderdbDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.artikliBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtNazivArtikla
-            // 
-            this.txtNazivArtikla.ForeColor = System.Drawing.Color.Black;
-            this.txtNazivArtikla.Location = new System.Drawing.Point(138, 18);
-            this.txtNazivArtikla.Name = "txtNazivArtikla";
-            this.txtNazivArtikla.Size = new System.Drawing.Size(146, 20);
-            this.txtNazivArtikla.TabIndex = 0;
-            // 
-            // txtJedinicnaCijena
-            // 
-            this.txtJedinicnaCijena.ForeColor = System.Drawing.Color.Black;
-            this.txtJedinicnaCijena.Location = new System.Drawing.Point(138, 46);
-            this.txtJedinicnaCijena.Name = "txtJedinicnaCijena";
-            this.txtJedinicnaCijena.Size = new System.Drawing.Size(146, 20);
-            this.txtJedinicnaCijena.TabIndex = 1;
-            // 
-            // txtOpisArtikla
-            // 
-            this.txtOpisArtikla.ForeColor = System.Drawing.Color.Black;
-            this.txtOpisArtikla.Location = new System.Drawing.Point(138, 72);
-            this.txtOpisArtikla.Name = "txtOpisArtikla";
-            this.txtOpisArtikla.Size = new System.Drawing.Size(38, 20);
-            this.txtOpisArtikla.TabIndex = 2;
-            // 
-            // txtJedinicaMjere
-            // 
-            this.txtJedinicaMjere.ForeColor = System.Drawing.Color.Black;
-            this.txtJedinicaMjere.Location = new System.Drawing.Point(138, 133);
-            this.txtJedinicaMjere.Name = "txtJedinicaMjere";
-            this.txtJedinicaMjere.Size = new System.Drawing.Size(146, 20);
-            this.txtJedinicaMjere.TabIndex = 3;
             // 
             // btnDodajArtikl
             // 
             this.btnDodajArtikl.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnDodajArtikl.ForeColor = System.Drawing.Color.Maroon;
-            this.btnDodajArtikl.Location = new System.Drawing.Point(311, 113);
+            this.btnDodajArtikl.Location = new System.Drawing.Point(302, 14);
             this.btnDodajArtikl.Name = "btnDodajArtikl";
             this.btnDodajArtikl.Size = new System.Drawing.Size(136, 40);
             this.btnDodajArtikl.TabIndex = 4;
@@ -87,57 +72,22 @@
             this.btnDodajArtikl.UseVisualStyleBackColor = true;
             this.btnDodajArtikl.Click += new System.EventHandler(this.btnDodajArtikl_Click);
             // 
-            // lblNazivArtikla
-            // 
-            this.lblNazivArtikla.AutoSize = true;
-            this.lblNazivArtikla.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblNazivArtikla.ForeColor = System.Drawing.Color.White;
-            this.lblNazivArtikla.Location = new System.Drawing.Point(50, 18);
-            this.lblNazivArtikla.Name = "lblNazivArtikla";
-            this.lblNazivArtikla.Size = new System.Drawing.Size(82, 17);
-            this.lblNazivArtikla.TabIndex = 5;
-            this.lblNazivArtikla.Text = "Naziv artikla:";
-            // 
-            // lblJedinicnaCijena
-            // 
-            this.lblJedinicnaCijena.AutoSize = true;
-            this.lblJedinicnaCijena.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblJedinicnaCijena.ForeColor = System.Drawing.Color.White;
-            this.lblJedinicnaCijena.Location = new System.Drawing.Point(47, 49);
-            this.lblJedinicnaCijena.Name = "lblJedinicnaCijena";
-            this.lblJedinicnaCijena.Size = new System.Drawing.Size(85, 17);
-            this.lblJedinicnaCijena.TabIndex = 6;
-            this.lblJedinicnaCijena.Text = "Cijena artikla:";
-            // 
-            // lblOpisArtikla
-            // 
-            this.lblOpisArtikla.AutoSize = true;
-            this.lblOpisArtikla.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblOpisArtikla.ForeColor = System.Drawing.Color.White;
-            this.lblOpisArtikla.Location = new System.Drawing.Point(6, 72);
-            this.lblOpisArtikla.Name = "lblOpisArtikla";
-            this.lblOpisArtikla.Size = new System.Drawing.Size(126, 51);
-            this.lblOpisArtikla.TabIndex = 7;
-            this.lblOpisArtikla.Text = "Opis: \r\n\r\n(1 - piće / 2 - hrana)";
-            this.lblOpisArtikla.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // lblJedinicaMjere
-            // 
-            this.lblJedinicaMjere.AutoSize = true;
-            this.lblJedinicaMjere.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblJedinicaMjere.ForeColor = System.Drawing.Color.White;
-            this.lblJedinicaMjere.Location = new System.Drawing.Point(38, 133);
-            this.lblJedinicaMjere.Name = "lblJedinicaMjere";
-            this.lblJedinicaMjere.Size = new System.Drawing.Size(94, 17);
-            this.lblJedinicaMjere.TabIndex = 8;
-            this.lblJedinicaMjere.Text = "Jedinica mjere:";
-            // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDartiklaDataGridViewTextBoxColumn,
+            this.nazivDataGridViewTextBoxColumn,
+            this.jedinicnacijenaDataGridViewTextBoxColumn,
+            this.opisartiklaDataGridViewTextBoxColumn,
+            this.jedinicamjereDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.artikliBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(9, 215);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(467, 267);
+            this.dataGridView1.Size = new System.Drawing.Size(543, 267);
             this.dataGridView1.TabIndex = 9;
             // 
             // lblpopis
@@ -151,29 +101,171 @@
             this.lblpopis.TabIndex = 10;
             this.lblpopis.Text = "Baza artikala";
             // 
+            // pi2013FastOrderdbDataSet
+            // 
+            this.pi2013FastOrderdbDataSet.DataSetName = "pi2013FastOrderdbDataSet";
+            this.pi2013FastOrderdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // artikliBindingSource
+            // 
+            this.artikliBindingSource.DataMember = "Artikli";
+            this.artikliBindingSource.DataSource = this.pi2013FastOrderdbDataSet;
+            // 
+            // artikliTableAdapter
+            // 
+            this.artikliTableAdapter.ClearBeforeFill = true;
+            // 
+            // iDartiklaDataGridViewTextBoxColumn
+            // 
+            this.iDartiklaDataGridViewTextBoxColumn.DataPropertyName = "ID_artikla";
+            this.iDartiklaDataGridViewTextBoxColumn.HeaderText = "Šifra";
+            this.iDartiklaDataGridViewTextBoxColumn.Name = "iDartiklaDataGridViewTextBoxColumn";
+            this.iDartiklaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nazivDataGridViewTextBoxColumn
+            // 
+            this.nazivDataGridViewTextBoxColumn.DataPropertyName = "Naziv";
+            this.nazivDataGridViewTextBoxColumn.HeaderText = "Naziv";
+            this.nazivDataGridViewTextBoxColumn.Name = "nazivDataGridViewTextBoxColumn";
+            // 
+            // jedinicnacijenaDataGridViewTextBoxColumn
+            // 
+            this.jedinicnacijenaDataGridViewTextBoxColumn.DataPropertyName = "Jedinicna_cijena";
+            this.jedinicnacijenaDataGridViewTextBoxColumn.HeaderText = "Cijena";
+            this.jedinicnacijenaDataGridViewTextBoxColumn.Name = "jedinicnacijenaDataGridViewTextBoxColumn";
+            // 
+            // opisartiklaDataGridViewTextBoxColumn
+            // 
+            this.opisartiklaDataGridViewTextBoxColumn.DataPropertyName = "Opis_artikla";
+            this.opisartiklaDataGridViewTextBoxColumn.HeaderText = "Opis";
+            this.opisartiklaDataGridViewTextBoxColumn.Name = "opisartiklaDataGridViewTextBoxColumn";
+            // 
+            // jedinicamjereDataGridViewTextBoxColumn
+            // 
+            this.jedinicamjereDataGridViewTextBoxColumn.DataPropertyName = "Jedinica_mjere";
+            this.jedinicamjereDataGridViewTextBoxColumn.HeaderText = "Jedinica mjere";
+            this.jedinicamjereDataGridViewTextBoxColumn.Name = "jedinicamjereDataGridViewTextBoxColumn";
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.ArtikliTableAdapter = this.artikliTableAdapter;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.Evidencija_o_zaposlenimaTableAdapter = null;
+            this.tableAdapterManager.NarudzbaTableAdapter = null;
+            this.tableAdapterManager.Popis_stolovaTableAdapter = null;
+            this.tableAdapterManager.Povratna_informacijaTableAdapter = null;
+            this.tableAdapterManager.Racun_za_gostaTableAdapter = null;
+            this.tableAdapterManager.Stavke_narudzbeTableAdapter = null;
+            this.tableAdapterManager.Stavke_racunaTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = FOR_Application.pi2013FastOrderdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // opis_artiklaLabel
+            // 
+            opis_artiklaLabel.AutoSize = true;
+            opis_artiklaLabel.Location = new System.Drawing.Point(34, 110);
+            opis_artiklaLabel.Name = "opis_artiklaLabel";
+            opis_artiklaLabel.Size = new System.Drawing.Size(62, 13);
+            opis_artiklaLabel.TabIndex = 10;
+            opis_artiklaLabel.Text = "Opis artikla:";
+            // 
+            // txtOpisArtikla
+            // 
+            this.txtOpisArtikla.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.artikliBindingSource, "Opis_artikla", true));
+            this.txtOpisArtikla.Location = new System.Drawing.Point(102, 107);
+            this.txtOpisArtikla.Name = "txtOpisArtikla";
+            this.txtOpisArtikla.Size = new System.Drawing.Size(100, 20);
+            this.txtOpisArtikla.TabIndex = 11;
+            // 
+            // jedinicna_cijenaLabel
+            // 
+            jedinicna_cijenaLabel.AutoSize = true;
+            jedinicna_cijenaLabel.Location = new System.Drawing.Point(10, 41);
+            jedinicna_cijenaLabel.Name = "jedinicna_cijenaLabel";
+            jedinicna_cijenaLabel.Size = new System.Drawing.Size(86, 13);
+            jedinicna_cijenaLabel.TabIndex = 11;
+            jedinicna_cijenaLabel.Text = "Jedinicna cijena:";
+            // 
+            // txtJedinicnaCijena
+            // 
+            this.txtJedinicnaCijena.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.artikliBindingSource, "Jedinicna_cijena", true));
+            this.txtJedinicnaCijena.Location = new System.Drawing.Point(102, 38);
+            this.txtJedinicnaCijena.Name = "txtJedinicnaCijena";
+            this.txtJedinicnaCijena.Size = new System.Drawing.Size(100, 20);
+            this.txtJedinicnaCijena.TabIndex = 12;
+            // 
+            // nazivLabel
+            // 
+            nazivLabel.AutoSize = true;
+            nazivLabel.Location = new System.Drawing.Point(59, 15);
+            nazivLabel.Name = "nazivLabel";
+            nazivLabel.Size = new System.Drawing.Size(37, 13);
+            nazivLabel.TabIndex = 12;
+            nazivLabel.Text = "Naziv:";
+            // 
+            // txtNazivArtikla
+            // 
+            this.txtNazivArtikla.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.artikliBindingSource, "Naziv", true));
+            this.txtNazivArtikla.Location = new System.Drawing.Point(102, 12);
+            this.txtNazivArtikla.Name = "txtNazivArtikla";
+            this.txtNazivArtikla.Size = new System.Drawing.Size(100, 20);
+            this.txtNazivArtikla.TabIndex = 13;
+            // 
+            // jedinica_mjereLabel
+            // 
+            jedinica_mjereLabel.AutoSize = true;
+            jedinica_mjereLabel.Location = new System.Drawing.Point(19, 136);
+            jedinica_mjereLabel.Name = "jedinica_mjereLabel";
+            jedinica_mjereLabel.Size = new System.Drawing.Size(77, 13);
+            jedinica_mjereLabel.TabIndex = 13;
+            jedinica_mjereLabel.Text = "Jedinica mjere:";
+            // 
+            // txtJedinicaMjere
+            // 
+            this.txtJedinicaMjere.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.artikliBindingSource, "Jedinica_mjere", true));
+            this.txtJedinicaMjere.Location = new System.Drawing.Point(102, 133);
+            this.txtJedinicaMjere.Name = "txtJedinicaMjere";
+            this.txtJedinicaMjere.Size = new System.Drawing.Size(100, 20);
+            this.txtJedinicaMjere.TabIndex = 14;
+            // 
+            // btnObrisiArtikl
+            // 
+            this.btnObrisiArtikl.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.btnObrisiArtikl.ForeColor = System.Drawing.Color.Maroon;
+            this.btnObrisiArtikl.Location = new System.Drawing.Point(302, 60);
+            this.btnObrisiArtikl.Name = "btnObrisiArtikl";
+            this.btnObrisiArtikl.Size = new System.Drawing.Size(136, 42);
+            this.btnObrisiArtikl.TabIndex = 15;
+            this.btnObrisiArtikl.Text = "Obriši artikl";
+            this.btnObrisiArtikl.UseVisualStyleBackColor = true;
+            this.btnObrisiArtikl.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmModifikacijaArtikala
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Maroon;
-            this.ClientSize = new System.Drawing.Size(486, 492);
+            this.ClientSize = new System.Drawing.Size(572, 502);
+            this.Controls.Add(this.btnObrisiArtikl);
+            this.Controls.Add(jedinica_mjereLabel);
+            this.Controls.Add(this.txtJedinicaMjere);
+            this.Controls.Add(nazivLabel);
+            this.Controls.Add(this.txtNazivArtikla);
+            this.Controls.Add(jedinicna_cijenaLabel);
+            this.Controls.Add(this.txtJedinicnaCijena);
+            this.Controls.Add(opis_artiklaLabel);
+            this.Controls.Add(this.txtOpisArtikla);
             this.Controls.Add(this.lblpopis);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.lblJedinicaMjere);
-            this.Controls.Add(this.lblOpisArtikla);
-            this.Controls.Add(this.lblJedinicnaCijena);
-            this.Controls.Add(this.lblNazivArtikla);
             this.Controls.Add(this.btnDodajArtikl);
-            this.Controls.Add(this.txtJedinicaMjere);
-            this.Controls.Add(this.txtOpisArtikla);
-            this.Controls.Add(this.txtJedinicnaCijena);
-            this.Controls.Add(this.txtNazivArtikla);
             this.ForeColor = System.Drawing.Color.White;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmModifikacijaArtikala";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Modifikacija artikala";
+            this.Load += new System.EventHandler(this.frmModifikacijaArtikala_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pi2013FastOrderdbDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.artikliBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -181,16 +273,22 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtNazivArtikla;
-        private System.Windows.Forms.TextBox txtJedinicnaCijena;
-        private System.Windows.Forms.TextBox txtOpisArtikla;
-        private System.Windows.Forms.TextBox txtJedinicaMjere;
         private System.Windows.Forms.Button btnDodajArtikl;
-        private System.Windows.Forms.Label lblNazivArtikla;
-        private System.Windows.Forms.Label lblJedinicnaCijena;
-        private System.Windows.Forms.Label lblOpisArtikla;
-        private System.Windows.Forms.Label lblJedinicaMjere;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblpopis;
+        private pi2013FastOrderdbDataSet pi2013FastOrderdbDataSet;
+        private System.Windows.Forms.BindingSource artikliBindingSource;
+        private pi2013FastOrderdbDataSetTableAdapters.ArtikliTableAdapter artikliTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDartiklaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nazivDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn jedinicnacijenaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn opisartiklaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn jedinicamjereDataGridViewTextBoxColumn;
+        private pi2013FastOrderdbDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.TextBox txtOpisArtikla;
+        private System.Windows.Forms.TextBox txtJedinicnaCijena;
+        private System.Windows.Forms.TextBox txtNazivArtikla;
+        private System.Windows.Forms.TextBox txtJedinicaMjere;
+        private System.Windows.Forms.Button btnObrisiArtikl;
     }
 }

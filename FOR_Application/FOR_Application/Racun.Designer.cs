@@ -33,7 +33,6 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.artikliBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.pi2013FastOrderdbDataSet1 = new FOR_Application.pi2013FastOrderdbDataSet();
             this.stavkeNarudzbeBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -94,12 +93,9 @@
             reportDataSource2.Value = this.stavkeNarudzbeBindingSource;
             reportDataSource3.Name = "DataSet3";
             reportDataSource3.Value = this.narudzbaBindingSource1;
-            reportDataSource4.Name = "DataSet4";
-            reportDataSource4.Value = this.racunZaGostaBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "FOR_Application.Racun.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(15, 12);
             this.reportViewer1.Name = "reportViewer1";

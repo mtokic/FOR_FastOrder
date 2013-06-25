@@ -29,130 +29,87 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Label radno_mjestoLabel;
+            System.Windows.Forms.Label imeLabel;
+            System.Windows.Forms.Label prezimeLabel;
+            System.Windows.Forms.Label adresaLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEvidencija));
-            this.txtIme = new System.Windows.Forms.TextBox();
-            this.txtPrezime = new System.Windows.Forms.TextBox();
-            this.txtRadnoMjesto = new System.Windows.Forms.TextBox();
-            this.lblAdresa = new System.Windows.Forms.Label();
-            this.lblRadnoMjesto = new System.Windows.Forms.Label();
-            this.lblPrezime = new System.Windows.Forms.Label();
-            this.lblIme = new System.Windows.Forms.Label();
-            this.txtAdresa = new System.Windows.Forms.TextBox();
             this.btnDodajZaposlenika = new System.Windows.Forms.Button();
-            this.dgvEvidencija = new System.Windows.Forms.DataGridView();
             this.evidencija_o_zaposlenimaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pi2013FastOrderdbDataSet = new FOR_Application.pi2013FastOrderdbDataSet();
             this.evidencija_o_zaposlenimaTableAdapter = new FOR_Application.pi2013FastOrderdbDataSetTableAdapters.Evidencija_o_zaposlenimaTableAdapter();
             this.tableAdapterManager = new FOR_Application.pi2013FastOrderdbDataSetTableAdapters.TableAdapterManager();
-            this.iDzaposlenikaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.radnomjestoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.imeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prezimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adresaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEvidencija)).BeginInit();
+            this.prezimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.imeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.radnomjestoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDzaposlenikaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvEvidencija = new System.Windows.Forms.DataGridView();
+            this.txtRadnoMjesto = new System.Windows.Forms.TextBox();
+            this.txtIme = new System.Windows.Forms.TextBox();
+            this.txtPrezime = new System.Windows.Forms.TextBox();
+            this.txtAdresa = new System.Windows.Forms.TextBox();
+            this.btnObrisiZaposlenik = new System.Windows.Forms.Button();
+            radno_mjestoLabel = new System.Windows.Forms.Label();
+            imeLabel = new System.Windows.Forms.Label();
+            prezimeLabel = new System.Windows.Forms.Label();
+            adresaLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.evidencija_o_zaposlenimaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pi2013FastOrderdbDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEvidencija)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtIme
+            // radno_mjestoLabel
             // 
-            this.txtIme.Location = new System.Drawing.Point(105, 12);
-            this.txtIme.Name = "txtIme";
-            this.txtIme.Size = new System.Drawing.Size(141, 20);
-            this.txtIme.TabIndex = 1;
+            radno_mjestoLabel.AutoSize = true;
+            radno_mjestoLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            radno_mjestoLabel.Location = new System.Drawing.Point(26, 15);
+            radno_mjestoLabel.Name = "radno_mjestoLabel";
+            radno_mjestoLabel.Size = new System.Drawing.Size(75, 13);
+            radno_mjestoLabel.TabIndex = 17;
+            radno_mjestoLabel.Text = "Radno mjesto:";
             // 
-            // txtPrezime
+            // imeLabel
             // 
-            this.txtPrezime.Location = new System.Drawing.Point(105, 41);
-            this.txtPrezime.Name = "txtPrezime";
-            this.txtPrezime.Size = new System.Drawing.Size(141, 20);
-            this.txtPrezime.TabIndex = 2;
+            imeLabel.AutoSize = true;
+            imeLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            imeLabel.Location = new System.Drawing.Point(74, 41);
+            imeLabel.Name = "imeLabel";
+            imeLabel.Size = new System.Drawing.Size(27, 13);
+            imeLabel.TabIndex = 18;
+            imeLabel.Text = "Ime:";
             // 
-            // txtRadnoMjesto
+            // prezimeLabel
             // 
-            this.txtRadnoMjesto.Location = new System.Drawing.Point(105, 70);
-            this.txtRadnoMjesto.Name = "txtRadnoMjesto";
-            this.txtRadnoMjesto.Size = new System.Drawing.Size(141, 20);
-            this.txtRadnoMjesto.TabIndex = 3;
+            prezimeLabel.AutoSize = true;
+            prezimeLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            prezimeLabel.Location = new System.Drawing.Point(54, 67);
+            prezimeLabel.Name = "prezimeLabel";
+            prezimeLabel.Size = new System.Drawing.Size(47, 13);
+            prezimeLabel.TabIndex = 19;
+            prezimeLabel.Text = "Prezime:";
             // 
-            // lblAdresa
+            // adresaLabel
             // 
-            this.lblAdresa.AutoSize = true;
-            this.lblAdresa.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblAdresa.ForeColor = System.Drawing.Color.White;
-            this.lblAdresa.Location = new System.Drawing.Point(42, 93);
-            this.lblAdresa.Name = "lblAdresa";
-            this.lblAdresa.Size = new System.Drawing.Size(52, 17);
-            this.lblAdresa.TabIndex = 14;
-            this.lblAdresa.Text = "Adresa:";
-            // 
-            // lblRadnoMjesto
-            // 
-            this.lblRadnoMjesto.AutoSize = true;
-            this.lblRadnoMjesto.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblRadnoMjesto.ForeColor = System.Drawing.Color.White;
-            this.lblRadnoMjesto.Location = new System.Drawing.Point(7, 67);
-            this.lblRadnoMjesto.Name = "lblRadnoMjesto";
-            this.lblRadnoMjesto.Size = new System.Drawing.Size(92, 17);
-            this.lblRadnoMjesto.TabIndex = 13;
-            this.lblRadnoMjesto.Text = "Radno mjesto:";
-            // 
-            // lblPrezime
-            // 
-            this.lblPrezime.AutoSize = true;
-            this.lblPrezime.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblPrezime.ForeColor = System.Drawing.Color.White;
-            this.lblPrezime.Location = new System.Drawing.Point(42, 38);
-            this.lblPrezime.Name = "lblPrezime";
-            this.lblPrezime.Size = new System.Drawing.Size(57, 17);
-            this.lblPrezime.TabIndex = 12;
-            this.lblPrezime.Text = "Prezime:";
-            // 
-            // lblIme
-            // 
-            this.lblIme.AutoSize = true;
-            this.lblIme.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblIme.ForeColor = System.Drawing.Color.White;
-            this.lblIme.Location = new System.Drawing.Point(67, 12);
-            this.lblIme.Name = "lblIme";
-            this.lblIme.Size = new System.Drawing.Size(32, 17);
-            this.lblIme.TabIndex = 11;
-            this.lblIme.Text = "Ime:";
-            // 
-            // txtAdresa
-            // 
-            this.txtAdresa.Location = new System.Drawing.Point(105, 96);
-            this.txtAdresa.Name = "txtAdresa";
-            this.txtAdresa.Size = new System.Drawing.Size(172, 20);
-            this.txtAdresa.TabIndex = 15;
+            adresaLabel.AutoSize = true;
+            adresaLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            adresaLabel.Location = new System.Drawing.Point(58, 93);
+            adresaLabel.Name = "adresaLabel";
+            adresaLabel.Size = new System.Drawing.Size(43, 13);
+            adresaLabel.TabIndex = 20;
+            adresaLabel.Text = "Adresa:";
             // 
             // btnDodajZaposlenika
             // 
             this.btnDodajZaposlenika.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnDodajZaposlenika.ForeColor = System.Drawing.Color.Maroon;
-            this.btnDodajZaposlenika.Location = new System.Drawing.Point(282, 23);
+            this.btnDodajZaposlenika.Location = new System.Drawing.Point(294, 12);
             this.btnDodajZaposlenika.Name = "btnDodajZaposlenika";
             this.btnDodajZaposlenika.Size = new System.Drawing.Size(136, 46);
             this.btnDodajZaposlenika.TabIndex = 16;
             this.btnDodajZaposlenika.Text = "Dodaj zaposlenika";
             this.btnDodajZaposlenika.UseVisualStyleBackColor = true;
             this.btnDodajZaposlenika.Click += new System.EventHandler(this.btnDodajZaposlenika_Click);
-            // 
-            // dgvEvidencija
-            // 
-            this.dgvEvidencija.AutoGenerateColumns = false;
-            this.dgvEvidencija.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEvidencija.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDzaposlenikaDataGridViewTextBoxColumn,
-            this.radnomjestoDataGridViewTextBoxColumn,
-            this.imeDataGridViewTextBoxColumn,
-            this.prezimeDataGridViewTextBoxColumn,
-            this.adresaDataGridViewTextBoxColumn});
-            this.dgvEvidencija.DataSource = this.evidencija_o_zaposlenimaBindingSource;
-            this.dgvEvidencija.Location = new System.Drawing.Point(12, 141);
-            this.dgvEvidencija.Name = "dgvEvidencija";
-            this.dgvEvidencija.Size = new System.Drawing.Size(418, 249);
-            this.dgvEvidencija.TabIndex = 17;
             // 
             // evidencija_o_zaposlenimaBindingSource
             // 
@@ -181,6 +138,30 @@
             this.tableAdapterManager.Stavke_racunaTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = FOR_Application.pi2013FastOrderdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // adresaDataGridViewTextBoxColumn
+            // 
+            this.adresaDataGridViewTextBoxColumn.DataPropertyName = "Adresa";
+            this.adresaDataGridViewTextBoxColumn.HeaderText = "Adresa";
+            this.adresaDataGridViewTextBoxColumn.Name = "adresaDataGridViewTextBoxColumn";
+            // 
+            // prezimeDataGridViewTextBoxColumn
+            // 
+            this.prezimeDataGridViewTextBoxColumn.DataPropertyName = "Prezime";
+            this.prezimeDataGridViewTextBoxColumn.HeaderText = "Prezime";
+            this.prezimeDataGridViewTextBoxColumn.Name = "prezimeDataGridViewTextBoxColumn";
+            // 
+            // imeDataGridViewTextBoxColumn
+            // 
+            this.imeDataGridViewTextBoxColumn.DataPropertyName = "Ime";
+            this.imeDataGridViewTextBoxColumn.HeaderText = "Ime";
+            this.imeDataGridViewTextBoxColumn.Name = "imeDataGridViewTextBoxColumn";
+            // 
+            // radnomjestoDataGridViewTextBoxColumn
+            // 
+            this.radnomjestoDataGridViewTextBoxColumn.DataPropertyName = "Radno_mjesto";
+            this.radnomjestoDataGridViewTextBoxColumn.HeaderText = "Radno mjesto";
+            this.radnomjestoDataGridViewTextBoxColumn.Name = "radnomjestoDataGridViewTextBoxColumn";
+            // 
             // iDzaposlenikaDataGridViewTextBoxColumn
             // 
             this.iDzaposlenikaDataGridViewTextBoxColumn.DataPropertyName = "ID_zaposlenika";
@@ -189,54 +170,94 @@
             this.iDzaposlenikaDataGridViewTextBoxColumn.ReadOnly = true;
             this.iDzaposlenikaDataGridViewTextBoxColumn.Visible = false;
             // 
-            // radnomjestoDataGridViewTextBoxColumn
+            // dgvEvidencija
             // 
-            this.radnomjestoDataGridViewTextBoxColumn.DataPropertyName = "Radno_mjesto";
-            this.radnomjestoDataGridViewTextBoxColumn.HeaderText = "Radno mjesto";
-            this.radnomjestoDataGridViewTextBoxColumn.Name = "radnomjestoDataGridViewTextBoxColumn";
+            this.dgvEvidencija.AllowUserToAddRows = false;
+            this.dgvEvidencija.AllowUserToDeleteRows = false;
+            this.dgvEvidencija.AutoGenerateColumns = false;
+            this.dgvEvidencija.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEvidencija.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDzaposlenikaDataGridViewTextBoxColumn,
+            this.radnomjestoDataGridViewTextBoxColumn,
+            this.imeDataGridViewTextBoxColumn,
+            this.prezimeDataGridViewTextBoxColumn,
+            this.adresaDataGridViewTextBoxColumn});
+            this.dgvEvidencija.DataSource = this.evidencija_o_zaposlenimaBindingSource;
+            this.dgvEvidencija.Location = new System.Drawing.Point(12, 141);
+            this.dgvEvidencija.Name = "dgvEvidencija";
+            this.dgvEvidencija.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvEvidencija.Size = new System.Drawing.Size(418, 249);
+            this.dgvEvidencija.TabIndex = 17;
             // 
-            // imeDataGridViewTextBoxColumn
+            // txtRadnoMjesto
             // 
-            this.imeDataGridViewTextBoxColumn.DataPropertyName = "Ime";
-            this.imeDataGridViewTextBoxColumn.HeaderText = "Ime";
-            this.imeDataGridViewTextBoxColumn.Name = "imeDataGridViewTextBoxColumn";
+            this.txtRadnoMjesto.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.evidencija_o_zaposlenimaBindingSource, "Radno_mjesto", true));
+            this.txtRadnoMjesto.Location = new System.Drawing.Point(107, 12);
+            this.txtRadnoMjesto.Name = "txtRadnoMjesto";
+            this.txtRadnoMjesto.Size = new System.Drawing.Size(100, 20);
+            this.txtRadnoMjesto.TabIndex = 18;
             // 
-            // prezimeDataGridViewTextBoxColumn
+            // txtIme
             // 
-            this.prezimeDataGridViewTextBoxColumn.DataPropertyName = "Prezime";
-            this.prezimeDataGridViewTextBoxColumn.HeaderText = "Prezime";
-            this.prezimeDataGridViewTextBoxColumn.Name = "prezimeDataGridViewTextBoxColumn";
+            this.txtIme.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.evidencija_o_zaposlenimaBindingSource, "Ime", true));
+            this.txtIme.Location = new System.Drawing.Point(107, 38);
+            this.txtIme.Name = "txtIme";
+            this.txtIme.Size = new System.Drawing.Size(100, 20);
+            this.txtIme.TabIndex = 19;
             // 
-            // adresaDataGridViewTextBoxColumn
+            // txtPrezime
             // 
-            this.adresaDataGridViewTextBoxColumn.DataPropertyName = "Adresa";
-            this.adresaDataGridViewTextBoxColumn.HeaderText = "Adresa";
-            this.adresaDataGridViewTextBoxColumn.Name = "adresaDataGridViewTextBoxColumn";
+            this.txtPrezime.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.evidencija_o_zaposlenimaBindingSource, "Prezime", true));
+            this.txtPrezime.Location = new System.Drawing.Point(107, 64);
+            this.txtPrezime.Name = "txtPrezime";
+            this.txtPrezime.Size = new System.Drawing.Size(122, 20);
+            this.txtPrezime.TabIndex = 20;
+            // 
+            // txtAdresa
+            // 
+            this.txtAdresa.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.evidencija_o_zaposlenimaBindingSource, "Adresa", true));
+            this.txtAdresa.Location = new System.Drawing.Point(107, 90);
+            this.txtAdresa.Name = "txtAdresa";
+            this.txtAdresa.Size = new System.Drawing.Size(122, 20);
+            this.txtAdresa.TabIndex = 21;
+            // 
+            // btnObrisiZaposlenik
+            // 
+            this.btnObrisiZaposlenik.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.btnObrisiZaposlenik.ForeColor = System.Drawing.Color.Maroon;
+            this.btnObrisiZaposlenik.Location = new System.Drawing.Point(294, 67);
+            this.btnObrisiZaposlenik.Name = "btnObrisiZaposlenik";
+            this.btnObrisiZaposlenik.Size = new System.Drawing.Size(136, 43);
+            this.btnObrisiZaposlenik.TabIndex = 22;
+            this.btnObrisiZaposlenik.Text = "Obriši zapsolenika";
+            this.btnObrisiZaposlenik.UseVisualStyleBackColor = true;
+            this.btnObrisiZaposlenik.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmEvidencija
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Maroon;
-            this.ClientSize = new System.Drawing.Size(442, 402);
+            this.ClientSize = new System.Drawing.Size(450, 410);
+            this.Controls.Add(this.btnObrisiZaposlenik);
+            this.Controls.Add(adresaLabel);
+            this.Controls.Add(this.txtAdresa);
+            this.Controls.Add(prezimeLabel);
+            this.Controls.Add(this.txtPrezime);
+            this.Controls.Add(imeLabel);
+            this.Controls.Add(this.txtIme);
+            this.Controls.Add(radno_mjestoLabel);
+            this.Controls.Add(this.txtRadnoMjesto);
             this.Controls.Add(this.dgvEvidencija);
             this.Controls.Add(this.btnDodajZaposlenika);
-            this.Controls.Add(this.txtAdresa);
-            this.Controls.Add(this.lblAdresa);
-            this.Controls.Add(this.lblRadnoMjesto);
-            this.Controls.Add(this.lblPrezime);
-            this.Controls.Add(this.lblIme);
-            this.Controls.Add(this.txtRadnoMjesto);
-            this.Controls.Add(this.txtPrezime);
-            this.Controls.Add(this.txtIme);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmEvidencija";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Evidencija zaposlenih";
             this.Load += new System.EventHandler(this.frmEvidencija_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEvidencija)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.evidencija_o_zaposlenimaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pi2013FastOrderdbDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEvidencija)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,24 +265,21 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtIme;
-        private System.Windows.Forms.TextBox txtPrezime;
-        private System.Windows.Forms.TextBox txtRadnoMjesto;
-        private System.Windows.Forms.Label lblAdresa;
-        private System.Windows.Forms.Label lblRadnoMjesto;
-        private System.Windows.Forms.Label lblPrezime;
-        private System.Windows.Forms.Label lblIme;
-        private System.Windows.Forms.TextBox txtAdresa;
         private System.Windows.Forms.Button btnDodajZaposlenika;
-        private System.Windows.Forms.DataGridView dgvEvidencija;
         private pi2013FastOrderdbDataSet pi2013FastOrderdbDataSet;
         private System.Windows.Forms.BindingSource evidencija_o_zaposlenimaBindingSource;
         private pi2013FastOrderdbDataSetTableAdapters.Evidencija_o_zaposlenimaTableAdapter evidencija_o_zaposlenimaTableAdapter;
         private pi2013FastOrderdbDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDzaposlenikaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn radnomjestoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn imeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn prezimeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn adresaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prezimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn imeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn radnomjestoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDzaposlenikaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridView dgvEvidencija;
+        private System.Windows.Forms.TextBox txtRadnoMjesto;
+        private System.Windows.Forms.TextBox txtIme;
+        private System.Windows.Forms.TextBox txtPrezime;
+        private System.Windows.Forms.TextBox txtAdresa;
+        private System.Windows.Forms.Button btnObrisiZaposlenik;
     }
 }

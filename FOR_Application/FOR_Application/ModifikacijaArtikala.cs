@@ -37,5 +37,20 @@ namespace FOR_Application
 
         }
 
+        private void frmModifikacijaArtikala_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'pi2013FastOrderdbDataSet.Artikli' table. You can move, or remove it, as needed.
+            this.artikliTableAdapter.Fill(this.pi2013FastOrderdbDataSet.Artikli);
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.RemoveAt(dataGridView1.CurrentRow.Index);
+            this.Validate();
+            this.artikliBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.pi2013FastOrderdbDataSet);
+        }
+
     }
 }

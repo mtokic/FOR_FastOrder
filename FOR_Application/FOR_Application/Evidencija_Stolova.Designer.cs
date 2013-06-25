@@ -29,17 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Label opisLabel;
             this.btnUnoStola = new System.Windows.Forms.Button();
             this.dgvListaStolova = new System.Windows.Forms.DataGridView();
+            this.iDstolaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.opisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.popis_stolovaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pi2013FastOrderdbDataSet = new FOR_Application.pi2013FastOrderdbDataSet();
             this.btnObrisiStol = new System.Windows.Forms.Button();
             this.popis_stolovaTableAdapter = new FOR_Application.pi2013FastOrderdbDataSetTableAdapters.Popis_stolovaTableAdapter();
             this.tableAdapterManager = new FOR_Application.pi2013FastOrderdbDataSetTableAdapters.TableAdapterManager();
             this.txtOpisStola = new System.Windows.Forms.TextBox();
-            this.lblOpisStolova = new System.Windows.Forms.Label();
-            this.iDstolaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.opisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            opisLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaStolova)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popis_stolovaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pi2013FastOrderdbDataSet)).BeginInit();
@@ -53,12 +54,14 @@
             this.btnUnoStola.Name = "btnUnoStola";
             this.btnUnoStola.Size = new System.Drawing.Size(129, 54);
             this.btnUnoStola.TabIndex = 0;
-            this.btnUnoStola.Text = "Unos stola:";
+            this.btnUnoStola.Text = "Unos stola";
             this.btnUnoStola.UseVisualStyleBackColor = true;
             this.btnUnoStola.Click += new System.EventHandler(this.btnUnoStola_Click);
             // 
             // dgvListaStolova
             // 
+            this.dgvListaStolova.AllowUserToAddRows = false;
+            this.dgvListaStolova.AllowUserToDeleteRows = false;
             this.dgvListaStolova.AutoGenerateColumns = false;
             this.dgvListaStolova.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListaStolova.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -70,6 +73,19 @@
             this.dgvListaStolova.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvListaStolova.Size = new System.Drawing.Size(245, 207);
             this.dgvListaStolova.TabIndex = 2;
+            // 
+            // iDstolaDataGridViewTextBoxColumn
+            // 
+            this.iDstolaDataGridViewTextBoxColumn.DataPropertyName = "ID_stola";
+            this.iDstolaDataGridViewTextBoxColumn.HeaderText = "Broj stola";
+            this.iDstolaDataGridViewTextBoxColumn.Name = "iDstolaDataGridViewTextBoxColumn";
+            this.iDstolaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // opisDataGridViewTextBoxColumn
+            // 
+            this.opisDataGridViewTextBoxColumn.DataPropertyName = "Opis";
+            this.opisDataGridViewTextBoxColumn.HeaderText = "Vanjski/unutarnji";
+            this.opisDataGridViewTextBoxColumn.Name = "opisDataGridViewTextBoxColumn";
             // 
             // popis_stolovaBindingSource
             // 
@@ -110,44 +126,31 @@
             this.tableAdapterManager.Stavke_racunaTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = FOR_Application.pi2013FastOrderdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // opisLabel
+            // 
+            opisLabel.AutoSize = true;
+            opisLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            opisLabel.Location = new System.Drawing.Point(56, 41);
+            opisLabel.Name = "opisLabel";
+            opisLabel.Size = new System.Drawing.Size(31, 13);
+            opisLabel.TabIndex = 5;
+            opisLabel.Text = "Opis:";
+            // 
             // txtOpisStola
             // 
-            this.txtOpisStola.Location = new System.Drawing.Point(93, 32);
+            this.txtOpisStola.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.popis_stolovaBindingSource, "Opis", true));
+            this.txtOpisStola.Location = new System.Drawing.Point(93, 38);
             this.txtOpisStola.Name = "txtOpisStola";
             this.txtOpisStola.Size = new System.Drawing.Size(100, 20);
-            this.txtOpisStola.TabIndex = 4;
-            // 
-            // lblOpisStolova
-            // 
-            this.lblOpisStolova.AutoSize = true;
-            this.lblOpisStolova.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOpisStolova.ForeColor = System.Drawing.Color.White;
-            this.lblOpisStolova.Location = new System.Drawing.Point(13, 29);
-            this.lblOpisStolova.Name = "lblOpisStolova";
-            this.lblOpisStolova.Size = new System.Drawing.Size(83, 23);
-            this.lblOpisStolova.TabIndex = 5;
-            this.lblOpisStolova.Text = "Opis stola: ";
-            // 
-            // iDstolaDataGridViewTextBoxColumn
-            // 
-            this.iDstolaDataGridViewTextBoxColumn.DataPropertyName = "ID_stola";
-            this.iDstolaDataGridViewTextBoxColumn.HeaderText = "Broj stola";
-            this.iDstolaDataGridViewTextBoxColumn.Name = "iDstolaDataGridViewTextBoxColumn";
-            this.iDstolaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // opisDataGridViewTextBoxColumn
-            // 
-            this.opisDataGridViewTextBoxColumn.DataPropertyName = "Opis";
-            this.opisDataGridViewTextBoxColumn.HeaderText = "Vanjski/unutarnji";
-            this.opisDataGridViewTextBoxColumn.Name = "opisDataGridViewTextBoxColumn";
+            this.txtOpisStola.TabIndex = 6;
             // 
             // frmEvidencijaStolova
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Maroon;
-            this.ClientSize = new System.Drawing.Size(481, 233);
-            this.Controls.Add(this.lblOpisStolova);
+            this.ClientSize = new System.Drawing.Size(489, 239);
+            this.Controls.Add(opisLabel);
             this.Controls.Add(this.txtOpisStola);
             this.Controls.Add(this.btnObrisiStol);
             this.Controls.Add(this.dgvListaStolova);
@@ -172,9 +175,8 @@
         private System.Windows.Forms.BindingSource popis_stolovaBindingSource;
         private pi2013FastOrderdbDataSetTableAdapters.Popis_stolovaTableAdapter popis_stolovaTableAdapter;
         private pi2013FastOrderdbDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.TextBox txtOpisStola;
-        private System.Windows.Forms.Label lblOpisStolova;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDstolaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn opisDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TextBox txtOpisStola;
     }
 }

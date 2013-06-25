@@ -45,6 +45,14 @@ namespace FOR_Application
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dgvEvidencija.Rows.RemoveAt(dgvEvidencija.CurrentRow.Index);
+            this.Validate();
+            this.evidencija_o_zaposlenimaBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.pi2013FastOrderdbDataSet);
+        }
+
 
     }
 }
