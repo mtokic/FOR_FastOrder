@@ -51,6 +51,7 @@
             this.txtNazivArtikla = new System.Windows.Forms.TextBox();
             this.txtJedinicaMjere = new System.Windows.Forms.TextBox();
             this.btnObrisiArtikl = new System.Windows.Forms.Button();
+            this.btnSpremimodif = new System.Windows.Forms.Button();
             opis_artiklaLabel = new System.Windows.Forms.Label();
             jedinicna_cijenaLabel = new System.Windows.Forms.Label();
             nazivLabel = new System.Windows.Forms.Label();
@@ -64,7 +65,7 @@
             // 
             opis_artiklaLabel.AutoSize = true;
             opis_artiklaLabel.ForeColor = System.Drawing.Color.White;
-            opis_artiklaLabel.Location = new System.Drawing.Point(34, 110);
+            opis_artiklaLabel.Location = new System.Drawing.Point(34, 111);
             opis_artiklaLabel.Name = "opis_artiklaLabel";
             opis_artiklaLabel.Size = new System.Drawing.Size(62, 13);
             opis_artiklaLabel.TabIndex = 10;
@@ -74,7 +75,7 @@
             // 
             jedinicna_cijenaLabel.AutoSize = true;
             jedinicna_cijenaLabel.ForeColor = System.Drawing.Color.White;
-            jedinicna_cijenaLabel.Location = new System.Drawing.Point(10, 41);
+            jedinicna_cijenaLabel.Location = new System.Drawing.Point(216, 137);
             jedinicna_cijenaLabel.Name = "jedinicna_cijenaLabel";
             jedinicna_cijenaLabel.Size = new System.Drawing.Size(86, 13);
             jedinicna_cijenaLabel.TabIndex = 11;
@@ -84,7 +85,7 @@
             // 
             nazivLabel.AutoSize = true;
             nazivLabel.ForeColor = System.Drawing.Color.White;
-            nazivLabel.Location = new System.Drawing.Point(59, 15);
+            nazivLabel.Location = new System.Drawing.Point(265, 111);
             nazivLabel.Name = "nazivLabel";
             nazivLabel.Size = new System.Drawing.Size(37, 13);
             nazivLabel.TabIndex = 12;
@@ -94,7 +95,7 @@
             // 
             jedinica_mjereLabel.AutoSize = true;
             jedinica_mjereLabel.ForeColor = System.Drawing.Color.White;
-            jedinica_mjereLabel.Location = new System.Drawing.Point(19, 136);
+            jedinica_mjereLabel.Location = new System.Drawing.Point(19, 137);
             jedinica_mjereLabel.Name = "jedinica_mjereLabel";
             jedinica_mjereLabel.Size = new System.Drawing.Size(77, 13);
             jedinica_mjereLabel.TabIndex = 13;
@@ -104,7 +105,7 @@
             // 
             this.btnDodajArtikl.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnDodajArtikl.ForeColor = System.Drawing.Color.Maroon;
-            this.btnDodajArtikl.Location = new System.Drawing.Point(238, 14);
+            this.btnDodajArtikl.Location = new System.Drawing.Point(37, 24);
             this.btnDodajArtikl.Name = "btnDodajArtikl";
             this.btnDodajArtikl.Size = new System.Drawing.Size(136, 40);
             this.btnDodajArtikl.TabIndex = 4;
@@ -203,7 +204,7 @@
             // txtOpisArtikla
             // 
             this.txtOpisArtikla.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.artikliBindingSource, "Opis_artikla", true));
-            this.txtOpisArtikla.Location = new System.Drawing.Point(102, 107);
+            this.txtOpisArtikla.Location = new System.Drawing.Point(102, 108);
             this.txtOpisArtikla.Name = "txtOpisArtikla";
             this.txtOpisArtikla.Size = new System.Drawing.Size(100, 20);
             this.txtOpisArtikla.TabIndex = 11;
@@ -211,7 +212,7 @@
             // txtJedinicnaCijena
             // 
             this.txtJedinicnaCijena.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.artikliBindingSource, "Jedinicna_cijena", true));
-            this.txtJedinicnaCijena.Location = new System.Drawing.Point(102, 38);
+            this.txtJedinicnaCijena.Location = new System.Drawing.Point(308, 134);
             this.txtJedinicnaCijena.Name = "txtJedinicnaCijena";
             this.txtJedinicnaCijena.Size = new System.Drawing.Size(100, 20);
             this.txtJedinicnaCijena.TabIndex = 12;
@@ -219,7 +220,7 @@
             // txtNazivArtikla
             // 
             this.txtNazivArtikla.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.artikliBindingSource, "Naziv", true));
-            this.txtNazivArtikla.Location = new System.Drawing.Point(102, 12);
+            this.txtNazivArtikla.Location = new System.Drawing.Point(308, 108);
             this.txtNazivArtikla.Name = "txtNazivArtikla";
             this.txtNazivArtikla.Size = new System.Drawing.Size(100, 20);
             this.txtNazivArtikla.TabIndex = 13;
@@ -227,7 +228,7 @@
             // txtJedinicaMjere
             // 
             this.txtJedinicaMjere.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.artikliBindingSource, "Jedinica_mjere", true));
-            this.txtJedinicaMjere.Location = new System.Drawing.Point(102, 133);
+            this.txtJedinicaMjere.Location = new System.Drawing.Point(102, 134);
             this.txtJedinicaMjere.Name = "txtJedinicaMjere";
             this.txtJedinicaMjere.Size = new System.Drawing.Size(100, 20);
             this.txtJedinicaMjere.TabIndex = 14;
@@ -236,7 +237,7 @@
             // 
             this.btnObrisiArtikl.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.btnObrisiArtikl.ForeColor = System.Drawing.Color.Maroon;
-            this.btnObrisiArtikl.Location = new System.Drawing.Point(238, 60);
+            this.btnObrisiArtikl.Location = new System.Drawing.Point(219, 24);
             this.btnObrisiArtikl.Name = "btnObrisiArtikl";
             this.btnObrisiArtikl.Size = new System.Drawing.Size(136, 42);
             this.btnObrisiArtikl.TabIndex = 15;
@@ -244,12 +245,25 @@
             this.btnObrisiArtikl.UseVisualStyleBackColor = true;
             this.btnObrisiArtikl.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnSpremimodif
+            // 
+            this.btnSpremimodif.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnSpremimodif.ForeColor = System.Drawing.Color.Maroon;
+            this.btnSpremimodif.Location = new System.Drawing.Point(381, 24);
+            this.btnSpremimodif.Name = "btnSpremimodif";
+            this.btnSpremimodif.Size = new System.Drawing.Size(137, 42);
+            this.btnSpremimodif.TabIndex = 16;
+            this.btnSpremimodif.Text = "Spremi modifikaciju";
+            this.btnSpremimodif.UseVisualStyleBackColor = true;
+            this.btnSpremimodif.Click += new System.EventHandler(this.btnSpremimodif_Click);
+            // 
             // frmModifikacijaArtikala
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Maroon;
             this.ClientSize = new System.Drawing.Size(572, 502);
+            this.Controls.Add(this.btnSpremimodif);
             this.Controls.Add(this.btnObrisiArtikl);
             this.Controls.Add(jedinica_mjereLabel);
             this.Controls.Add(this.txtJedinicaMjere);
@@ -295,5 +309,6 @@
         private System.Windows.Forms.TextBox txtNazivArtikla;
         private System.Windows.Forms.TextBox txtJedinicaMjere;
         private System.Windows.Forms.Button btnObrisiArtikl;
+        private System.Windows.Forms.Button btnSpremimodif;
     }
 }
