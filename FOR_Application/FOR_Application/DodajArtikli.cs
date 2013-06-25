@@ -42,6 +42,10 @@ namespace FOR_Application
             this.txtNazivArtikla.Text = "";
             this.txtOpisArtikla.Text = "";
 
+            this.Validate();
+            this.artikliBindingSource.EndEdit();
+            this.artikliTableAdapter.Update(this.pi2013FastOrderdbDataSet);
+
         
         }
 
